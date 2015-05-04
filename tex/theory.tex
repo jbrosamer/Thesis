@@ -22,15 +22,18 @@ The top quark is important in aesthetic problem with the Higgs mass known as the
 
 In addition to the hierarchy problem, there are several other open questions which cannot be explained by the SM. The SM does not account for the 85\% of our universe made up of \textit{dark matter} particles, or provide an explanation for the observed asymmetry between matter and anti-matter. The SM also does not account for the observed non-zero mass of neutrinos or have a way to incorporate gravitational interactions.
 
-Theorists have formulated many extensions to the SM that address these puzzles. Perhaps the most widespread, Supersymmetry (SUSY)~\cite{susy} proposes an additional superpartner for every particle in the SM. SUSY is especially popular because it naturally contains a light, stable, neutral dark matter candidate and solves the hierarchy problem. Diagrams from superpartners remove the need to fine tune the Higgs mass. Since SUSY has not been observed, the superpartners of SM particles must have different masses, and SUSY has to be a broken symmetry. However, in order to satisfactorily solve the hierarchy problem, the superpartners with the largest contributions to the Higgs mass must be $\mathcal{O}(\Tev)$. This means that they should be discoverable at the LHC.
+Theorists have formulated many extensions to the SM that address these puzzles. Perhaps the most widespread, Supersymmetry (SUSY)~\cite{susy} proposes an additional superpartner for every particle in the SM. SUSY is especially popular because it naturally contains a light, stable, neutral dark matter candidate and solves the hierarchy problem. Diagrams from superpartners remove the need to fine tune the Higgs mass. Since SUSY has not been observed, the superpartners of SM particles must have different masses, and SUSY has to be a broken symmetry. However, in order to satisfactorily solve the hierarchy problem, the superpartners with the largest contributions to the Higgs mass must be $\mathcal{O}(\tev)$. This means that they should be discoverable at the LHC.
 
 Another popular SM extension, called the Randall-Sundrum model~\cite{Lillie:2007yh}, posits an extra dimension in which gravity would propagate. This model includes a new particle, a Kaluza-Klein gluon, that propagates into the extra dimension and decays into a top quark pair.
-
+%COULD ADD MORE ABOUT WHY SIGNALS IMPOR. See a thesis
 
 Many of the signals for new physics are dominated by the top quark since heavier particles are more sensitive to higher energy scales.  The top pair production analyzed in this thesis is important as a background for \ttbar resonances~\cite{ATLAS-CONF-2015-009} and other searches~\cite{Aad:2014kra}.
 
 \section{Top quark production at the LHC}
 
+In $pp$ collision at the LHC, top quarks are mostly produced in pairs through the leading order QCD processes  $gg \rightarrow \ttbar$ and $q\bar{q} \rightarrow \ttbar$. The Feynman diagrams for these processes are shown in Figure~\ref{fig:ttdiag}. At Tevatron with $p\bar{p}$ collisions, \ttbar production was dominated by quark annihilation ($\sim 85$\%). At the LHC, the higher collision energy and lack of valence anti-quarks in the proton result in gluon-fusion dominated \ttbar production ($\sim 85$\%)~\cite{PDG}. The total \ttbar cross-section has been computed at next-to-next-to leading order (NNLO) with next-to-next-to-leading-log soft gluon resummation (NNLL) in Ref.~\cite{Czakon:2013goa} with a final theoretical uncertainty of $\sim\ 3 \%$ and found to agree with experimental measurements. Figure~\ref{fig:ttxsec} compares this calculation with measurements made at both in the LHC and Tevatron in various decay channels.
+
+Top quarks can also be produced singly via electroweak processes. Because the weak coupling is much smaller than the strong coupling, fewer quarks are produced singly than in pairs. The Feynman diagrams for single top production are shown in Figure~\ref{fig:tdiag}. Single production can mediated by virtual $s$-channel and $t$-channel $W$-bosons. These production channels provide sensitivity to physics beyond the SM. Single tops are also produced in association with a $W$-boson ($Wt$-associated production). While negligible at the Tevatron, at the LHC, $Wt$-associated production provide a sizeable contribution to single top production. The inclusive cross-section for $s$-channel, $t$-channel and $Wt$-associated single top production has been computed to NNLO. This calculation is compared with the ATLAS experimental measurements of each channel in Figure~\ref{fig:txsec}.
 \begin{table}
 \begin{tabular}[b]{|l||ccc|c|c|}
 \hline
@@ -85,12 +88,36 @@ Scalar boson               & \multicolumn{3} {c|} {$H$} & 0 & 0 \\
 & $\pi^0$ & 135.0 MeV  \\
 \hline
 \end{tabular}
-\label{t:mass}
+\label{t:pmass}
 \caption{Mass of particles in the SM, taken from Ref.~\cite{PDG}.}
 \end{table}
 
 \begin{figure}
 \includegraphics[width=\textwidth]{fig/mtopSummary_All.pdf}
-\caption{Summary of the ATLAS direct $m_top$ measurements. The results are compared with the ATLAS, Tevatron and Tevatron+LHC mtop combinations. For each measurement, the statistical uncertainty, the sum of the remaining uncertainties are reported separately. The JSF, bJSF contributions are statistical in nature and apply to analyses performing in-situ (top quark pair base) jet energy calibration procedures.}
-\label{t:topmass}
+\caption{Summary of the ATLAS direct $m_{top}$ measurements. The results are compared with the ATLAS, Tevatron and Tevatron+LHC mtop combinations. For each measurement, the statistical uncertainty, the sum of the remaining uncertainties are reported separately. The JSF, bJSF contributions are statistical in nature and apply to analyses performing in-situ (top quark pair base) jet energy calibration procedures.}
+\label{fig:topmass}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{fig/fig_ttbar.png}
+\caption{Feynman diagrams for \ttbar production at leading order QCD}
+\label{fig:ttdiag}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{fig/tt_xsec_vsroots.pdf}
+\caption{Summary of LHC and Tevatron measurements of the top-pair production cross-section as a function of the centre-of-mass energy compared to the NNLO QCD calculation complemented with NNLL resummation (top++2.0). The theory band represents uncertainties due to renormalisation and factorisation scale, parton density functions and the strong coupling. The measurements and the theory calculation is quoted at $m_{top}$=172.5 GeV. Measurements made at the same centre-of-mass energy are slightly offset for clarity.}
+\label{fig:ttxsec}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{fig/singletop_allchanvsroots_ATLASonly.pdf}
+\caption{Summary of ATLAS measurements of the single top production cross-sections in various channels as a function of the center of mass energy compared to a theoretical calculation based on NLO QCD complemented with NNLL resummation. For the $s$-channel only an upper limit is shown.}
+\label{fig:txsec}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{fig/fig_singletop.png}
+\caption{Feynman diagrams for single top quark production at leading order QCD. From left to right: $t$-channel production as flavor excitation; $t$-channel production as $W$-gluon fusion; $s$-channel production; $Wt$-channel production.}
+\label{fig:tdiag}
 \end{figure}

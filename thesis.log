@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  3 MAY 2015 13:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  3 MAY 2015 16:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -587,18 +587,18 @@ LaTeX Info: Redefining \today on input line 724.
 ) (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
 
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -617,17 +617,17 @@ LaTeX Font Info:    ... okay on input line 33.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 61.
+LaTeX Font Info:    Try loading font information for U+msa on input line 63.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 61.
+LaTeX Font Info:    Try loading font information for U+msb on input line 63.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 61.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 63.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
@@ -663,65 +663,120 @@ Chapter 1.
 Chapter 2.
 (./tex/theory.tex
 
-LaTeX Warning: Reference `t:particles' on page 2 undefined on input line 10.
+Package caption Warning: \label without proper \caption on input line 57.
+See the caption package documentation for explanation.
 
-) [2
 
-] [3]
+LaTeX Warning: Reference `t:pspincharge' on page 2 undefined on input line 12.
+
+
+LaTeX Warning: Reference `t:pmass' on page 2 undefined on input line 12.
+
+[2
+
+] [3] <fig/mtopSummary_All.pdf, id=52, 569.12625pt x 426.59375pt>
+File: fig/mtopSummary_All.pdf Graphic file (type pdf)
+
+<use fig/mtopSummary_All.pdf>
+Package pdftex.def Info: fig/mtopSummary_All.pdf used on input line 96.
+(pdftex.def)             Requested size: 433.62pt x 325.04129pt.
+
+<fig/fig_ttbar.png, id=53, 466.74374pt x 69.25874pt>
+File: fig/fig_ttbar.png Graphic file (type png)
+ <use fig/fig_ttbar.png>
+Package pdftex.def Info: fig/fig_ttbar.png used on input line 102.
+(pdftex.def)             Requested size: 433.62pt x 64.34654pt.
+
+<fig/tt_xsec_vsroots.pdf, id=54, 569.12625pt x 385.44pt>
+File: fig/tt_xsec_vsroots.pdf Graphic file (type pdf)
+
+<use fig/tt_xsec_vsroots.pdf>
+Package pdftex.def Info: fig/tt_xsec_vsroots.pdf used on input line 108.
+(pdftex.def)             Requested size: 433.62pt x 293.68437pt.
+
+<fig/singletop_allchanvsroots_ATLASonly.pdf, id=55, 569.12625pt x 450.68375pt>
+File: fig/singletop_allchanvsroots_ATLASonly.pdf Graphic file (type pdf)
+
+<use fig/singletop_allchanvsroots_ATLASonly.pdf>
+Package pdftex.def Info: fig/singletop_allchanvsroots_ATLASonly.pdf used on inp
+ut line 114.
+(pdftex.def)             Requested size: 433.62pt x 343.39656pt.
+
+<fig/fig_singletop.png, id=56, 466.74374pt x 68.255pt>
+File: fig/fig_singletop.png Graphic file (type png)
+
+<use fig/fig_singletop.png>
+Package pdftex.def Info: fig/fig_singletop.png used on input line 120.
+(pdftex.def)             Requested size: 433.62pt x 63.41399pt.
+) [4] [5] [6 <./fig/mtopSummary_All.pdf, page is rotated 90 degrees> <./fig/fig
+_ttbar.png (PNG copy)>] [7 <./fig/tt_xsec_vsroots.pdf>] [8 <./fig/singletop_all
+chanvsroots_ATLASonly.pdf, page is rotated 90 degrees> <./fig/fig_singletop.png
+ (PNG copy)>]
 Chapter 3.
-(./tex/strategy.tex) [4
+(./tex/strategy.tex) [9
 
 ]
 Chapter 4.
-(./tex/atlas.tex) [5
+(./tex/atlas.tex) [10
 
 ]
 Chapter 5.
-(./tex/objects.tex) [6
+(./tex/objects.tex) [11
 
 ]
 Chapter 6.
-(./tex/event.tex) [7
+(./tex/event.tex) [12
 
 ]
 Chapter 7.
-(./tex/extrajets.tex) [8
+(./tex/extrajets.tex) [13
 
 ]
 Chapter 8.
-(./tex/unfolding.tex) [9
+(./tex/unfolding.tex) [14
 
 ]
 Chapter 9.
-(./tex/uncert.tex) [10
+(./tex/uncert.tex) [15
 
 ]
 Chapter 10.
-(./tex/results.tex) [11
+(./tex/results.tex) [16
 
 ]
 Chapter 11.
-(./tex/conclusions.tex) [12
+(./tex/conclusions.tex) [17
 
 ]
 Appendix A.
-(./thesis.bbl [13
+(./thesis.bbl [18
 
-]) [14
+]
+Missing character: There is no ≈ in font cmr12!
+Missing character: There is no Ç in font cmr12!
+Missing character: There is no Œ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+) [19
 
 ] (./thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 13597 strings out of 493315
- 242172 string characters out of 6137904
- 308335 words of memory out of 5000000
- 16703 multiletter control sequences out of 15000+600000
- 12049 words of font info for 45 fonts, out of 8000000 for 9000
+ 13755 strings out of 493315
+ 243707 string characters out of 6137904
+ 316567 words of memory out of 5000000
+ 16852 multiletter control sequences out of 15000+600000
+ 12670 words of font info for 47 fonts, out of 8000000 for 9000
  958 hyphenation exceptions out of 8191
- 56i,10n,55p,907b,271s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,11n,55p,1108b,289s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
@@ -734,10 +789,10 @@ xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
 e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (22 pages, 143657 bytes).
+Output written on thesis.pdf (27 pages, 212947 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
+ 241 PDF objects out of 1000 (max. 8388607)
+ 143 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

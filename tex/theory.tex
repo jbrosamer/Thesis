@@ -29,8 +29,6 @@ Another popular SM extension, called the Randall-Sundrum model~\cite{Lillie:2007
 
 Many of the signals for new physics are dominated by the top quark since heavier particles are more sensitive to higher energy scales.  The top pair production analyzed in this thesis is important as a background for \ttbar resonances~\cite{ATLAS-CONF-2015-009} and other searches~\cite{Aad:2014kra}.
 
-\section{QCD phenomenology}
-Predictions for QCD 
 
 
 \section{Top quark production at the LHC}
@@ -38,6 +36,32 @@ Predictions for QCD
 In $pp$ collision at the LHC, top quarks are mostly produced in pairs through the leading order QCD processes  $gg \rightarrow \ttbar$ and $q\bar{q} \rightarrow \ttbar$. The Feynman diagrams for these processes are shown in Figure~\ref{fig:ttdiag}. At Tevatron with $p\bar{p}$ collisions, \ttbar production was dominated by quark annihilation ($\sim 85$\%). At the LHC, the higher collision energy and lack of valence anti-quarks in the proton result in gluon-fusion dominated \ttbar production ($\sim 85$\%)~\cite{PDG}. The total \ttbar cross-section has been computed at next-to-next-to leading order (NNLO) with next-to-next-to-leading-log soft gluon resummation (NNLL) in Ref.~\cite{Czakon:2013goa} with a final theoretical uncertainty of $\sim\ 3 \%$ and found to agree with experimental measurements. Figure~\ref{fig:ttxsec} compares this calculation with measurements made at both in the LHC and Tevatron in various decay channels.
 
 Top quarks can also be produced singly via electroweak processes. Because the weak coupling is much smaller than the strong coupling, fewer quarks are produced singly than in pairs. The Feynman diagrams for single top production are shown in Figure~\ref{fig:tdiag}. Single production can mediated by virtual $s$-channel and $t$-channel $W$-bosons. These production channels provide sensitivity to physics beyond the SM. Single tops are also produced in association with a $W$-boson ($Wt$-associated production). While negligible at the Tevatron, at the LHC, $Wt$-associated production provide a sizeable contribution to single top production. The inclusive cross-section for $s$-channel, $t$-channel and $Wt$-associated single top production has been computed to NNLO. This calculation is compared with the ATLAS experimental measurements of each channel in Figure~\ref{fig:txsec}.
+
+\section{Top quark decays}
+At lowest order in the SM, the top quark can only decay to a $W$ boson and a down-type quark: $t \rightarrow qW$ where $q=b,s,d$. The rate of each of these decays is proportional to the square of the Cabibbo-Kobayashi-Masakawa (CKM) matrix, $|V_{tq}|^2$. Measured from experiment, the CKM matrix governs quark mixing in flavor-changing weak decays~\cite{PDG}.
+
+Weak hadron decays and the unitiary of the CKM matrix constrain the value of $0.9990 < |V_{tb}| < 0.9992$ at the 95\% C.L~\cite{Chetyrkin:1999ys}. Top quarks nearly always decay with $t \rightarrow Wb$.
+
+Experimentally, the decay modes of \ttbar are distinguished by the decay  of the two $W$-bosons:
+\begin{list}
+\item[All hadronic] Both $W$ boson decay to quark pairs: $\ttbar \rightarrow WbWb \rightarrow 2b4q$. Because there are 6 quarks in the final state, this channel has a large multi-jet background, which can be difficult to subtract. 
+
+\item[Semi-leptonic] One $W$ boson decays to a quark pair and the other decays to a lepton and neutrino: $\ttbar \rightarrow WbWb \rightarrow 2b2q \ell \nu$. 
+
+
+\item[All hadronic] Both $W$ boson decay to quark pairs: $\ttbar \rightarrow WbWb \rightarrow 2b4q$. Because there are 6 quarks in the final state, this channel has a large multi-jet background, which can be difficult to subtract. 
+
+
+\end{list} 
+
+\section{Monte Carlo prediction}
+Since the mass of the top quark is above $\Lambda_{QCD}$, top quark production at the LHC can be predicted by perturbative QCD. The \ttbar ($\sigma_{\ttbar}$) cross section is a convolution of the partonic cross section ($\qqbar, qq \rightarrow \ttbar$)and the parton distribution functions (PDFs):
+
+\begin{equation}
+\sigma_{\ttbar}(s, m_{t}) = \sum_{i, j} \int^1_0 dx_i  \int^1_0 dx_j f_i \left(x_i, \mu_F^2 \right) f_j\left(x_j, \mu_F^2 \right) \times \hat{\sigma}_{ij} \left( \hat{s}, m_{t}, \alpha_s \left(\mu_R \right), \mu_R,  \right)
+\end{equation}
+
+
 \begin{table}
 \begin{tabular}[b]{|l||ccc|c|c|}
 \hline

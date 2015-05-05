@@ -41,9 +41,9 @@ dayssince = np.array(dayssince)
 pages     = np.array(pages)
 
 from matplotlib import rcParams
-rcParams["font.family"] = "sans-serif"
+#rcParams["font.family"] = "sans-serif"
 #rcParams["font.sans-serif"] = ["Helvetica"]
-rcParams["font.size"] = "20"
+rcParams["font.size"] = "12"
 import matplotlib.pyplot as plt
 
 now = datetime.datetime.now()
@@ -55,7 +55,7 @@ ax.yaxis.set_label_coords(-0.10, 0.9)
 
 # configure plot
 plt.xlabel("Days since start (May 4, 2015)")
-plt.ylabel("Pages")
+plt.ylabel("JBros's thesis pages")
 plt.title("")
 ymax = 1.3*max(pages) if annotate else 1.1*max(pages)
 plt.text(0.81*maxdayssince, 1.02*ymax, r"%s pages"   % (lastpages))
@@ -118,6 +118,6 @@ if calendar:
 #     plt.plot([days,   days], [192, 214], "k-")
 
 # save
-rcParams["font.size"] = "20"
+rcParams["font.size"] = "12"
 plt.savefig("pages.png")
 plt.savefig("pages.pdf")

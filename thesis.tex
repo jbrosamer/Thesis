@@ -17,6 +17,7 @@
 % Double spacing, if you want it.
 % \def\dsp{\def\baselinestretch{2.0}\large\normalsize}
 % \dsp
+
 \usepackage{defs}
 \graphicspath{{fig/}}
 % If the Grad. Division insists that the first paragraph of a section
@@ -30,8 +31,6 @@
 
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
-
-
 \begin{document}
 
 % Declarations for Front Matter
@@ -91,16 +90,16 @@ To do
 \chapter{Analysis strategy}
 \label{ch:strategy}
 \input{tex/strategy.tex}
-\chapter{The ATLAS detector}
+\chapter{The ATLAS detector and the LHC}
 \label{ch:atlas}
 \input{tex/atlas.tex}
-\chapter{Object definitions}
+\chapter{Event reconstruction and object definitions}
 \label{ch:objects}
 \input{tex/objects.tex}
 \chapter{Event selection}
 \label{ch:event}
 \input{tex/event.tex}
-\chapter{Extra jets}
+\chapter{Reconstruction of extra jets}
 \label{ch:extrajets}
 \input{tex/extrajets.tex}
 \chapter{Correction to particle-level}
@@ -116,8 +115,11 @@ To do
 \label{ch:conclusions}
 \input{tex/conclusions.tex}
 \appendix
-\chapter{Appendix 1}
+\chapter{Extra jets}
 stuff
+\chapter{Tracking studies}
+
+\chapter{Modeling hadron decays}
 
 
 \bibliographystyle{plain}

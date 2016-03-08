@@ -44,7 +44,7 @@ testpdflatex:
 	bibtex    ${BASENAME}
 	pdflatex  ${BASENAME}
 	pdflatex  ${BASENAME}
-	bash scripts/pages.sh
+	# bash scripts/pages.sh
 
 
 run_latex: $(BASENAME).dvi

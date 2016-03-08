@@ -1,5 +1,5 @@
 %!TEX program = pdflatex
-\documentclass[12pt]{ucthesis}
+\documentclass[12pt]{ucbthesis}
 \def\ssp{\def\baselinestretch{1}\large\normalsize}\ssp
 \usepackage{xspace, graphicx,color,caption,subcaption,amsmath,amssymb,verbatim,wasysym}
 \usepackage{acronym}
@@ -11,7 +11,7 @@
 \usepackage{epstopdf}
 \usepackage{multirow}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
-% \usepackage{endfloat}
+\usepackage{siunitx}
 
 \usepackage[us,12hr]{datetime}
 % Double spacing, if you want it.
@@ -121,7 +121,8 @@ stuff
 \chapter{Modeling hadron decays}
 
 
+\backmatter
 \bibliographystyle{plain}
-\bibliography{thesis}
+\bibliography{bib/thesis,bib/atlas}
 
 \end{document}

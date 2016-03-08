@@ -1,9 +1,28 @@
 \begin{thebibliography}{10}
 
+\bibitem{cern-jinst-alice}
+The alice experiment at the cern lhc.
+\newblock {\em Journal of Instrumentation}, 3:S08002, 2008.
+
+\bibitem{cern-jinst-atlas}
+The atlas experiment at the cern large hadron collider.
+\newblock {\em Journal of Instrumentation}, 3:S08003, 2008.
+
+\bibitem{cern-jinst-cms}
+The cms experiment at the cern lhc.
+\newblock {\em Journal of Instrumentation}, 3:S08004, 2008.
+
+\bibitem{cern-jinst-lhcb}
+The lhcb detector at the lhc.
+\newblock {\em Journal of Instrumentation}, 3:S08005, 2008.
+
 \bibitem{ATLAS-CONF-2015-009}
 {A search for $\mathbf{t\bar{t}}$ resonances using lepton plus jets events in
   proton-proton collisions at $\sqrt{s} = 8$ TeV with the ATLAS detector}.
 \newblock Technical Report ATLAS-CONF-2015-009, CERN, Geneva, Mar 2015.
+
+\bibitem{atlas-surface}
+Atlas photos, 2015.
 
 \bibitem{ATLAS:2014wva}
 {First combination of Tevatron and LHC measurements of the top-quark mass}.
@@ -26,11 +45,26 @@ F.~Abe et~al.
 \newblock {Observation of top quark production in $\bar{p}p$ collisions}.
 \newblock {\em Phys.Rev.Lett.}, 74:2626--2631, 1995.
 
+\bibitem{Lumi}
+{ATLAS Collaboration}.
+\newblock {Improved luminosity determination in $pp$ collisions at $\sqrt{s}$ =
+  7 TeV using the ATLAS detector at the LHC}.
+\newblock {\em Eur. Phys. J.}, C73:2518, 2013.
+
 \bibitem{Czakon:2013goa}
 Michał Czakon, Paul Fiedler, and Alexander Mitov.
 \newblock {Total Top-Quark Pair-Production Cross Section at Hadron Colliders
   Through $O(α\frac{4}{S})$}.
 \newblock {\em Phys.Rev.Lett.}, 110:252004, 2013.
+
+\bibitem{cern-jinst-lhc}
+Lyndon Evans and Philip Bryant.
+\newblock Lhc machine.
+\newblock {\em Journal of Instrumentation}, 3:S08001, 2008.
+
+\bibitem{cern-faq}
+Christiane Lefevre.
+\newblock Lhc: The guide, 2009.
 
 \bibitem{Lillie:2007yh}
 Ben Lillie, Lisa Randall, and Lian-Tao Wang.
@@ -39,8 +73,9 @@ Ben Lillie, Lisa Randall, and Lian-Tao Wang.
 
 \bibitem{susy}
 Stephen~P. Martin.
-\newblock A supersymmetry primer” (hep-ph/9709356), latest version available
-  at http://zippy.physics.niu.edu/primer.shtml.
+\newblock {A Supersymmetry primer}.
+\newblock 1997.
+\newblock [Adv. Ser. Direct. High Energy Phys.18,1(1998)].
 
 \bibitem{PDG}
 K.A. Olive et~al.

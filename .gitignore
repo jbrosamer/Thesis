@@ -17,4 +17,4 @@ thesis.pdf
 *.synctex.gz 
 *~ 
 ~*
-.DF_Store
+.DS_Store

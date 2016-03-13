@@ -230,6 +230,25 @@ The MS also has two types of trigger chambers: Resistive Plate Chambers (RPC) in
 
 
 \section{The trigger system}
+At hadron colliders, only a very small fraction of the proton-proton collisions result in events with interesting physics. The majority of events are low energy jets, which aren't useful for SM measurements or new physics searches. With bunch crossings every 50 ns, recording and reconstructing all of the collisions would take an unreasonable amount of data storage and computing power. Therefore, it is necessary to determine whether a collision is interesting immediately after it occurs with minimal analysis. 
 
+The process quickly filtering events to record only those of physics interest is called \emph{triggering.} Processes which take place in the trigger system are referred to as \emph{online}. Processes which take place after triggering, such as particle reconstruction, are called \emph{offline}.
+
+The ATLAS trigger scheme\cite{TDR-L1} consists of three stages: Level 1 (L1), Level 2 (L2), and Event Filter (EF). All collision candidates are first run through L1, an online hardware trigger that has coarse granularity by necessity. If events pass the L1 trigger, they are then passed through the offline software triggers, collectively called the High Level Trigger (HLT). The HLT is divided into two stages: L2 and EF.
+
+Applying multiplicity and energy threshold requirements, L1 reduces the rate of events from 20 MHz (all $pp$ collisions) to 75 kHz. The L1 trigger only looks at output from the calorimeters and muon system because the inner detector cannot process events at the rate required. In order to process events with the necessary speed, granularity in the calorimeter must be reduced and in the muon system, only the trigger chambers are read out. This reduction in granularity is illustrated in Figure~\ref{fig:L1}. The maximum latency time to process at this level is 2.5 $\mu$s. The data-acquisition system must keep track of which data correspond to which bunch crossing. This is really challenging since the time for measuring a signal shape in the EM calorimeter is $>100$ ns and the time of flight through the MS is $>25$ ns, both longer than the time between events. 
+
+If the event passes the L1 trigger, then the L2 trigger looks at the distribution of energy deposits for Regions Of Interest (ROIs). The detector signals are compared to a menu of pre-programmed signatures that represent a potential physics object. For instance, a track and a cluster in the EM calorimeter might signal an electron. The L2 looks for these signatures in the ROIs by pulling information from all needed detectors. 
+
+For events with signatures that pass the L2 trigger, all information for the event is read out. Then the standard offline reconstruction algorithm is run. The event can then be evaluated in terms of the fully reconstructed physics objects to see if particle identities and kinmatics match a menu of desired signatures. Finally, a decision about whether to record the event or not is made. This last stage of the triggering is called the Event Filter. The EF takes about 4s to process each event and can accept events at a rate up to 200 Hz.
+
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.80\textwidth]{fig/atlas/cartoonL1}
+  \caption{Schematic view of the calorimeter granularity available at the L1 trigger~\cite{TDR-L1}.}
+  \label{fig:l1}
+\end{figure}
+% The analysis is performed on the complete 2012 pp √s =8 TeV collision dataset. Events are required tofulfill standard data quality requirements corresponding to the physics ‘AllGood’ good run list (GRL) [7],which ensures that all detector components are functioning. Events are required to pass a single electronor single muon trigger chain, with thresholds that are maximally efficient for leptons passing offlineselections of pT > 25 GeV. For electrons, the OR of the EF_24vh_medium1 and EF_e60_medium1trigger chains is used. For muons, the OR of EF_mu24i_tight and EF_mu36_tight is used. In eachcase, the higher threshold trigger has no isolation requirement, and adds to the acceptance of the lowerthreshold trigger at higher lepton pT .
 \subsection{Electron trigger}
 \subsection{Muon trigger}

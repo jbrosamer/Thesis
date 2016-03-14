@@ -157,6 +157,15 @@ Measurements from the three subdetectors of the ID are combined to make \emph{tr
 
 The algorithm works first from the inside of the detector outward. Pattern recognition is used to make the pixel detector hits into three-point track candidates. Then, a Kalman filter is used to add SCT hits radially outward. After ambiguities like missing or shared hits are resolved, the tracks are extended into the TRT. Tracks must have $\pt > 400 \mev$ to be reconstructed. After this inside-out algorithm as been completed, an outside-in algorithm is run on the unused hits, to reconstruct secondary tracks left by particles not originating directly from the IP.
 
+Since charged particle tracks are bent by the magnetic field, the trajectory takes a helical form and can be expressed by 5 parameters: 
+\begin{itemize}
+\item $d_0$ is the transverse impact parameter, equal to the distance of closest approach in the plane transverse to the beam of the track to the primary vertex
+\item $z_0$ is the longitudinal impact parameter, equal to the $z$ coordinate of the point of closest approach to the primary vertex
+\item $\phi_0$ is the azimuthal angle of the trajectory at the point of closest approach to the primary vertex
+\item $\cos\theta$ is the cosine of the angle the track forms with respect to the beam
+\item $q/p_T$ is the charge divided by the momentum in the transverse plane.
+\end{itemize}
+
 
 
 \subsection{Vertex reconstruction}
@@ -164,7 +173,6 @@ A vertex reconstruction algorithm determines if many tracks originate from the s
 
 Since several $pp$ collisions are likely to occur for each bunch crossing, some of the tracks will be associated with secondary vertices from pile-up rather than the primary vertex (PV) from the hard collision. The PV is conventionally defined as the vertex with the highest track $\pt^2$. In 2012, the average number of interactions per crossing was 20.7, as shown in Figure~\ref{fig:atlas-pileup}, so vertex reconstructon is essential for determining which particles came from pile-up. If a track isn' associated with the PV, it is typically considered pile-up Figure~\ref{fig:disppileup} shows an event with 22 vertices, demonstrating the important of tracking and vertexing in events with a lot of pile-up.
 
-After the PV has been found, tracks are described by five parameters: the transverse impact parameter relative to the primary vertex $d_0$, the longitudinal impact parameter $z_0$, the azimuthal angle $\phi_0$, the polar angle $\theta$, and the ratio of charge to momentum $q/p$. 
 
 \begin{figure}[tp]
   \centering
@@ -194,13 +202,13 @@ The endcap of the EM calorimeter has two layers, with the accordion shape orient
 
 \begin{figure}[h]
 \begin{minipage}[b]{0.48\textwidth}
-\includegraphics[width=\textwidth]{fig/atlas/caloModule}
+\includegraphics[width=\textwidth]{fig/atlas/caloModule.png}
 \caption{Diagram of an electromagnetic calorimeter barrel module\cite{cern-jinst-atlas}.}
 \label{fig:caloModule}
 \end{minipage}
 \hfill
 \begin{minipage}[b]{0.48\textwidth}
-\includegraphics[width=\textwidth]{fig/atlas/tile}
+\includegraphics[width=\textwidth]{fig/atlas/tile.png}
 \caption{Diagram of a hadronic tile module\cite{cern-jinst-atlas}.}
 \label{fig:tileModule}
 \end{minipage}
@@ -209,6 +217,7 @@ The endcap of the EM calorimeter has two layers, with the accordion shape orient
 The hadronic calorimeter is divided into three components: the barrel tile calorimeter, which uses steel absorbers and scintillator tiles and covers $|\eta| <$1.7; the Hadronic Endcap Calorimeter (HEC), which uses copper absorber and LAr active material and covers $|\eta|$<3.2; and the forward calorimeter (FCal), which uses LAr active materials and covers $3.1 < |\eta| < 4.9$. The hadronic calorimeters are much coarser than the EM calorimeters because electrons and photons usually don't reach the radius of the hadronic calorimeters, so particle idenitification isn't a priority. Figure~\ref{fig:tileModule} shows a schematic of a hadronic tile module.
 
 \subsection{Clustering}
+\label{ss:cluster}
 In order to identify particles, information from the shape of the calorimeter showers are used. EM particles like photons and electrons produce narrow showers which are largely contained in the EM calorimeters. Hadrons produce broader showers and tend to travel farther into the hadronic calorimeters. Hadronic showers can also contain EM deposits from decays before the calorimeters, such as a neutral pion becoming two photons. 
 
 In order to turn energy deposits in cells into clusters, information from all of the calorimeters is used as inputs to one of two principal algorithms\cite{ATL-LARG-PUB-2008-002}. The \emph{sliding-window} algorithm clusters cells within fixed-sized rectangles. This algorithm is generally used for electron, photon and tau identifcation. The second algorithm is the \emph{topological} algorithm, which clusters together neighboring cells on the condition that the energy deposit in the cell is signifigantly more than the expected noise. This algorithm is generally used for jet and missing transverse energy reconstruction.
@@ -223,7 +232,7 @@ There are two types of tracking systems in the MS. The Monitored Drift Tubes (MD
 The MS also has two types of trigger chambers: Resistive Plate Chambers (RPC) in the barrel and Thin Gap Chambers (TGC) in the endcaps. Just as with tracking, the endcap and barrel have different types of triggers due to the different rate and precision requirements. The barrel trigger system has 3 RPC layers, and the endcap trigger system has 4 TGC layers. 
 
 \begin{figure}[tp]
-\includegraphics[width=0.95\textwidth]{fig/atlas/muonchamb}
+\includegraphics[width=0.95\textwidth]{fig/atlas/muonchamb.jpg}
 \caption{Diagram of the muon system\cite{cern-jinst-atlas}.}
 \label{fig:muonOverview}
 \end{figure}
@@ -238,17 +247,25 @@ The ATLAS trigger scheme\cite{TDR-L1} consists of three stages: Level 1 (L1), Le
 
 Applying multiplicity and energy threshold requirements, L1 reduces the rate of events from 20 MHz (all $pp$ collisions) to 75 kHz. The L1 trigger only looks at output from the calorimeters and muon system because the inner detector cannot process events at the rate required. In order to process events with the necessary speed, granularity in the calorimeter must be reduced and in the muon system, only the trigger chambers are read out. This reduction in granularity is illustrated in Figure~\ref{fig:L1}. The maximum latency time to process at this level is 2.5 $\mu$s. The data-acquisition system must keep track of which data correspond to which bunch crossing. This is really challenging since the time for measuring a signal shape in the EM calorimeter is $>100$ ns and the time of flight through the MS is $>25$ ns, both longer than the time between events. 
 
-If the event passes the L1 trigger, then the L2 trigger looks at the distribution of energy deposits for Regions Of Interest (ROIs). The detector signals are compared to a menu of pre-programmed signatures that represent a potential physics object. For instance, a track and a cluster in the EM calorimeter might signal an electron. The L2 looks for these signatures in the ROIs by pulling information from all needed detectors. 
+If the event passes the L1 trigger, then the L2 trigger looks at the distribution of energy deposits as Regions Of Interest (ROIs) identified by L1. The detector signals are compared to a menu of pre-programmed signatures that represent a potential physics object. For instance, a track and a cluster in the EM calorimeter might signal an electron. The L2 looks for these signatures in the ROIs by pulling information from all needed detectors. 
 
 For events with signatures that pass the L2 trigger, all information for the event is read out. Then the standard offline reconstruction algorithm is run. The event can then be evaluated in terms of the fully reconstructed physics objects to see if particle identities and kinmatics match a menu of desired signatures. Finally, a decision about whether to record the event or not is made. This last stage of the triggering is called the Event Filter. The EF takes about 4s to process each event and can accept events at a rate up to 200 Hz.
 
 
 \begin{figure}[tp]
   \centering
-  \includegraphics[width=0.80\textwidth]{fig/atlas/cartoonL1}
+  \includegraphics[width=0.80\textwidth]{fig/atlas/cartoonL1.pdf}
   \caption{Schematic view of the calorimeter granularity available at the L1 trigger~\cite{TDR-L1}.}
   \label{fig:l1}
 \end{figure}
-% The analysis is performed on the complete 2012 pp √s =8 TeV collision dataset. Events are required tofulfill standard data quality requirements corresponding to the physics ‘AllGood’ good run list (GRL) [7],which ensures that all detector components are functioning. Events are required to pass a single electronor single muon trigger chain, with thresholds that are maximally efficient for leptons passing offlineselections of pT > 25 GeV. For electrons, the OR of the EF_24vh_medium1 and EF_e60_medium1trigger chains is used. For muons, the OR of EF_mu24i_tight and EF_mu36_tight is used. In eachcase, the higher threshold trigger has no isolation requirement, and adds to the acceptance of the lowerthreshold trigger at higher lepton pT .
-\subsection{Electron trigger}
-\subsection{Muon trigger}
+\subsection{Single electron trigger}
+The single electron trigger for used for 2012 is fully described in~\cite{eltrig}. At L1, calorimeters are split into $0.1\times0.1$ towers and then $2\times 2$ clusters are identify $e/\gamma$ leptons using the sliding window algorithm described in Section~\ref{ss:cluster}. Regions of $4\times 4$ with clusters that meet isolation requirements are passed to the L2 trigger as ROIs. At L2, the position of the cluster is identified as the energy-weighted average of the cluter. Track reconstruction is then performed and if a track can be matched to the cluster, it is considered to come from an electron, not a photon. At both L2 and EF, electron candidates are require to pass selection criteria based on the calorimeter cluster and the track, such as cuts on the lateral width of the shower and hits in the inner pixel detector.
+
+In this analysis, the logical OR of two triggers is used to identify electrons: a 24 GeV trigger with a loose track-based isolation requirement and a 60 GeV trigger without an isolation requiment. The isolation requirement specifies that the sum of the \pt of tracks within a cone of $\Delta R$=0.2 must be less than 10\% the \pt of the electron. These trigger chains have thresholds that are maximally efficient for leptons passing offlines selections of $\pT > 25 \GeV$.
+
+\subsection{Single muon trigger}
+
+The single muon trigger for used for 2012 is fully described in~\cite{mutrig}. The muon trigger uses data from the RPCs in the barrel region and the TGCs in the outer region. At L1, the paths between hits in the trigger chambers are interpolated to identify muon candidates. If a hit pattern matches the requirements of the L1 trigger, the $\eta$ and $\phi$ coordinates are passed to the L2 trigger as a ROI. At L2, the MDT and CSC information for the ROI are used to fit a higher quality track. Then, the track in the MS is combined with a track from the ID. Calorimeter data can be used to apply isolation requirements. Quality cuts are applied to the track to determine whether it passes the final trigger chain.
+
+In this analysis, the logical OR of two triggers is used to identify muons: a 24 GeV trigger with a loose track-based isolation requirement and a 36 GeV trigger without an isolation requiment. The isolation requirement specifies that the sum of the \pt of tracks within a cone of $\Delta R$=0.2 must be less than 12\% the \pt of the muon. These trigger chains have thresholds that are maximally efficient for leptons passing offlines selections of $\pT > 25 \GeV$.
+

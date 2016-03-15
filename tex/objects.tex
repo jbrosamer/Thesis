@@ -1,8 +1,7 @@
 
 The analysis relies on the selection of electrons, muons, jets and $b$-tagged jets. This chapter reviews the reconstruction, definition, efficiencies and calibration of these objects in ATLAS.
 
-\section{Object reconstruction}\label{s:objects}
-\subsection{Muons}
+\section{Muons}
 Muons are reconstructed by combining tracks found in the muon spectrometer and inner detector. Track segments are found in each layer of then detector then combined, taking into account energy loss while crossing the calorimeters. Tracks in the ID are required to pass minimum hit requirements in the Pixel, SCT, and TRT. Muons can be reconstructed using only the MS, but in this analysis uses \emph{combined} muons, reconstructed in both the MS and ID, to ensure high purity.
 
 The muon reconstruction efficiency can be measured using the \emph{tag-and-probe} method. The ID reconstruction efficiency is determined from events reconstructed with one combined muon, the \emph{tag}, and a second muon only required to have an MS track, the \emph{probe}. The ID reconstructrion efficiency is given by the fraction of events where the MS track probe also has a track in the ID. The same method can be used to determine the efficiency of the MS reconstruction as matching. This time, the ID segements are used as the probe and the MS+matching efficiency is given by the fraction of ID segments with a matching MS segment. The overall muon reconstruction efficiency is given by the product of these two efficiencies. To obtain the scale factors (SF), the muon reconstruction efficiency in data and MC is compared: $SF = \epsilon_{data}/\epsilon{MC}$. These scale factors are applied to the simulation to ensure that muons are reconstructed with the same efficiency in MC as in data. For muons, the SFs are calculated in bins of \pt\ and $\eta$ for $Z\rightarrow \mu\mu$ and $J/\Psi\rightarrow \mu\mu$ events~\cite{muonpaper}. 
@@ -11,14 +10,54 @@ The muon momentum scale and resolution of the MC must also be corrected to match
 
 Finally, the efficiency of the muon trigger is also estimated via the tag-and-probe method. In this analysis, the logical OR of two triggers is used to identify muons: a 24 GeV trigger with a loose track-based isolation requirement (the sum of the \pt of tracks within a cone of $\Delta R$=0.2 must be less than 12\% the \pt of the muon) and a 36 GeV trigger without an isolation requiment. For $\pt<100 \gev$, $Z\rightarrow\mu\mu$ events are used to estimate the trigger efficiency, while $W+$jets is used for \pt\ above this threshold. The muon trigger efficiency in the barrel region is derived from $Z\rightarrow\mu\mu$ events is shown in Figure~\ref{muontrigger}
 
-\begin{figure}[h]
+\begin{figure}[hp]
 \centering
 \includegraphics[width=0.6\textwidth]{fig/obj/muontrigger.png}
 \caption{Reconstruction and identification efficiency~\cite{Aad:2014fxa}.}
 \label{fig:muontrigger}
 \end{figure}
-\subsection{Electrons}
 
+\section{Electrons}
+The reconstruction of electrons uses information from both the EM calorimeters and tracks in the ID. First, clusters of energy are found using the sliding-window algorithm described in Chapter~\ref{ss:cluster}. Then, tracks reconstructed in the ID are extended into the calorimeter. Tracks and clusters are considered a match if the center of the cluster and the track are within $\Delta\eta<$0.05 and $\Delta\phi<$0.1. Clusters that don't match to a single track are considered as candidate photons. 
+
+Quality requirements divide electron cadidates into three categories: loose, medium and tight. In this analysis, electrons are required to match the tight requirements, such as ID hit requirements, shower shape, track quality and tighter criteria for matching tracks and clusters. The total reconstruction and identification efficiency for these tight electrons is shown in Figure~\ref{fig:electronID}. As with muon reconstruction, tag-and-probe methods determine the electron scale factors using $Z\rightarrow ee$.
+
+The electron energy scale of the MC must be corrected to match data. First, the MC simulation of electron response is used as a initial calibration of the electron energy. Then, the absolute energy scale and resoultion are determined by comparing $Z\rightarrow ee$ events in data and MC. This calibration is then checked against $J/\Psi\rightarrow ee$ events.
+
+In this analysis, the logical OR of two triggers is used to identify electrons: a 24 GeV trigger with a loose track-based isolation requirement and a 60 GeV trigger without an isolation requiment. The isolation requirement specifies that the sum of the \pt of tracks within a cone of $\Delta R$=0.2 must be less than 10\% the \pt of the electron. The trigger efficiency is evaluated with a tag-and-probe of $Z\rightarrow ee$ events, using the tight electron matched to a trigger with a lower threshold as a tag and an electron with opposite charge as a probe. This efficiency is shown in Figure~\ref{fig:el_trigger}.
+
+ Their efficiency is measured using tag-and-probe in $Z\rightarrow ee$ events, where the tag is a tight electron matched to a trigger with a lower threshold and the probe is an oppositely charged electron such that the $ee$ system has invariant mass within the $Z$ mass window of 80-100 GeV. The measured efficiency is shown in Figure~\ref{fig:eltrigger}. 
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=0.6\textwidth]{fig/obj/electronID.pdf}
+\caption{Reconstruction and identification efficiency~\cite{Aad:2014fxa}.}
+\label{fig:electronID}
+\end{figure}
+\begin{figure}[hp]
+\centering
+\includegraphics[width=0.6\textwidth]{fig/obj/eltrigger.png}
+\caption{Combined efficiency of the 24 GeV and 60 GeV electron triggers. ~\cite{eltrig}.}
+\label{fig:eltrigger}
+\end{figure}
+
+\section{Jets}
+Jet reconstruction begins with the formation of \emph{topo-clusters} from energy deposits in the EM and hadronic calorimeter cells as described in Chapter~\ref{ss:cluster}. Once the clusters have been built, they are used as input to the the anti-$k_t$ algorithm~\cite{antikt1} with radius parameter $R=0.4$. The final 4-momentum of the jet is defined as the sum of the 4-momenta of its constituent topo-clusters. 
+
+At this stage, the jet reconstruction efficiency and its uncertainty can be measured in data using the fraction track-jets matched to calorimeter jets. The efficiency can also be calculated using a tag-and-probe method in dijet events. The reconstruction efficiency is found to be very small: about 0.0002\% for jets with $\pt< 30 \gev$ and negligible for jets with higher \pt.
+
+The jets are then corrected for the effects of pileup using the jet area method. This method corrects the \pt\ of the jet by subtracting $\rho\times A$. The quantity $\rho$ is defined as the  the energy density in the event calculated from all calibrated topo-clusters within $|\eta|\leq$ 2, and the quantity $A$ is defined as the catchment area of the jet. This correction depends both on the characteristics of the jet and the pileup in the event. Then a residual correction dependent on the instantaneous luminosity and number of reconstructed primary vertices in the event. This correction is primarily relevant in the forward region and is derived from simulation.
+
+Finally, the jets are calibrated according to both their energy and $\eta$~\cite{JES}. The jet direction is corrected so that the jet originates from the primary vertex. THen the energy scale of the jet (JES) correction is applied, which has both an MC-based and \emph{in situ} component. The energy- and $\eta$-dependent MC-based JES scheme is derived from the ratio of the energy of a detector level jet to the matching truth level jet (jets formed using the same anti-$k_t$ algorithm from simulated hadrons). The \emph{in situ} correction uses data events where a jet recoils against a $Z$ or a photon, which can be more precisely measured by the detector. However, this method can only be used for jets with $\pt<800 \gev$. Jets with $\pt<800 \gev$ are calibrated with events where a high \pt\ jet recoils against a several lower \pt\ jets already calibrated by the $Z$ or photon events. The final JES and uncertainty comes from a combination of such measurements. Figure~\ref{fig:jesex} shows the JES uncertainty for jets in the central $\eta$ region. The jet energy resolution (JER) is studied seperately via a similar process with di-jet events, and the resolution in data and simulation is found to be comparable.
+
+
+
+% \begin{figure}[hp]
+% \centering
+% \includegraphics[width=0.6\textwidth]{fig/obj/smalljesunc.pdf}
+% \caption{The relative Jet Energy Scale (JES) uncertainty for jets in the central region~\cite{JES}.}
+% \label{fig:jesex}
+% \end{figure}
 
 
 

@@ -1,0 +1,6 @@
+AcerMC+PY6RadHi & 148.8 & 3.8\e{-14} \\ 
+AcerMC+PY6RadLo & 151.7 & 1.3\e{-14} \\ 
+Alpgen+PY6RadHi & 93.4 & 5.8\e{-6} \\ 
+Alpgen+PY6RadLo & 52.0 & 1.2\e{-1} \\ 
+Madgraph+PY6q^{2}down & 52.6 & 1.1\e{-1} \\ 
+Madgraph+PY6q^{2}up & 86.2 & 4.7\e{-5} \\ 

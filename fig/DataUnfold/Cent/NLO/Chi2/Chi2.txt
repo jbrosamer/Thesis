@@ -1,0 +1,5 @@
+Powheg+PY6hdamp=#infty & 55.3 & 6.7\e{-2} \\ 
+Powheg+PY6hdamp=m_{t} & 60.6 & 2.5\e{-2} \\ 
+Powheg+PY8hdamp=m_{t} & 71.6 & 2.2\e{-3} \\ 
+MC@NLO+HW & 79.0 & 3.4\e{-4} \\ 
+Powheg+HWhdamp=#infty & 45.6 & 2.9\e{-1} \\ 

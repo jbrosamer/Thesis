@@ -12,7 +12,7 @@
 % Useful particle definitions - include with particle option in atlasphysics.sty
 % Included by default
 %-------------------------------------------------------------------------------
-%\let\sst=\scriptscriptstyle
+%\let\sst=\textscriptscriptstyle
 %
 % +--------------------------------------------------------------------+
 % |                                                                    |
@@ -41,7 +41,6 @@
 \newcommand*{\nbar}{\ensuremath{\bar{\nu}}\xspace}
 \newcommand*{\nnbar}{\antibar{\nu}}
 \newcommand*{\micron}{\ensuremath{\mu \textrm{m}}}
-\newcommand*{\chisq}{\ensuremath{\chi^2}}
 %
 % +--------------------------------------------------------------------+
 % |                                                                    |
@@ -87,7 +86,7 @@
 \newcommand*{\pimp}{\ensuremath{\pii^{\mp}}\xspace}
 \let\etaa=\eta
 \renewcommand*{\eta}{\ensuremath{\etaa}\xspace}
-\newcommand*{\etaprime}{\ensuremath{\eta^{\scriptscriptstyle\prime}}\xspace}
+\newcommand*{\etaprime}{\ensuremath{\eta^{\textscriptscriptstyle\prime}}\xspace}
 %
 % +--------------------------------------------------------------------+
 % |                                                                    |
@@ -118,7 +117,7 @@
 \renewcommand*{\psi}{\ensuremath{\psii}\xspace}
 \newcommand*{\jpsi}{\ensuremath{J/\psi}\xspace}
 \newcommand*{\Jpsi}{\ensuremath{J/\psi}\xspace}
-\newcommand*{\psip}{\ensuremath{\psi^{\scriptscriptstyle\prime}}\xspace}
+\newcommand*{\psip}{\ensuremath{\psi^{\textscriptscriptstyle\prime}}\xspace}
 %
 % +--------------------------------------------------------------------+
 % |                                                                    |
@@ -127,10 +126,10 @@
 % +--------------------------------------------------------------------+
 %
 % \newcommand*{\Ups}{\ensuremath{\mit\Upsilon}\xspace}
-\newcommand*{\Upsp}{\ensuremath{\mit\Upsilon^{\scriptscriptstyle\prime}}\xspace}
-\newcommand*{\Upspp}{\ensuremath{\mit\Upsilon^{\scriptscriptstyle\prime\prime}}\xspace}
-\newcommand*{\Upsppp}{\ensuremath{\mit\Upsilon^{\scriptscriptstyle\prime\prime\prime}}\xspace}
-\newcommand*{\Upspppp}{\ensuremath{\mit\Upsilon^{\scriptscriptstyle\prime\prime\prime\prime}}\xspace}
+\newcommand*{\Upsp}{\ensuremath{\mit\Upsilon^{\textscriptscriptstyle\prime}}\xspace}
+\newcommand*{\Upspp}{\ensuremath{\mit\Upsilon^{\textscriptscriptstyle\prime\prime}}\xspace}
+\newcommand*{\Upsppp}{\ensuremath{\mit\Upsilon^{\textscriptscriptstyle\prime\prime\prime}}\xspace}
+\newcommand*{\Upspppp}{\ensuremath{\mit\Upsilon^{\textscriptscriptstyle\prime\prime\prime\prime}}\xspace}
 \newcommand*{\UoneS}{\ensuremath{\mit\Upsilon(\text{1S})}\xspace}
 \newcommand*{\Ups}[1]{\ensuremath{\mit{\Upsilon}(\text{#1S})}\xspace}
 %
@@ -288,13 +287,15 @@
 \newcommand*{\ipb}{\mbox{pb$^{-1}$}}
 \newcommand*{\inb}{\mbox{nb$^{-1}$}}
 
-\newcommand*{\pow}{{\sc PowHeg}}
-\newcommand*{\py}{{\sc Pythia}}
-\newcommand*{\hw}{{\sc Herwig}}
-\newcommand*{\alpg}{{\sc Alpgen}}
-\newcommand*{\mcnlohw}{{MC@NLO+{\sc Herwig}}}
-\newcommand*{\acermc}{{\sc{Acer}MC}}
-\newcommand*{\madgraph}{{\sc MadGraph}}
+\newcommand*{\pow}{{\textsc PowHeg}}
+\newcommand*{\py}{{\textsc Pythia}}
+\newcommand*{\pye}{{\textsc Pythia8}}
+\newcommand*{\peight}{\pow+{\textsc Pythia8}}
+\newcommand*{\hw}{{\textsc Herwig}}
+\newcommand*{\alpg}{{\textsc Alpgen}}
+\newcommand*{\mcnlohw}{{MC@NLO+{\textsc Herwig}}}
+\newcommand*{\acermc}{{\textsc{Acer}MC}}
+\newcommand*{\madgraph}{{\textsc MadGraph}}
 \newcommand*{\powpy}{\pow+\py~hdamp=$\infty$}
 \newcommand*{\hdamp}{\pow+\py~hdamp=$m_t$}
 \newcommand*{\madpy}{{\madgraph+\py}}
@@ -304,9 +305,11 @@
 \newcommand*{\sigmapt}{\ensuremath{\frac{1}{\sigma_{\emubb}} \frac{d \sigma_{\mathrm{jet}} } {dp_T}}}
 \newcommand*{\sigmapti}{\ensuremath{\frac{1}{\sigma_{\emubb}} \frac{d \sigma_{\mathrm{jet,}i}}{dp_T}}}
 \newcommand*{\sigmaptb}{\ensuremath{\frac{1}{2}\frac{1}{\sigma_{\emubb}} \frac{d \sigma_{b-\mathrm{jet}}}{dp_T^i}}}
-\newcommand*{\bjet}{\ensuremath{b-\mathrm{jet}}}
+\newcommand*{\chisq}{\ensuremath {\chi^{2}}}
+\newcommand*{\bjet}{\ensuremath{b\textrm{-jet}}}
 \newcommand*{\pttop}{\ensuremath{p_T^\mathrm{top}}}
-\newcommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\newcommand*{\ptjet}{\ensuremath{p_T^\mathrm{jet}}}
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
 
 \newcommand*{\TeV}{\ifmmode {\mathrm{\ Te\kern -0.1em V}}\else
                    \textrm{Te\kern -0.1em V}\fi}%

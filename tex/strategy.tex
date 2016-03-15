@@ -1,4 +1,67 @@
-\section{Event selection}
-\section{Extra jets}
-\section{Correction procedure}
-\section{Evaluation of generators}
+This thesis presents a measurement of the multiplicity and differential 
+cross section for additional (a.k.a. extra) jets produced in 
+association with top quark decay products as a function of jet \pT.  Jets are selected from the  $R=0.4$ anti-$k_t$
+collection and are calibrated using the final 2012 calibration. These additional jets are ordered 
+in transverse momentum and labeled by \textit{rank} $i$, such that $i=1$ represents 
+the leading (highest transverse momentum),  $i=2$ the subleading jet, {\textit etc.}.  The cross sections
+\sigmapti\ for $i=1$ through $i=4$ are measured and 
+the multiplicity is measured for the number of jets $N_{Jets}=1$ through $N_{Jets}=4$ 
+and inclusively for  $N_{Jets}\ge 5$.  Here \sigemubb\ is the fiducial production cross section 
+for  events containing a high \pT\ electron, a high \pT\ muon and two tagged \bjet s,
+where all four objects are required to pass the fiducial selection:  $\pT>25$~\GeV\ and pseudorapidity $|\eta|<2.5$,
+and where the  additional jets in the event are required to have
+${p_T}^{i}>25$~\GeV\ and $|\eta^{i}|<4.5$. Thus  $\int$\sigmapti $d{p_T}^{i}$ gives
+the fraction of the accepted events that contain at least $i$ jets.
+
+The event selection employed here closely matches that used in the ATLAS 8~\TeV\ cross
+section measurement\cite{xsec}. The event rates and background estimates obtained 
+are consistent with those obtained for that analysis and result in a sample with a >99\% purity
+for the dilepton plus two $b$-jet final state. More than 95\%\ of
+the events that pass the reconstruction selection cuts also pass the truth fiducial requirements.
+
+% Additional jets in events passing the selection criteria are selected from the  $R=0.4$ anti-$k_t$
+% collection and are calibrated using the final 2012 calibration.  These \pt and \textit{rank} of each 
+% jet is encoded into a single bin number. The \textit{rank} of a jet is defined as its \pt order in an event, so that the rank of the leading jet is 1, the rank of the subleading jet is 2, the rank of the subsubleading jet is 3 and so on. 
+
+Reconstructed jets not from the primary collision are called \textit{unmatched jets} and treated as
+background.  Their origin can be studied using simulated samples. In the baseline MC simulation, $\sim 4\%$ of the events 
+contain at least one reconstructed calorimeter
+jet that cannot be matched to a jet reconstructed from truth particles.  The largest
+source of these unmatched jets is pileup interactions.  A second
+source is attributable to  detector effects which result in a single truth jet being reconstructed as
+two jets in the detector or where  the separation  $\Delta R$ between the reconstructed and truth jet
+exceeds the matching cuts.  The rate of unmatched jets is determined as a function of
+jet rank and  \pT\ and  is subtracted from the reconstructed distribution before that distribution is
+unfolded.
+
+The unfolding procedure used to correct the background-subtracted extra jet \pt~  distributions to the true
+spectra takes  reconstruction efficiency and resolution effects
+into account.  For events that pass the fiducial requirements at both the truth and the reconstruction level,
+a response matrix that maps between truth and reconstruction \pt~ and jet ordering is constructed using simulated data.  The reconstructed spectrum is corrected for migration
+of jets with truth \pT\ below the 25~\GeV\ cut but reconstructed \pT\ above it using
+a correction factor obtained from simulated data. 
+%are incorporated into the response matrix by including extra bins with truth \pT\  below 25~\GeV\ .  
+Because the ordered full \pT\  distributions
+are corrected with a single unfolding matrix, cases where the relative rank of two reconstructed jets
+differs from of their associated truth jets are properly treated in the unfolding.  
+
+%The unfolded distribution is then normalized by the number of events passing the event selection, producing a distribution of the mean number of jets per grand bin per reconstructed event.
+
+The unfolded jet \pT\ spectra provide unbiased measurements of the true transverse momentum distributions of the ordered
+jets for events passing the reconstruction-level event selection cuts.   However, they do 
+not provide an unbiased measurement of the distributions for events passing the truth fidicial selection.
+While most events that pass the reconstruction requirements
+also pass the selection cuts at truth level, the inverse is not the case. Only about 25\%\ of the events
+passing the truth selection also pass reconstruction.  Furthermore, the event selection efficiency
+depends on the kinematics of the top decays;  regions of phase space where the top decay
+products have higher \pT\ are more likely to pass the selection criteria.  The resulting bias on
+the unfolded distribution is corrected  using bin-by-bin  factors obtained from MC.  
+These correction factors typically differ from unity by less than 10\%.
+
+
+The distribution obtained
+after applying this final correction is \sigmapti.  The multiplicity
+is obtained by integrating the differential \pT\ distribution separately for each jet rank.
+
+
+

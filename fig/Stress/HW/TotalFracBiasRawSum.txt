@@ -1,0 +1,2 @@
+Iterations, Powheg+HW,Err,Powheg+PY FS,Err,Powheg+PY hdamp=m_{t},Err,MadGraph+PY,Err,Powheg+PY hdamp=#infty,Err,Powheg+PY8,Err,MC@NLO+HW,Err,MadGraph+PY
+2, -5.0\e{-2, -2.1\e{-1, -1.1\e{-1, -2.7\e{-1, -2.1\e{-1, -2.3\e{-1, 2.7\e{-1, -2.7\e{-1

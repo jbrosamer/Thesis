@@ -1,0 +1,2 @@
+Sample, Chi2, p-val 
+2 Iterations & 1.2\e{1 

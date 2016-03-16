@@ -13,9 +13,13 @@
 \contentsline {table}{\numberline {6.5}{\ignorespaces Number of events with an opposite sign $e\mu $ and at least 2 $b$-jets for different \ensuremath {t\bar {t}}\xspace generators. The last column gives scale factor to normalize the sum of the \ensuremath {t\bar {t}}\xspace \ simulatation and single top yields ($N_{\mathrm {single\nobreakspace {}top}}=361.4$) to the data yield (12332).\relax }}{53}
 \addvspace {10pt}
 \addvspace {10pt}
+\contentsline {table}{\numberline {8.1}{\ignorespaces Binning for unfolding of extra jets. Jets are binned simultaneously in both rank (\ensuremath {p_{\text {T}}}\xspace order) and \ensuremath {p_{\text {T}}}\xspace . For each jet rank, variable sized \ensuremath {p_{\text {T}}}\xspace bins are chosen so that at least 10 data events fall in each bin. The first bin in \ensuremath {p_{\text {T}}}\xspace for each rank is treated as underflow bins. These bins are not reported as part of the measurement.}}{66}
+\contentsline {table}{\numberline {8.2}{\ignorespaces Number of events passing different combinations of truth and reconstructed selection requirements.\relax }}{71}
+\contentsline {table}{\numberline {8.3}{\ignorespaces Number of selected reconstructed events that fail truth selection categorized by reason they have failed. The selections are applied sequentially in the order listed in the table.\relax }}{75}
+\contentsline {table}{\numberline {8.4}{\ignorespaces Number of truth events that fail reconstruction selection categorized by reason they have failed. The selections are applied sequentially in the order listed in the table.\relax }}{75}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {table}{\numberline {10.1}{\ignorespaces $\chi ^2$ between extra jet \ensuremath {p_{\text {T}}}\xspace \ spectra in fully corrected data and different generators. The first column represents the agreement including only (diagonal) statistical uncertainties. The second column also includes the covariance due to systematic uncertainties (primarily JES).\relax }}{72}
+\contentsline {table}{\numberline {10.1}{\ignorespaces $\chi ^2$ between extra jet \ensuremath {p_{\text {T}}}\xspace \ spectra in fully corrected data and different generators. The first column represents the agreement including only (diagonal) statistical uncertainties. The second column also includes the covariance due to systematic uncertainties (primarily JES).\relax }}{96}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}

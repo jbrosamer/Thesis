@@ -1,6 +1,6 @@
-The Standard Model (SM) theory of particle physics has been very successful at describing the interactions of fundamental particles. With the discovery of the Higgs boson, the SM is complete and may be the correct theory up to the energy scale of gravity. The Large Hadron Collider (LHC) was built in order to probe this the SM and look for solutions to some of the unknown issues in particle physics that may involve physics beyond the stand model.
+The Standard Model theory of particle physics has been very successful at describing the interactions of fundamental particles. With the discovery of the Higgs boson, the Standard Model is complete and may be the correct theory up to the energy scale of gravity. The Large Hadron Collider (LHC) was built in order to probe this the Standard Model and look for solutions to some of the unknown issues in particle physics that may involve physics beyond the stand model.
 
-Despite the success of the SM, one of the most uncertain of its sectors is Quantum Chromodynamics (QCD). Due to the non-pertubative nature of QCD as well as its higher energy scale, QCD has not been as precisely measured as other parts of the SM. In particular, since the top quark was only discovered in the late 1990s, its decays and properties have not been as studied as thoroughly. 
+Despite the overwhelming success of the Standard Model, some uncertainty remains in predictions in the Quantum Chromodynamics (QCD) sector at the LHC. Due to the non-pertubative nature of QCD as well as its higher energy scale, QCD has not been as precisely measured as other parts of the Standard Model. In particular, since the top quark was only discovered in the late 1990s, its decays and properties have not been as studied as thoroughly. 
 
 The top quark plays a special role in the Standard Model and in searches for
 physics beyond the Standard Model .  Its high mass means its coupling to the
@@ -13,50 +13,44 @@ events is an important part of the LHC program.
 Measurements of the activity of additional jets (jets not coming from the decay of top quarks)
 have been made by ATLAS~\cite{gapfraction,hdamp,ljets} and CMS\cite{Chatrchyan:2014gma} using
 pp data with $\sqrt{s}=7~\TeV$.  Comparison of the measured distributions with the predictions of Monte Carlo (MC) generators
-indicate that some state-of-the-art generators (e.g. {\textsc MC@NLO}) have a difficult time in reproducing the data,
+indicate that some state-of-the-art generators (e.g. \textsc{ MC@NLO}) have a difficult time in reproducing the data,
 while for others  agreement with data can be improved with appropriate
-choice of generator parameters.  For example, in {\textsc Powheg+Pythia} adding a damping
+choice of generator parameters.  For example, in \textsc{Powheg+Pythia} adding a damping
 function that limits the resummation of higher-order effects incorportated into  the Sudakov form factor improves
 the agreement between data and MC~\cite{hdamp} at 7~TeV.  
 
 The range of predictions observed in standard MC generators for
 8~\TeV\ $pp$ interactions is shown in 
-Figure~\ref{fig:introtjets}. The fiducial definition of extra jets is provided in Section~\ref{sec:extrajets}.  
+Figure~\ref{fig:introtjets}. The fiducial definition of these extra jets is provided in Chapter~\ref{ch:extrajets}.  
 Differences in rate as large as 40\%\  are seen for
 jet multiplicities $\ge 5$.  Differences up to 20\%\ for the leading
 jet and up to 40\%\ for the subleading jet are seen at high jet transverse
 momentum.  
+\begin{figure}
+\centering
+\subfloat{
+\includegraphics[width=0.45\textwidth]{fig/MCComp/NTruthExtraJets30.pdf}}
+~
+\subfloat{
+\includegraphics[width=0.45\textwidth]{fig/MCComp/NTruthExtraJets50.pdf}} \\
+\subfloat{
+\includegraphics[width=0.45\textwidth]{fig/MCComp/TruthPtJet0.pdf}} ~
+\subfloat{
+\includegraphics[width=0.45\textwidth]{fig/MCComp/TruthPtJet1.pdf}}
+\caption{Comparison of the truth level extra jet multiplicity and $\pt$ distributions in generated $\ttbar$ events with an opposite-sign $e\mu$ pair and at least 2 $b$-jets.  Jets are reconstructed using the anti-$k_t$ algorithm with 
+the distance parameter $R=0.4$.
+Each simulation is normalized by the number of events passing the truth-level selection.
+The ratio plots compare each generator to the predictions of the baseline \textsc{ Powheg+Pythia} sample with the hdamp parameter
+set to $\infty$.}
+\label{fig:introtjets}
+\end{figure}
 
-This thesis presents a study of jet activity in top quark events using the $e\mu$ final state 
-with 2 $b$-tagged jets in $pp$ collisions at $\sqrt{s}=8$ TeV. The analysis employs
+This analysis presents a study of jet activity in top quark events using the $e\mu$ final state 
+with at least 2 $b$-tagged jets in $pp$ collisions at $\sqrt{s}=8$ TeV. The analysis employs
 an event selection which closely matches that used in the ATLAS 8~\TeV\ cross
 section measurement\cite{xsec}.
 The particle-level fiducial cross section \sigmapti\ for additional jets with 
 rank 1-4, where rank=1  is the leading additional jet are measured and
 these distributions are used to obtain the extra jet multiplicity as a function of minimum jet \pt\ threshold. 
-The \pt\ distribution of \bjet s is also presented.
-
-At lowest order, the $e\mu+2\ b$-jet final state results from $t\overline t$ production where both the 
-$t$ and the $\overline t$  decay leptonically.  
-Events where the leptons do not arise from $W$ decay are suppressed by isolation and
-transverse momentum cuts on the leptons; they are treated as background and corrected for in the analysis.
-The distinction between $t\overline{t}$ and $Wt$ final states cannot be made at NLO in QCD unless the top quark is stable.
-Once it decays to $Wb$, the same initial and final state appear in both processes,
-{\textit e.g.} $gg\to W^+W^- b \overline{b}$ appears at LO and NLO via $gg\to  t\overline{t}\to W^+W^- b \overline{b}$ or
-at NLO via  $gg\to  Wt\overline{b} \to W^+W^- b \overline{b}$.
-Quantum interference must occur and the classification into
-"$t\overline{t}$" and "$Wt$"is not possible. If restrictions are placed on the final state,
- this interference can be restricted and an approximate distinction made. For example,
-if a kinematic constraint is applied so both  $W^-\overline{b}$ and  $W^+ b$
-have invariant mass equal to the top mass, 
-the process is dominated by "$t\overline{t}$", if  $W^-\overline{b}$ has an invariant mass
-far from the top quark mass "$Wt$" will dominate.
-No such kinematic constraint is applied in this analysis, so that any discussion of  "$t\overline{t}$" 
-and "$Wt$" contributions can only be made in simulation where samples labelled by 
- "$t\overline{t}$" and "$Wt$" are used.  In standard ATLAS MC samples, $\sim 3\%$ of the 
-$e\mu+2\ b$-jet are assigned to the "$Wt$" process.  This analysis chooses to treat this
-component as signal rather than background as it cannot separate them in a model independent manner. However, if a MC is used to fix the
- "$Wt$" component, then it can be subtracted from the data and comparisons with "$t\overline{t}$" MC made. The subtraction will 
-introduce (small) additional systematic uncertainties. The effect of such a subtraction is discussed below.
 
 This thesis is structured as follows: FINAL CHAPTER STRUCTURE TO FOLLOW

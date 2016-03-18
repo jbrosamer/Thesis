@@ -44,7 +44,6 @@ testpdflatex:
 	bibtex    ${BASENAME}
 	pdflatex  ${BASENAME}
 	pdflatex  ${BASENAME}
-	for i in tex/*.tex; do j=${i%.tex}; pdflatex -jobname=the$j "\includeonly{$j}\input{thesis}"; done
 	# bash scripts/pages.sh
 
 

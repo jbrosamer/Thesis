@@ -3,27 +3,27 @@ Bias versus spread
 
 \section{Detector modeling}
 Detector modeling uncertainties are evaluated using the baseline \ttbar\ simulation by varying the
-default scale factors within their systematic uncertainties using the {\texttt TopRootCore} framework. Jet-related uncertainties, primarily the jet energy scale, are the biggest source of detector modeling uncertainity. Uncertainities due to lepton isolation, reconstruction, identification and trigger efficiencies have been evaluated, but found to be negligible. 
+default scale factors within their systematic uncertainties using the \texttt{ TopRootCore} framework. Jet-related uncertainties, primarily the jet energy scale, are the biggest source of detector modeling uncertainity. Uncertainities due to lepton isolation, reconstruction, identification and trigger efficiencies have been evaluated, but found to be negligible. 
 
 
 %The differences between the varied and nominal unfolded distributions are added in quadrature, symmetrizing if necessary. Finally, the distributions are smoothed with a gaussian kernel procedure to reduce non-physical bin-to-bin fluctuations. 
 \subsection{Nuisance parameters}
 \label{ss:np}
-Jet energy scale uncertainties are evaluated using the {\texttt JetUncertainties-00-08-25} package and the 
-{\texttt InsituJES2012\_23NP\_ByCategory.config} configuration.
+Jet energy scale uncertainties are evaluated using the \texttt{ JetUncertainties-00-08-25} package and the 
+\texttt{ InsituJES2012\_23NP\_ByCategory.config} configuration.
 Each of the 23 nuisance parameters is independently varied.
-The jet energy resolution (JER) uncertainty is derived from measurements of the jet response in data and found to agree well with simulation. The uncertainty is evaluated using the {\texttt ApplyJetResolutionSmearing-00-01-04} package.  Jet energy is smeared using
+The jet energy resolution (JER) uncertainty is derived from measurements of the jet response in data and found to agree well with simulation. The uncertainty is evaluated using the \texttt{ ApplyJetResolutionSmearing-00-01-04} package.  Jet energy is smeared using
 a function that depends on  \pt\ and $\eta$.    Because this procedure only allows for an increase in resolution, 
 the resulting uncertainty is symmetrized.
-%The systematic uncertainty due to the JVF cut was estimated by varying the JVF with the {\texttt JVFUncertaintyTool-00-00-04}.
+%The systematic uncertainty due to the JVF cut was estimated by varying the JVF with the \texttt{ JVFUncertaintyTool-00-00-04}.
 %The jet reconstruction efficiency and its uncertainty were measured in data using the fraction track-jets matched to calorimeter jets.
 % The difference between simulation and data is taken as the uncertainty. 
-The uncertainty on the jet finding efficiency is parametrized in the  {\texttt JetEffiProvider-00-00-05} tool.
+The uncertainty on the jet finding efficiency is parametrized in the  \texttt{ JetEffiProvider-00-00-05} tool.
 This uncertainty is propagated to the extra jet distribution by randomly dropping jets in the nominal simulation
 and reanalyzing the resulting data.  The resulting difference is then symmetrized. 
 
 
-The $b$-tagging scale factor and uncertainty for $b$-tagging efficiency and mistag is evaluated using the {\texttt BTaggingCalibrationDataInterface}. To avoid using efficiencies and mistag rates measured from the same events as this analysis, the System~8 calibrations
+The $b$-tagging scale factor and uncertainty for $b$-tagging efficiency and mistag is evaluated using the \texttt{ BTaggingCalibrationDataInterface}. To avoid using efficiencies and mistag rates measured from the same events as this analysis, the System~8 calibrations
 are used.
 
 
@@ -120,10 +120,10 @@ Each variation is unfolded with the nominal \mcnlohw\ migration matrix. For each
 \end{displaymath}
 
 \begin{figure}
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/PDF/AvgBias.pdf}}
 ~
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/PDF/AvgFracBias.pdf}}
 ~
 \label{fig:pdfbias}
@@ -133,10 +133,10 @@ Each variation is unfolded with the nominal \mcnlohw\ migration matrix. For each
 
 
 \begin{figure}
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/Stress/110875atlfast/FracBias2Iterations.pdf}}
 ~
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/Stress/110878atlfast/FracBias2Iterations.pdf}}
 \label{fig:radbias}
 \caption{
@@ -146,16 +146,16 @@ Fractional bias distributions for pseudoexperiments from \madpy\ radiation sampl
 
 \begin{figure}
 ~
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/Pileup/RecoPtFalseJet0.pdf}}
 ~
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/Pileup/RecoPtFalseJet1.pdf}}\\
 ~
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/Pileup/RecoPtFalseJet2.pdf}}
 ~
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/Pileup/RecoPtFalseJet3.pdf}}
 ~
 \caption{Unmatched jets in the baseline \ttbar\ simulation and the hybrid sample. The difference between the two is used to estimate the uncertainty.}
@@ -164,11 +164,11 @@ Fractional bias distributions for pseudoexperiments from \madpy\ radiation sampl
 
 \section{Combined uncertainty}
 %%%%%SHOULD THIS SECTION MOVE????
-A covariance matrix associated with the statistical uncertainty of the input data spectrum returned from {\texttt RooUnfold}. The covariance due to all sources of uncertainty described above is then added to obtain the final uncertainty on the corrected data. Figure~\ref{fig:cov}  shows (a) the statistical covariance matrix  and (b) total covariance matrix for the unfolded data. The diagonal elements of total matrix are used to obtain uncertainties on the bins of \pt\ and rank. The entire matrix is used to assess the \chisq agreement between data and generators. 
+A covariance matrix associated with the statistical uncertainty of the input data spectrum returned from \texttt{ RooUnfold}. The covariance due to all sources of uncertainty described above is then added to obtain the final uncertainty on the corrected data. Figure~\ref{fig:cov}  shows (a) the statistical covariance matrix  and (b) total covariance matrix for the unfolded data. The diagonal elements of total matrix are used to obtain uncertainties on the bins of \pt\ and rank. The entire matrix is used to assess the \chisq agreement between data and generators. 
 
 Figure ~\ref{fig:SmoothSys} shows the sum of uncertainties from all sources, broken into categories as follows.
 \begin{description}
-\item[Statistics:] Statistical uncertainty on the data is returned from {\texttt RooUnfold}
+\item[Statistics:] Statistical uncertainty on the data is returned from \texttt{ RooUnfold}
 \item[Modeling:] NLO generator, radiation, shower and migration matrix statistics uncertainties (Section~\ref{ss:unfsystt}-\ref{ss:mcstats})
 \item[PDF:] PDF variations, determined from \mcnlohw (Section~\ref{ss:pdf})
 \item[Pileup:] Uncertainties from JVF nuisance parameters (Section~\ref{ss:np}) and false jet modelling (Section~\ref{ss:sysbkg})
@@ -203,10 +203,10 @@ In most bins, statistical uncertainty dominates. At low jet \pt, JES is the larg
 \label{fig:SmoothSys}
 \end{figure}
 % \begin{figure}
-% \subfloat[]{
+% \subfloat{
 % \includegraphics[width=0.45\textwidth]{fig/Cov/TotSys.pdf}}
 % ~
-% \subfloat[]{
+% \subfloat{
 % \includegraphics[width=0.45\textwidth]{fig/Cov/Total.pdf}}
 % ~
 % \caption{(a) Covariance matrix representing the systematic uncertainty on the measured
@@ -215,13 +215,13 @@ In most bins, statistical uncertainty dominates. At low jet \pt, JES is the larg
 % \label{fig:uncmat}
 % \end{figure}
 \begin{figure}
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/Cov/Stat.pdf}}
 ~
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/Cov/Total.pdf}}
 ~
-\caption{(a) The covariance matrix associated with the statistical uncertainty of the input spectrum returned from {\texttt RooUnfold}. (b) The covariance matrix from all sources of uncertainty, obtained by adding the covariance matrices from all sources of systematic uncertainty to (a). This matrix is used to determine the \chisq\ agreement between generators and the fully corrected data.}
+\caption{(a) The covariance matrix associated with the statistical uncertainty of the input spectrum returned from \texttt{ RooUnfold}. (b) The covariance matrix from all sources of uncertainty, obtained by adding the covariance matrices from all sources of systematic uncertainty to (a). This matrix is used to determine the \chisq\ agreement between generators and the fully corrected data.}
 \label{fig:cov}
 \end{figure}
 

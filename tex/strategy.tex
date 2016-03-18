@@ -1,9 +1,9 @@
-This thesis presents a measurement of the multiplicity and differential 
+This analysis presents a measurement of the multiplicity and differential 
 cross section for additional (a.k.a. extra) jets produced in 
-association with top quark decay products as a function of jet \pT.  Jets are selected from the  $R=0.4$ anti-$k_t$
+association with top quark decay products as a function of jet \pT. Events top quarks decaying to the the $e\mu$ final state with at least 2 $b$-tagged jets are used.   Jets are selected from the  $R=0.4$ anti-$k_t$
 collection and are calibrated using the final 2012 calibration. These additional jets are ordered 
 in transverse momentum and labeled by \textit{rank} $i$, such that $i=1$ represents 
-the leading (highest transverse momentum),  $i=2$ the subleading jet, {\textit etc.}.  The cross sections
+the leading (highest transverse momentum),  $i=2$ the subleading jet, \textit{ etc.}.  The cross sections
 \sigmapti\ for $i=1$ through $i=4$ are measured and 
 the multiplicity is measured for the number of jets $N_{Jets}=1$ through $N_{Jets}=4$ 
 and inclusively for  $N_{Jets}\ge 5$.  Here \sigemubb\ is the fiducial production cross section 
@@ -15,9 +15,33 @@ the fraction of the accepted events that contain at least $i$ jets.
 
 The event selection employed here closely matches that used in the ATLAS 8~\TeV\ cross
 section measurement\cite{xsec}. The event rates and background estimates obtained 
-are consistent with those obtained for that analysis and result in a sample with a >99\% purity
+are consistent with those obtained for that analysis and result in a sample with a greater than 99\% purity
 for the dilepton plus two $b$-jet final state. More than 95\%\ of
 the events that pass the reconstruction selection cuts also pass the truth fiducial requirements.
+
+Rather than subtracting $Wt$ events as background, this analysis chooses to measure the extra jets from both $Wt$ and \ttbar\ events that pass selection with the following rationale. At lowest order, the $e\mu+2\ b$-jet final state results from $t\overline t$ production where both the 
+$t$ and the $\overline t$  decay leptonically.  
+Events where the leptons do not arise from $W$ decay are suppressed by isolation and
+transverse momentum cuts on the leptons; they are treated as background and corrected for in the analysis.
+The distinction between $t\overline{t}$ and $Wt$ final states cannot be made at NLO in QCD unless the top quark is stable.
+Once it decays to $Wb$, the same initial and final state appear in both processes,
+\textit{ e.g.} $gg\to W^+W^- b \overline{b}$ appears at LO and NLO via $gg\to  t\overline{t}\to W^+W^- b \overline{b}$ or
+at NLO via  $gg\to  Wt\overline{b} \to W^+W^- b \overline{b}$.
+Quantum interference must occur and the classification into
+``\ttbar'' and ``$Wt$"is not possible. If restrictions are placed on the final state,
+ this interference can be restricted and an approximate distinction made. For example,
+if a kinematic constraint is applied so both  $W^-\overline{b}$ and  $W^+ b$
+have invariant mass equal to the top mass, 
+the process is dominated by ``\ttbar'', if  $W^-\overline{b}$ has an invariant mass
+far from the top quark mass ``$Wt$" will dominate.
+No such kinematic constraint is applied in this analysis, so that any discussion of  ``\ttbar'' 
+and ``$Wt$" contributions can only be made in simulation where samples labelled by 
+ ``\ttbar'' and ``$Wt$" are used.  In standard ATLAS MC samples, $\sim 3\%$ of the 
+$e\mu+2\ b$-jet are assigned to the ``$Wt$" process.  This analysis chooses to treat this
+component as signal rather than background as it cannot separate them in a model independent manner. However, if a MC is used to fix the
+ ``$Wt$" component, then it can be subtracted from the data and comparisons with ``\ttbar'' MC made. The subtraction will 
+introduce (small) additional systematic uncertainties. 
+
 
 % Additional jets in events passing the selection criteria are selected from the  $R=0.4$ anti-$k_t$
 % collection and are calibrated using the final 2012 calibration.  These \pt and \textit{rank} of each 

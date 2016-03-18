@@ -1,140 +1,131 @@
-The following section describes the procedure used to select the events used for analysis. First, the data and simulation samples to be used are defined. Then, the fiducial definition of the physics objects used to select the events is given. Then, the criteria for selecting events is discussed. Finally, the event yields and reconstructed distributions are reviewed.
+The following section describes the procedure used to select the events used for analysis. First, the data and simulation samples to be used are defined. Then, the fiducial definition of the physics objects used to select the events is given. Then, the criteria for selecting events is discussed. Finally, the event yields and reconstructed distributions are reviewed. 
 
 \section{Data samples}
-Data and Monte Carlo samples are used in the common D3PD format ({\texttt NTUP\_COMMON}), using the {\texttt p1562} processing tag. The D3PDs are processed using software based on {\texttt AnalysisTop-1.8.0}~\cite{trc}.
+Data and Monte Carlo samples are used in the common D3PD format (\texttt{ NTUP\_COMMON}), using the \texttt{ p1562} processing tag. The D3PDs are processed using software based on \texttt{ AnalysisTop-1.8.0}~\cite{trc}.
 
 \subsection{Collision data}
 The analysis is performed on the complete 2012 $pp$  \rts=8 \tev\ LHC collision dataset. Events are required to
-fulfill standard data quality requirements corresponding to the physics  `AllGood' good run list (GRL)~\cite{grl}, which ensures that all detector components are functioning. Events are required to pass a single electron or single muon trigger chain, with thresholds that are maximally efficient for leptons passing offline selections of $p_T>25$\,GeV.  For electrons, the OR of the {\texttt EF\_24vh\_medium1}\ and {\texttt EF\_e60\_medium1}\ trigger chains is used. For muons, the OR of {\texttt EF\_mu24i\_tight}\ and {\texttt EF\_mu36\_tight} is used. In each case, the higher threshold trigger has no isolation requirement, and adds to the acceptance of the lower threshold trigger at higher lepton $p_T$. 
+fulfill standard data quality requirements corresponding to the physics  `AllGood' good run list (GRL)~\cite{grl}, which ensures that all detector components are functioning. Events are required to pass a single electron or single muon trigger chain, with thresholds that are maximally efficient for leptons passing offline selections of $p_T>25$\,GeV.  For electrons, the OR of the \texttt{ EF\_24vh\_medium1}\ and \texttt{ EF\_e60\_medium1}\ trigger chains is used. For muons, the OR of \texttt{ EF\_mu24i\_tight}\ and \texttt{ EF\_mu36\_tight} is used. In each case, the higher threshold trigger has no isolation requirement, and adds to the acceptance of the lower threshold trigger at higher lepton $p_T$. 
 
-Events are selected from both {\texttt Egamma} and {\texttt Muons} data streams. To avoid double counting of $e\mu$ events appearing in both streams, events passing electron triggers are only accepted from the {\texttt Egamma} stream, {\em i.e.} the {\texttt Muons} stream is only used for events selected {\emph only} by muon triggers. Luminosity blocks where only one stream is seen in the final analysis are vetoed, to avoid biases from losing events from either stream in the upstream reconstruction and data processing. 
+Events are selected from both \texttt{ Egamma} and \texttt{ Muons} data streams defined by the trigger chains. To avoid double counting of $e\mu$ events appearing in both streams, events passing electron triggers are only accepted from the \texttt{Egamma} stream, {\em i.e.} the \texttt{ Muons} stream is only used for events selected \emph{only} by muon triggers. Luminosity blocks where only one stream is seen in the final analysis are vetoed, to avoid biases from losing events from either stream in the upstream reconstruction and data processing. 
 After all these selections, the final analyzed data samples correspond to an integrated luminosity of 20.3\,\ifb\ with an uncertainty of 2.8\%.
 \subsection{Simulated Samples}
 
 Simulated Monte Carlo event samples are used in this analysis to evaluate the efficiency and uncertainty of signal and background.  Both uncorrected and corrected data distributions are also compared to simulated samples to distiguish between physics models. 
-Standard ATLAS top group MC12 samples are used.~\cite{topmc} The corresponding dataset (DS) identification numbers are given  in Tables~\ref{t:ttsamples},~\ref{t:bgsamples}, and ~\ref{t:wtsamples} and a complete list of dataset names is provided in Appendix~\ref{app:ds}.
+Standard ATLAS top group MC12 samples are used~\cite{topmc}.% The corresponding dataset (DS) identification numbers are given  in Tables~\ref{t:ttsamples},~\ref{t:bgsamples}, and ~\ref{t:wtsamples} and a complete list of dataset names is provided in Appendix~\ref{app:ds}.
 
-Samples are processed either through the full ATLAS Geant4\cite{bib:g4} based detector simulation or through the {\texttt AtlFast2}\cite{atlfast2} fast simulation. All samples include additional overlaid minimum bias events generated with {\textsc  Pythia8} \cite{pythia8} to simulate pileup background. 
+Samples are processed either through the full ATLAS Geant4\cite{bib:g4} based detector simulation (``FS'') or through the \texttt{ AtlFast2}\cite{atlfast2} fast simulation. All samples include additional overlaid minimum bias events generated with \textsc{  Pythia8} \cite{pythia8} to simulate pileup background. 
 The simulated samples are reweighted to reproduce the same distributions of $\mu$, the average number of interactions per bunch crossing, as the data. The samples are also reweighted with scale factors to reproduce the electron and muon reconstruction and trigger efficiencies, and the width of the primary vertex distribution in $z$, as measured in the data. Finally, scale factors are applied to account for $b$-tagging efficiencies.  In all cases,
-the scale factors are those specificed in {\texttt AnalysisTop-1.8.0}.
+the scale factors are those specificed in \texttt{ AnalysisTop-1.8.0}.
 
-All Monte Carlo samples are normalized according to the best available theoretical cross-section and $K$-factor calculations, as tabulated in the {\texttt TopDataPreparation} package, tag {\texttt 00-06-48}.
+All Monte Carlo samples are normalized according to the best available theoretical cross-section and $K$-factor calculations, as tabulated in the \texttt{ TopDataPreparation} package, tag \texttt{ 00-06-48}.
 
 \subsubsection{\ttbar samples}\label{ss:mcsignal}
 
-The baseline \ttbar\ samples are produced using {\textsc  Powheg} \cite{Powheg, Powheg2, Powheg3, Powheg4} interfaced to {\textsc  Pythia6} \cite{pythia6} with the Perugia 2011C tune \cite{perugia}, CT10 parton density functions (PDFs) \cite{cttenpdf}, the hdamp parameter set to $\infty$ and fast simulation (DS 117050).  
+The baseline \ttbar\ samples are produced using \textsc{  Powheg} \cite{Powheg, Powheg2, Powheg3, Powheg4} interfaced to \textsc{  Pythia6} \cite{pythia6} with the Perugia 2011C tune \cite{perugia}, CT10 parton density functions (PDFs) \cite{cttenpdf}, the hdamp parameter set to $\infty$ and fast simulation.  
 This same MC tune has been processed using full simulation and the results of the two samples have been compared.
 %After appropriate
 %JES corrections are applied, systematic differences in the prediction are observed. 
 %The stress test in Section~\ref{sec:unfold} confirms the agreement of these two samples.
-{\textsc  Powheg}+{\textsc  Pythia6} is the baseline suggested by the TopReconstruction twiki page as the default \ttbar\ simulation~\cite{topmc}. The atlfast2 sample with the hdamp parameter set to $\infty$ is chosen as the baseline because it has signifigantly higher statistics ($\sim 40$ times data) than either the FS or hdamp=$m_t$ samples ($\sim 20$ times data).
+\textsc{  Powheg}+\textsc{  Pythia6} is the baseline suggested by the TopReconstruction twiki page as the default \ttbar\ simulation~\cite{topmc}. The atlfast2 sample with the hdamp parameter set to $\infty$ is chosen as the baseline because it has signifigantly higher statistics ($\sim 40$ times data) than either the FS or hdamp=$m_t$ samples ($\sim 20$ times data).
 Systematic uncertainties associated with the difference in the response matrices obtained from FS and atlfast are
 assessed in Section~\ref{sec:syst}.
 
 
 %For the baseline dataset, samples using both full and fast  simulation are analyzed to confirm that after making appropriate JES corrections, there are no differences in the predictions.
 
-Alternative \ttbar\ simulation samples are also studied.  At next-to-leading-order, these include {\textsc  Powheg} plus {\textsc  Pythia6}  with the hdamp parameter set to $m_{t}$ (DS 110404); {\textsc  Powheg} plus {\textsc  Pythia8} with the hdamp parameter set to $m_{t}$ and the A14 tune (DS117046) ; {\textsc  MC@NLO} \cite{mcatnlo, mcatnlo2} interfaced to {\textsc  Herwig} \cite{Herwig, Herwig1, Herwig2} with {\textsc  Jimmy} \cite{jimmy} for the underlying event modeling and with the ATLAS AUET2 \cite{auet} tune and CT10 PDFs (DS 105200); and {\textsc  Powheg} plus {\textsc  Herwig} (DS 105860). 
-Alternate multi-leg leading order samples include {\textsc  MadGraph} \cite{Alwall:2011uj} interfaced to {\textsc  Pythia6} \cite{pythia6} with the Perugia 2011C tune \cite{perugia}, and CT10 parton density functions (PDFs) \cite{cttenpdf} (DS 110872); {\textsc  Alpgen} \cite{alpgen} interfaced to {\textsc  Herwig} and {\textsc  Jimmy}, with
-the CTEQ6L1 PDFs \cite{CTEQ} (DS 105890--2, 117897--9, 116108 and 116109); and {\textsc  Alpgen} interfaced to {\textsc  Pythia6}
-(DS 117113--8). To study the effects of initial and final state radiation (ISR/FSR), several samples with different radition parameters were used.
+Alternative \ttbar\ simulation samples are also studied.  At next-to-leading-order, these include \textsc{  Powheg} plus \textsc{  Pythia6}  with the hdamp parameter set to $m_{t}$; \textsc{  Powheg} plus \textsc{  Pythia8} with the hdamp parameter set to $m_{t}$ and the A14 tune ; \textsc{  MC@NLO} \cite{mcatnlo, mcatnlo2} interfaced to \textsc{  Herwig} \cite{Herwig, Herwig1, Herwig2} with \textsc{  Jimmy} \cite{jimmy} for the underlying event modeling and with the ATLAS AUET2 \cite{auet} tune and CT10 PDFs; and \textsc{  Powheg} plus \textsc{  Herwig}. 
+Alternate multi-leg leading order samples include \textsc{  MadGraph} \cite{Alwall:2011uj} interfaced to \textsc{  Pythia6} \cite{pythia6} with the Perugia 2011C tune \cite{perugia}, and CT10 parton density functions (PDFs) \cite{cttenpdf}; \textsc{  Alpgen} \cite{alpgen} interfaced to \textsc{  Herwig} and \textsc{  Jimmy}, with
+the CTEQ6L1 PDFs \cite{CTEQ}; and \textsc{  Alpgen} interfaced to \textsc{  Pythia6}
+. To study the effects of initial and final state radiation (ISR/FSR), several samples with different radition parameters were used.
 
 %ADD IN HERWIG FOR PARTON SHOWERING+MADGRAPH Q2+ISR FSR
 
-The {\textsc  Powheg} and {\textsc  MC@NLO} samples include all \ttbar\ final states except fully-hadronic, where both $W$ bosons decay to \qqbar\ giving a negligible probability to pass the event selection. The {\textsc  MadGraph} sample only included dileptonic final states, where both $W$ bosons decay to leptons. Most of these MC samples contain more than ten times the data statistics.
+The \textsc{  Powheg} and \textsc{  MC@NLO} samples include all \ttbar\ final states except fully-hadronic, where both $W$ bosons decay to \qqbar\ giving a negligible probability to pass the event selection. The \textsc{  MadGraph} sample only included dileptonic final states, where both $W$ bosons decay to leptons. Most of these MC samples contain more than ten times the data statistics.
 
 \subsubsection{Single top samples}
-Only the $Wt$ channel of single top production contributes significantly to \emubb\ events. Single top production is modeled using {\textsc  Powheg+Pythia} with the CT10 PDFs and the Perugia P2011C tune, using the `diagram removal' \cite{Frixione:2008yi} generation scheme (DS 110140). Alternative physics models include the {\textsc  Powheg+Pythia} sample with `diagram subtraction' \cite{Frixione:2008yi} (DS 110142) and \mcnlohw (DS 108346).
+Only the $Wt$ channel of single top production contributes significantly to \emubb\ events. Single top production is modeled using \textsc{  Powheg+Pythia} with the CT10 PDFs and the Perugia P2011C tune, using the `diagram removal' \cite{Frixione:2008yi} generation scheme. Alternative physics models include the \textsc{  Powheg+Pythia} sample with `diagram subtraction' \cite{Frixione:2008yi} and \mcnlohw.
 
 \subsubsection{Background samples}\label{ss:mcbkg}
 
-$Z$+jets events with $Z\rightarrow \ell^-\ell^+$ and diboson production ($WW$, $WZ$ and~$ZZ$) where both bosons decay leptonically can contribute to background. $Z$+jets background is modeled using {\textsc  Alpgen} \cite{Mangano:2002ea} with CTEQ6L1 PDFs, interfaced to {\textsc  Pythia6} with the Perugia P2011C tune, including both samples with 0--5 additional light partons (DS 147105--10, 147113--8, 147121--6), 
-\ccbar\ plus an additional 0--3 partons (DS 200432--5, 200440--3, 200448--51), and \bbbar\
-plus 0--3 partons (DS 200332--5, 200340--3, 200348--51). The heavy flavor overlap procedure (HFOR) \cite{hfor} is used to avoid double counting of configurations where the \ccbar\ or \bbbar\ pair could be produced from either the matrix element or parton shower. The simulated $Z+$jets  events are scaled by the ratios of $Z\rarrow ee$+2 $b$-jets or $Z\rarrow \mu\mu$+2 $b$-jets measured in simulation and data, to account for the mismodeling of heavy-flavor jets produced with $Z$ bosons. Ref.~\cite{xsec} computes this scale factor to be $1.13 \pm 0.08$. 
+$Z$+jets events with $Z\rightarrow \ell^-\ell^+$ and diboson production ($WW$, $WZ$ and~$ZZ$) where both bosons decay leptonically can contribute to background. $Z$+jets background is modeled using \textsc{  Alpgen} \cite{Mangano:2002ea} with CTEQ6L1 PDFs, interfaced to \textsc{  Pythia6} with the Perugia P2011C tune, including both samples with 0--5 additional light partons, 
+\ccbar\ plus an additional 0--3 partons, and \bbbar\
+plus 0--3 partons. The heavy flavor overlap procedure (HFOR) \cite{hfor} is used to avoid double counting of configurations where the \ccbar\ or \bbbar\ pair could be produced from either the matrix element or parton shower. The simulated $Z+$jets  events are scaled by the ratios of $Z\rarrow ee$+2 $b$-jets or $Z\rarrow \mu\mu$+2 $b$-jets measured in simulation and data, to account for the mismodeling of heavy-flavor jets produced with $Z$ bosons. Ref.~\cite{xsec} computes this scale factor to be $1.13 \pm 0.08$. 
 
-Diboson production is simulated using {\textsc  Alpgen+Herwig} with up to three additional partons (DS 107100--11).
-
-
-\begin{table}
-{\small
-\begin{tabular}{|lc|l|l|l|l|}\hline
-Generator & Dataset & Sim & FS & Tune  & Comment \\ \hline
-{\textsc  Powheg+Pythia} hdamp=$\infty$ & 117050 & fast & nFH & P2011C &  baseline\\
-\hline
-{\textsc  Powheg+Pythia} hdamp=$m_t$ & 110404 & fast & nFH & P2011C &  alt. physics \\
-{\textsc  MC@NLO+Herwig} & 105200 & fast & nFH & P2011C & alt. physics \\
-{\textsc  Powheg+Herwig} & 105860 & fast & nFH & AUET2 & alt. shower \\
-{\textsc  Powheg+Pythia8} & 117046 & fast & nFH & A14 & alt. physics \\
-\hline
-{\textsc  MadGraph+Pythia} & 110872 & fast & $\ell\ell$ & P2011C & alt. physics \\
-{\textsc  Alpgen+Pythia} & 201020-4 & fast & nFH & P2012 & alt. physics \\
-{\textsc  Alpgen+Herwig} & 164440-3, & full & nFH  & P2012 & alt. physics \\
-{\textsc  Alpgen+Herwig} & 116108 & full & nFH & P2012 & alt. physics \\
-{\textsc  Alpgen+Herwig} & 116109 & full & nFH & P2012 & alt. physics \\
-\hline
-{\textsc  AcerMC+Pythia} & 117209 &  fast & nFH & MPS AUET2 & more radiation \\
-{\textsc  AcerMC+Pythia} & 117210 &  fast & nFH & LPS AUET2 & less radiation \\
-{\textsc  Alpgen+Pythia} & 201030-4 & fast & nFH & P2012 & ktfac=0.5, more radiation tune \\
-{\textsc  Alpgen+Pythia} & 201040-4 & fast & nFH & P2012 & ktfac=2, less radiation tune \\
-{\textsc  MadGraph+Pythia} & 110878 & fast & $\ell\ell$ & P2011C & more radiation tune \\
-{\textsc  MadGraph+Pythia} & 110875 & fast & $\ell\ell$ & P2011C & less radiation tune \\
-\hline \hline
-\end{tabular}
-}
-\caption{\ttbar samples used in this
-analysis. The sample name, dataset ID, simulation type, final state simulated 
-(non-fully hadronic, nFH, or dilepton, $\ell\ell$) and tune is given. The {\textsc  Alpgen} samples consist of several samples
-with different parton multiplicities and sometimes dedicated heavy flavor samples.\label{t:ttsamples}}
-\end{table}
+Diboson production is simulated using \textsc{  Alpgen+Herwig} with up to three additional partons.
 
 
-\begin{table}
-\begin{center}
-\begin{tabular}{|lc|l|l|l|l|}\hline
-Generator &  Process  & Sim  & FS & Tune  & Comment \\ \hline
+% \begin{table}
+% {\small
+% \begin{tabular}{|lc|l|l|l|l|}\hline
+% Generator & Dataset & Sim & FS & Tune  & Comment \\ \hline
+% \textsc{  Powheg+Pythia} hdamp=$\infty$ & 117050 & fast & nFH & P2011C &  baseline\\
+% \hline
+% \textsc{  Powheg+Pythia} hdamp=$m_t$ & 110404 & fast & nFH & P2011C &  alt. physics \\
+% \textsc{  MC@NLO+Herwig} & 105200 & fast & nFH & P2011C & alt. physics \\
+% \textsc{  Powheg+Herwig} & 105860 & fast & nFH & AUET2 & alt. shower \\
+% \textsc{  Powheg+Pythia8} & 117046 & fast & nFH & A14 & alt. physics \\
+% \hline
+% \textsc{  MadGraph+Pythia} & 110872 & fast & $\ell\ell$ & P2011C & alt. physics \\
+% \textsc{  Alpgen+Pythia} & 201020-4 & fast & nFH & P2012 & alt. physics \\
+% \textsc{  Alpgen+Herwig} & 164440-3, & full & nFH  & P2012 & alt. physics \\
+% \textsc{  Alpgen+Herwig} & 116108 & full & nFH & P2012 & alt. physics \\
+% \textsc{  Alpgen+Herwig} & 116109 & full & nFH & P2012 & alt. physics \\
+% \hline
+% \textsc{  AcerMC+Pythia} & 117209 &  fast & nFH & MPS AUET2 & more radiation \\
+% \textsc{  AcerMC+Pythia} & 117210 &  fast & nFH & LPS AUET2 & less radiation \\
+% \textsc{  Alpgen+Pythia} & 201030-4 & fast & nFH & P2012 & ktfac=0.5, more radiation tune \\
+% \textsc{  Alpgen+Pythia} & 201040-4 & fast & nFH & P2012 & ktfac=2, less radiation tune \\
+% \textsc{  MadGraph+Pythia} & 110878 & fast & $\ell\ell$ & P2011C & more radiation tune \\
+% \textsc{  MadGraph+Pythia} & 110875 & fast & $\ell\ell$ & P2011C & less radiation tune \\
+% \hline \hline
+% \end{tabular}
+% }
+% \caption{\ttbar samples used in this
+% analysis. The sample name, dataset ID, simulation type, final state simulated 
+% (non-fully hadronic, nFH, or dilepton, $\ell\ell$) and tune is given. The \textsc{  Alpgen} samples consist of several samples
+% with different parton multiplicities and sometimes dedicated heavy flavor samples.\label{t:ttsamples}}
+% \end{table}
 
-{\textsc  Alpgen+Herwig } & Diboson  & full & $\ell\ell$  & AUET2 &  \\
-{\textsc  Alpgen+Pythia }  & $Z$+jets  &  full &  $\ell\ell$ & P2011C &   On-the-fly \\
-\hline \hline
-\end{tabular}
-\end{center}
-\caption{$Z$+jets and diboson background samples used in this
-analysis. The sample name, process, simulation type, process simulated, final state simulated 
-(non-fully hadronic, nFH, or dilepton, $\ell\ell$) and tune is given. The {\textsc  Alpgen} samples consist of several samples
-with different parton multiplicities and sometimes dedicated heavy flavor samples. Dataset IDs are listed in Appendix~\ref{app:ds}.\label{t:bgsamples}}
-\end{table}
 
-\begin{table}
-\begin{center}
-\begin{tabular}{|lc|l|l|l|}\hline
-Generator & Dataset & Sim & Tune  & Comment \\ \hline
-{\textsc  Powheg+Pythia} & 110140 & fast & P2011C & baseline diagram removal \\
-\hline
-{\textsc  Powheg+Pythia} & 110142 & full & P2011C & alt. diagram subtraction \\
-\mcnlohw & 108346 & full   & AUET2 & alt. physics \\
-\hline \hline
-\end{tabular}
-\caption{Single top $Wt$-channel samples used in this
-analysis. The sample name, dataset ID, simulation type, and tune is given. All samples are simulated with the inclusive final state in the $Wt$ channel.\label{t:wtsamples}}
-\end{center}
-\end{table}
+% \begin{table}
+% \begin{center}
+% \begin{tabular}{|lc|l|l|l|l|}\hline
+% Generator &  Process  & Sim  & FS & Tune  & Comment \\ \hline
 
-%\begin{table}
-%\begin{center}
-%\begin{tabular}{|lc|l|l|l|l|}\hline
-%Generator &  Process  & Sim  & FS & Tune  & Comment \\ \hline
-%\hline \hline
-%\end{tabular}
-%\begin{center}
-%\caption{Evgen samples to be added here (if/when used)\label{t:evgen}}
-%\end{table}
-%\end{center}
+% \textsc{  Alpgen+Herwig } & Diboson  & full & $\ell\ell$  & AUET2 &  \\
+% \textsc{  Alpgen+Pythia }  & $Z$+jets  &  full &  $\ell\ell$ & P2011C &   On-the-fly \\
+% \hline \hline
+% \end{tabular}
+% \end{center}
+% \caption{$Z$+jets and diboson background samples used in this
+% analysis. The sample name, process, simulation type, process simulated, final state simulated 
+% (non-fully hadronic, nFH, or dilepton, $\ell\ell$) and tune is given. The \textsc{  Alpgen} samples consist of several samples
+% with different parton multiplicities and sometimes dedicated heavy flavor samples. Dataset IDs are listed in Appendix~\ref{app:ds}.\label{t:bgsamples}}
+% \end{table}
+
+% \begin{table}
+% \begin{center}
+% \begin{tabular}{|lc|l|l|l|}\hline
+% Generator & Dataset & Sim & Tune  & Comment \\ \hline
+% \textsc{  Powheg+Pythia} & 110140 & fast & P2011C & baseline diagram removal \\
+% \hline
+% \textsc{  Powheg+Pythia} & 110142 & full & P2011C & alt. diagram subtraction \\
+% \mcnlohw & 108346 & full   & AUET2 & alt. physics \\
+% \hline \hline
+% \end{tabular}
+% \caption{Single top $Wt$-channel samples used in this
+% analysis. The sample name, dataset ID, simulation type, and tune is given. All samples are simulated with the inclusive final state in the $Wt$ channel.\label{t:wtsamples}}
+% \end{center}
+% \end{table}
+
+
 \subsection{Pileup jet samples}
-Samples using pileup overlay simulation in \ttbar\ events are used to study background to the extra jet distributions. The only sample with sufficient statistics (DS 117050) uses {\textsc  Powheg+Pythia} with the baseline tune. The sample was processed using tag {\texttt d708} which is affected by a simulation problem in the tile cell energy. An additional sample has been requested, but production is delayed by problems with ProdSys2.\footnote{JIRA entry {\textsc  ATLMCPROD-821}} 
+Samples using pileup overlay simulation in \ttbar\ events are used to study background to the extra jet distributions. The only sample with sufficient statistics uses \textsc{  Powheg+Pythia} with the baseline tune. The sample was processed using tag \texttt{ d708} which is affected by a simulation problem in the tile cell energy. An additional sample has been requested, but production is delayed by problems with ProdSys2.\footnote{JIRA entry \textsc{  ATLMCPROD-821}} 
 
 Because of limitations with the available overlay samples, a data driven estimate of the pileup is used for the baseline
 analysis.  This estimate uses 
-data from the {\texttt data12\_8TeV.physics\_ZeroBiasOverlay}, which are events taken from data to estimate pileup. These data are available in {\texttt NTUP\_COMMON} format. This sample is studied as an alternative to the standard minimum bias overlay in the other samples.
+data from the \texttt{ data12\_8TeV.physics\_ZeroBiasOverlay}, which are events taken from data to estimate pileup.  This sample is studied as an alternative to the standard minimum bias overlay in the other samples.
 \section{Object definitions}
 The object and event selection follows the generic ATLAS top working
 group recommendations for 2012 \cite{topreco}, with two exceptions. The first change is a loosening of the electron isolation criteria, which is possible due to the low background  $e\mu$ final state. This loosened requirement is also used in Ref.~\cite{xsec}. The second change is to relax the $\eta$ requirement on  jets to $|\eta|<4.5$.
@@ -142,10 +133,10 @@ group recommendations for 2012 \cite{topreco}, with two exceptions. The first ch
 \subsection{Reconstructed objects}\label{s:objects}
 
 The analysis relies on the selection of electrons, muons and jets, and
-the tagging of jets as $b$-jets. With the exceptions specified above, these correspond to standard {\texttt TopRootCore} defaults.
+the tagging of jets as $b$-jets. With the exceptions specified above, these correspond to standard \texttt{ TopRootCore} defaults.
 \begin{description}
 \item[Muons:] Combined muons (reconstructed in both the muon spectrometer
-and inner detector) are selected with the {\texttt MuID} algorithm, and 
+and inner detector) are selected with the \texttt{ MuID} algorithm, and 
 required to satisfy $p_T>25$\,GeV and $|\eta|<2.5$.  Following the 2012 recommendations from the MuonCP group, muons must have
 \begin{itemize}
 \item at least one pixel hit
@@ -161,20 +152,20 @@ muons from heavy flavor decays inside jets, muons are required to be
 separated by $\Delta R>0.4$ from the nearest jet. Muons are required to satisfy 
 mini-isolation requirement $I^\ell_{\textrm mini}<0.05$, where
 the mini-isolation variable is the ratio of the sum of $p_T$ of tracks
-in a variable-sized cone of radius $\Delta R=10\,{\textrm GeV}/p_T(\mu)$ to the $p_T$ of the muon $p_T(\mu)$ \cite{topreco}. %For anti-muons, the mini-isolation requirement is energy loss of less than 6 GeV, ${\texttt ETCone20}/p_{T} < 0.03$, and $I^\ell_{\textrm mini}<0.1$
+in a variable-sized cone of radius $\Delta R=10\,{\textrm GeV}/p_T(\mu)$ to the $p_T$ of the muon $p_T(\mu)$ \cite{topreco}. %For anti-muons, the mini-isolation requirement is energy loss of less than 6 GeV, $\texttt{ ETCone20}/p_{T} < 0.03$, and $I^\ell_{\textrm mini}<0.1$
 
-\item[Electrons:] Electrons are selected using the offline {\texttt tight++} 
+\item[Electrons:] Electrons are selected using the offline \texttt{ tight++} 
 identification within the fiducial region $p_T>25$\,GeV and $|\eta|<2.47$, 
 excluding the calorimeter transition region $1.37<|\eta|<1.52$. The impact parameter
 in the longitudinal direction with respect to the primary vertex is
 required to satisfy $z_0<2$\,mm. In addition 
-to the calorimeter isolation requirements implicit in {\texttt tight++},
+to the calorimeter isolation requirements implicit in \texttt{ tight++},
 the calorimeter energy in a cone of radius $\Delta R<0.2$ around the
 electron (excluding the deposit from the electron itself) is required
-to satisfy ${\texttt ETCone20}<6$\,GeV, and the sum of $p_T$ of tracks
+to satisfy $\texttt{ ETCone20}<6$\,GeV, and the sum of $p_T$ of tracks
 in a cone of radius $\Delta R<0.3$ (excluding the electron track) is
-required to satisfy ${\texttt pTCone30}<6$\,GeV. Using the
-EGamma group {\texttt EisoTool2012} \cite{eisotool}, further
+required to satisfy $\texttt{ pTCone30}<6$\,GeV. Using the
+EGamma group \texttt{ EisoTool2012} \cite{eisotool}, further
 kinematic-dependent cuts are applied to these two isolation variables,
 corresponding to a 98\,\% efficiency on true prompt electrons. 
 To prevent double-counting
@@ -207,11 +198,11 @@ which combines the outputs of the IP3D, SV1 and JetFitterCombNN algorithms
 into a multivariate discriminant $w$ with values between zero and one. 
 Light-quark and gluon jets tend to have values close to zero, and 
 $b$-flavored jets close to one, with charm jets somewhere in between. Jets are defined as being $b$-tagged if the MV1 weight $w$ is larger than a cut value 0.7892, which corresponds to the $b$-tagging working 
-point having approximately 70\% $b$-tagging efficiency for $b$-jets in \ttbar\ events, although the exact efficiency varies significantly with $p_T$. The $b$-tagging calibration used is the default in {\texttt TopRootCore}, which is based on the system8 muon and jet calibration method~\cite{btagsys8}.
+point having approximately 70\% $b$-tagging efficiency for $b$-jets in \ttbar\ events, although the exact efficiency varies significantly with $p_T$. The $b$-tagging calibration used is the default in \texttt{ TopRootCore}, which is based on the system8 muon and jet calibration method~\cite{btagsys8}.
 \end{description}
 Events reconstructed with exactly one $e$ and $\mu$ with opposite sign and at least 2-$b$ jets as defined above pass the reconstruction-level fiducial selection. In the case of Monte Carlo, selected events are reweighted to reproduce the same distributions of $\mu$, the average number of interactions per bunch crossing, as in the data. The samples are also reweighted with scale factors to reproduce the electron and muon reconstruction and trigger efficiencies, and the width of the primary vertex distribution in $z$, as measured in the data. Finally, scale factors are applied to account for $b$-tagging efficiencies.
 \subsection{Truth objects}
-Truth objects are processed using the software package {\texttt TopFiducial-00-00-09} in {\texttt AnalysisTop-1.8.0}. Cuts applied to truth objects attempt to replicate the above fiducial selections for the reconstructed objects.
+Truth objects are processed using the software package \texttt{ TopFiducial-00-00-09} in \texttt{ AnalysisTop-1.8.0}. Cuts applied to truth objects attempt to replicate the above fiducial selections for the reconstructed objects.
 
 \begin{description}
 \item[Leptons:] Stable electrons and muons are required not to come from a hadron in the Monte Carlo truth particle record, either directly or through a tau decay. This ensures that the lepton is from an electroweak decay without requiring a direct $W$-boson match. The four momenta of the bare leptons are then `dressed' by adding the four momenta of all stable photons within $\Delta R$=0.1 with status code 1 and not originating from Geant4. The dressed leptons are required to have \pt > 25 \GeV\ and $|\eta|$ < 2.5.
@@ -227,8 +218,9 @@ muons  and electrons with $\Delta R$ < 0.4 of a jet are excluded. Electrons over
 Events with exactly one $e$ and $\mu$ with opposite sign and at least 2-$b$ jets as defined above pass the fiducial truth selection.
 
 \subsection{Truth matching}
+In addition to fiducial definitions for reconstructed from detector output, fiducial definitions for the ``true'' particles generated by the MC simulation must be made.
 \label{ss:tmatching}
-Following {\texttt TopFiducial} standard criteria, a geometric $\Delta R$ algorithm matches reconstructed objects to truth objects satisfying the fiducial requirements above. These definitions are relevant for background unmatched extra jets, as well as various truth studies.
+Ageometric $\Delta R$ algorithm matches reconstructed objects to truth objects satisfying the fiducial requirements above. These definitions are relevant for background unmatched extra jets, as well as various truth studies.
 \begin{description}
 \item[Leptons:] Each truth $e$ ($\mu$) is matched to the closest reconstructed $e$ ($\mu$) within $\Delta R < 0.02$.
 \item[Jets:] Truth jets are geometrically matched to the closest reconstructed jet within $\Delta R_{\mathrm{reco jet, truth jet}} < 0.4$. If a reconstructed jet is not matched to a truth jet, it is assumed to be either from pileup or matching inefficiency and is treated as background as discussed in Section~\ref{ss:pileup}.
@@ -257,7 +249,7 @@ an electron and a muon, and potentially giving rise to a fake $e\mu$ event.  Suc
 
 The numbers of events with exactly one $e$ and one $\mu$ before and after the $b$-jet requirement are given in Table~\ref{t:sel}. The events are selected from the 2012 \rts=8 \TeV data with 20.3 \ifb. Simulation predictions are categorized into contributions from \ttbar, $Wt$ single top, $Z$+jets and dibosons. 
 
-After the selection of $e\mu$ opposite-sign pairs, the biggest contribution (60\%) is from \ttbar events with the second largest from $Z$+jets (21.8\%). The $e\mu$ event rates agree to  better than 3\% with those from other ongoing 2012 top analyses as documented in {\texttt TopEventChallenge}\cite{topeventchallenge}. The events with at least 2 $b$-jets are heavily dominated by \ttbar events, with a small $\sim 3\%$ contribution from single top. $Z$+jets and dibosons make up less than 0.1\% of events passing the final selection, and are thus neglected in this analysis.
+After the selection of $e\mu$ opposite-sign pairs, the biggest contribution (60\%) is from \ttbar events with the second largest from $Z$+jets (21.8\%). The $e\mu$ event rates agree to  better than 3\% with those from other ongoing 2012 top analyses as documented in \texttt{ TopEventChallenge}\cite{topeventchallenge}. The events with at least 2 $b$-jets are heavily dominated by \ttbar events, with a small $\sim 3\%$ contribution from single top. $Z$+jets and dibosons make up less than 0.1\% of events passing the final selection, and are thus neglected in this analysis.
 
 
 The number of selected events in simulation and data agree to within better than 3\%, demonstrating that the Monte Carlo reproduces the data quite well. Table~\ref{t:ttgen} compares the number of selected events from the baseline \ttbar simulation to those from other \ttbar generators. The two \pow+\py\ simulations and \mcnlohw\ all agree with each other to within ~2\%. The \madpy\ simulation gives about 10\% more events. The reason for this difference is not well understood. The last column in Table~\ref{t:ttgen} gives the scale factor used to normalize each \ttbar generator to the number of events in data (including the single top contribution).
@@ -317,14 +309,14 @@ Generator & DS & $N_{\ttbar}$ & $N_{\mathrm{data}}/(N_{\text{single~top}}+N_{\tt
 
 \begin{figure}
 \centering
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/MCComp/NLO/ElecPt.pdf}}
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/MCComp/NLO/ElecEta.pdf}}
 \\
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/MCComp/NLO/MuPt.pdf}}
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/MCComp/NLO/MuEta.pdf}}
 \caption{Distributions of the transverse momentum and $\eta$ of the electron and muon in events with an opposite sign $e\mu$ pair and at least 2 $b$-jets in data and simulation. The distributions in data are compared to simulation normalized to data yields (see scale factors in Table~\ref{t:ttgen}). The ratio of different MC samples to data is shown with error bars corresponding to the MC statistical uncertainty and a shaded band corresponding to the data statistical uncertainty.}
 \label{fig:emu}
@@ -332,9 +324,9 @@ Generator & DS & $N_{\ttbar}$ & $N_{\mathrm{data}}/(N_{\text{single~top}}+N_{\tt
 
 \begin{figure}
 \centering
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/MCComp/NLO/BJetPt.pdf}}
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/MCComp/NLO/BJetEta.pdf}}
 
 \caption{Distributions of the transverse momentum and $\eta$ of the $b$-jets in events with an opposite sign $e\mu$ pair  and at least 2 $b$-jets in the 2012 data. The distributions in data are compared to simulation, normalized to the same number of events as in the data  (see scale factors in Table~\ref{t:ttgen}).. In events where more than two $b$-jets are reconstructed, the two highest \pt $b$-jets are selected and the remaining $b$-jet is classified as an extra jet (see Section ~\ref{sec:extrajets}). The ratio of different MC samples to data are shown with error bars corresponding to the MC statistical uncertainty and a shaded band corresponding to the data statistical uncertainty. Systematic uncertainties are not shown.}

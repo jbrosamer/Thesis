@@ -1,7 +1,14 @@
 \section{Introduction to unfolding}
+Kinematic distributions measured by a detector contain distortions due to limited acceptance, resolution and biases. The data must be corrected for these effects in order to allow for direct comparison with theoretical models or other experimental measurements. This process of correcting the detector or reconstructed level back to the generator or truth level is called \emph{unfolding}.
+
+
+Unfolding begins with building a \emph{response} (a.k.a. migration) matrix. The response matrix is a 2-dimensional representation of how the truth value of an observable relates to the measured value, as distorted by characteristic detector effects. The response matrix is built from simulation on an event-by-event basis.
+
+In order to go from a reconstructed distribution to a truth distribution, the response matrix must be inverted. Since some bins of the matrix may be sparsely populated, the matrix is close to singular and a \emph{regularization} must be introduced to suppress unphysical bin-to-bin fluctuations. In this analysis, the iterative Bayesian algorithm is chosen, though the Singular Value Decomposition (SVD) technique was also considered.
+
 \section{Procedure}
 This section outlines the procedure used to unfold the reconstructed \pt and multiplicity of the 
-extra jets using {\texttt RooUnfold}~\cite{roounfold}.\footnote{Due to important bug fixes necessary for error propagation in this analysis, the development version of RooUnfold is used.}
+extra jets using \texttt{ RooUnfold}~\cite{roounfold}.\footnote{Due to important bug fixes necessary for error propagation in this analysis, the development version of RooUnfold is used.}
 This procedure corrects the background-subtracted measured spectrum to the true
 spectum for events that pass the fiducial requirements at both the truth and the reconstruction level.
 Detector effects can distort the true extra jet spectrum in several ways.  Hard scattering jets can be lost due to
@@ -76,7 +83,7 @@ Bin number & Jet rank & Jet \pt (\GeV) \\
 Jet rank & Bin number &  Jet \pt (\GeV) \\
 \hline 
 \endhead
-\hline \multicolumn{3}{l} {\textit{Continued on next page}} \\
+\hline \multicolumn{3}{l} \textit{{Continued on next page}} \\
 \endfoot
 \hline \hline
 \endlastfoot
@@ -156,7 +163,7 @@ Figure~\ref{fig:feedin} shows this factor estimated for several NLO \ttbar\ gene
 
 The response matrix ${\mathbf M}_{\textrm{reco, j}}^{\textrm{true, i}}$ gives the number of jets reconstructed with bin number $j$; bin number $i$ is obtained from true \pt\ and rank.
 The matrix is 
-filled from simulated events that pass {\textit both} reconstructed and truth selection requirements.
+filled from simulated events that pass \textit{ both} reconstructed and truth selection requirements.
 Figure~\ref{f:res} provides a graphical representation of ${\mathbf M}_{\textrm{reco, j}}^{\textrm{true}, i}$. 
 The matrix is largely diagonal, showing that jets are most likely to be constructed with the correct \pt\ and rank.
 However, there are significant numbers of truth subleading jets reconstructed as leading jets (for example ${\mathbf M}[1,18; 19,32]$), and 
@@ -193,7 +200,7 @@ Singular value decomposition unfolding cannot be used since the input spectrum i
 
 \section{Misidentified events}
 The unfolding procedure described above returns unbiased extra jet distributions for
-events passing {\textit both} the truth and reconstruction selection.  This subsample of events has
+events passing \textit{ both} the truth and reconstruction selection.  This subsample of events has
 different kinematics from events passing the truth only selection.  Therefore, the extra jet
 distributions obtained from the unfolding are biased with respect to the truth selection.
 In addition, a secondary contribution to the bias results from events where one of the two reconstructed
@@ -300,14 +307,14 @@ Total reco events & 11997.1 & 100.00 \\
 
 \begin{figure}
 \centering
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/RecoNotTruth/ElecPt.pdf}}
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/RecoNotTruth/BJetPt.pdf}}
 \\
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/RecoNotTruth/BJetMV1.pdf}}
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/RecoNotTruth/NJets.pdf}}
 \caption{Distributions of the (a) $e$ \pt, (b) $b$-jet \pt, (c) $b$-jet MV1 weight and (d) extra jet multiplicity. Each distribution is normalized by the number of events falling in that category. Events were simulated with \powpy~\ttbar.}
 \label{fig:reconottruth}
@@ -341,14 +348,14 @@ Total truth events & 43376.7 & 100.00 \\
 
 \begin{figure}
 \centering
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/TruthNotReco/TruthBJetPt.pdf}}
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/TruthNotReco/NTruthExtraJets30.pdf}}
 \\
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/TruthNotReco/TruthPtJet0.pdf}}
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/TruthNotReco/TruthPtJet1.pdf}}
 \caption{Distributions of the truth (a) $b-$jet \pt, (b) extra jet multiplicity, (c) leading extra jet \pt and (d) subleading extra jet \pt. Each distribution is normalized by the number of events falling in that category. Events were simulated with \powpy~\ttbar and required to pass the fiducial truth $e\mu$+2 $b$-jet selection.}
 \label{fig:truthnotreco}
@@ -356,14 +363,14 @@ Total truth events & 43376.7 & 100.00 \\
 
 \begin{figure}
 \centering
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/TruthNotReco/BJetNJets30.pdf}}
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/TruthNotReco/BJetPtJet0.pdf}}
 \\
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/TruthNotReco/BJetPtJet1.pdf}}
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/TruthNotReco/BJetPtJet2.pdf}}
 \caption{Distributions of the truth (a) extra jet multiplicity, (b) leading extra jet \pt, (c) subleading extra jet \pt and (d) subsubleading extra jet \pt in bins of the average of the \pt of the two truth $b$-jets used to select the event. Each distribution is normalized by 
 the number of events falling in that bin. Events were simulated with \powpy~\ttbar and required to pass the fiducial truth $e\mu$+2 $b$-jet selection.}
@@ -397,10 +404,10 @@ The final correction factors used for data are taken from the baseline \powpy\ s
 
 \begin{center}
 \begin{figure}
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/Unfolding/CorrFactors.pdf}}
 ~
-\subfloat[]{
+\subfloat{
  \includegraphics[width=0.45\textwidth]{fig/Unfolding/FractionCorrectionDiff.pdf}}
 \caption{(a) Ratio of unfolded extra jets to truth extra jets different \ttbar generators (including a 2.9\% contribution from single top). (b) Fractional difference of the correction factorfrom baseline for different generators. Extra jets in events passing reconstructed and truth selection for each generator are added to single top and used to fill a response matrix. Then each generator is unfolded against itself, using all selected reconstructed events. Extra jet truth distributions are made without any reconstruction requirements. Finally, the unfolded distribution is divided by the truth distribution to obtain a correction factor for each bin.
 \label{fig:bincorr}}
@@ -413,7 +420,7 @@ The final correction factors used for data are taken from the baseline \powpy\ s
 \section{Validation}
 %%COVARIANCE DISCUSSION HERE
 
-{\texttt RooUnfold} allows propagation of the full covariance matrix of the measured distribution through the unfolding. 
+\texttt{ RooUnfold} allows propagation of the full covariance matrix of the measured distribution through the unfolding. 
 The package returns a covariance matrix, which is used to determine the uncertainties
 on the unfolded spectrum. %and an inverse covariance matrix, which is used to calculated the $\chi^2$ betweenthe unfolded data and a predicted truth spectrum including correlations.
 The covariance matrix $X$ on the unfolded distribution is calculated via pseudoexperiments. The diagonal elements of this covariance matrix give the uncertainties on the bins of \pt\ and rank. 
@@ -427,7 +434,7 @@ The agreement between an unfolded spectrum and truth distribution can be estimat
 \chi^2= \left( {\mathscr N}_{\textrm {unf}}- {\mathscr N}_{\textrm {true}} \right)^{T} X^{-1}\left( {\mathscr N}_{\textrm {unf}}- {\mathscr N}_{\textrm {true}} \right)
 \label{eq:unfchi2}
 \end{equation}
- The inverse covariance matrix, $X^{-1}$, is determined using SVD with {\texttt SciPy}~\cite{scipy}.
+ The inverse covariance matrix, $X^{-1}$, is determined using SVD with \texttt{ SciPy}~\cite{scipy}.
 
 This \chisq\ is used validate the unfolding procedure with different MC generators in Sections~\ref{ss:close}-\ref{ss:stress}, as well as to assess the agreement of generators with the fully corrected data in Section~\ref{sec:results}.
 \subsection{Closure test}
@@ -466,26 +473,26 @@ The pull distributions for the alternate generators unfolded against the baselin
 Figure~\ref{fig:fracbias} shows the fractional bias obtained for the stress test for four representative alternative generators. Though bin-to-bin fluctuations around zero are visible, these fluctuations fall largely within the one sigma error contour. For \mcnlohw, the disagreements become large for jets of rank 3 and higher. The jet multiplicity in \mcnlohw\ at reconstruction level is signifigantly lower than the data. For \madpy\ deviations above the one sigma level are observed for low jet \pt. The \madpy\ is signifigantly steeper than that of \powpy. This will affect the size of the feed-in correction $g_i$. The differences with respect to \madpy\ are included in the systematic uncertainties described in Section~\ref{ss:unfsystt}.
 
 \begin{figure}
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/Stress/117050atlfast/Pull2Iterations.pdf}}
 ~
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/Stress/117050atlfast/FracBias2Iterations.pdf}}
 \caption{(a) Pull distribution and (b) fractional bias for the extra jets from the baseline \ttbar simulation unfolded against a matrix filled with the baseline \ttbar simulation with all correction factors. The Bayesian unfolding method with 2 iterations is used. One thousand pseudoexperiments, each the size of the events in data, are randomly selected from the sample and unfolded. Each bin of the pull distribution over the pseudoexperiments is fit with a gaussian. The black points show the fitted mean of each bin. A fitted mean of zero shows the unfolding is not signifigantly biased. The blue band shows the fitted $\sigma$ of each bin. A fitted $\sigma$ of one shows the unfolding correctly estimates the errors.}
 \label{fig:UnfoldPull}
 \end{figure}
 
 \begin{figure}
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/Stress/105860atlfast/FracBias2Iterations.pdf}}
 ~
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/Stress/110872atlfast/FracBias2Iterations.pdf}}
 \\
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/Stress/110404atlfast/FracBias2Iterations.pdf}}
 ~
-\subfloat[]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/Stress/105200atlfast/FracBias2Iterations.pdf}}
 ~
 \caption{Fractional bias distributions for pseudoexperiments from alternative generators unfolded against a matrix filled with the baseline simulation. The truth spectrum of the baseline sample is reweighted to match jet \pt\ and multiplicity spectra of (a) \pow+\hw (b) \madpy, (c) \hdamp, and (d) \mcnlohw~simulation. One thousand pseudoexperiments, each the size of the events in data, are constructed for each generator and unfolded. The Bayesian unfolding method with 2 iterations is used. Each bin of the distribution over the pseudoexperiments is fit with a gaussian. The black points show the fitted mean of each bin and the blue band shows the fitted sigma.}

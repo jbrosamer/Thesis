@@ -1,9 +1,9 @@
 
-The goal of this analysis is to study additional jets in events that pass the selection criteria described above. 
-Jets in selected events are divided into two categories: the two $b$-jets used for event selection and any additional `extra' jets. In simulated data, this categorization is done independently for truth jets and reconstructed jets. The $b$-jets are required to have $|\eta|$ < 2.5.  Extra jets are required to have  $|\eta|$ < 4.5. The final measurement of the extra jets will be corrected to the fiducial region $p_{T}^{jet} > 25$~\GeV.
+The goal of this analysis is to study additional jets in events that pass the selection criteria described in Chapter~\ref{ch:event}. 
+Jets in selected events are divided into two categories: the two $b$-jets used for event selection and any additional `extra' jets. In simulated data, this categorization is done independently for truth jets and reconstructed jets. The $b$-jets are required to have $|\eta|$ $<$  2.5.  Extra jets are required to have  $|\eta|$ $<$  4.5. The final measurement of the extra jets will be corrected to the fiducial region $p_{T}^{jet} > 25$~\GeV.
 
 \section{Matching criteria}
-As described in Section~\ref{ss:tmatching}, a geometric algorithm matches reconstructed jets to truth jets. The $b$-jets are matched before the extra jets and no two reconstructed jets are allowed to match to the same truth jet. Though required to have reconstructed \pt>25 \GeV, reconstructed jets are matched to truth jets with \pt>10 \GeV. This procedure allows the unfolding to account for migration over the selection boundary.
+As described in Chapter~\ref{ss:tmatching}, a geometric algorithm matches reconstructed jets to truth jets. The $b$-jets are matched before the extra jets and no two reconstructed jets are allowed to match to the same truth jet. Though required to have reconstructed $\pt>25 \GeV$, reconstructed jets are matched to truth jets with $\pt>10 \GeV$. This procedure allows the unfolding to account for migration over the selection boundary.
 
 In the $\sim 2\%$ of events with more than two reconstructed $b$-jets, the two jets with the highest MV1 weight are classified as the selected $b$-jets and the remaining jets are treated as extra jets. In the events that contain more than two reconstructed $b$-jets, this prescription selects $b$-jets that are matched to the top decay products with 74\% accuracy. In contrast, choosing the two highest \pt $b$-jets in these same events selects $b$-jets from the top decay 68\% of the time. In simulated events with exactly 2 reconstructed $b$-jets, 96\% of selected $b$-jets descend from the top quark; the remainder are consistent with mistagged~\cite{btagmiscal} non $b$-jets.
 
@@ -11,7 +11,7 @@ In the $\sim 2\%$ of events with more than two reconstructed $b$-jets, the two j
 
 \section{Background contributions to extra jets}
 \label{ss:pileup}
-In the baseline MC sample, approximately 4\% of the events contain an \textit{unmatched} jet (see Section~\ref{ss:tmatching}). The RooUnfold package used to unfold the data does not properly handle \pT-dependent background subtraction. Therefore, the unfolding response matrix is constructed using only matched jets. Unmatched jets are defined to be background and are subtracted from the data before unfolding. 
+In the baseline MC sample, approximately 4\% of the events contain an \textit{unmatched} jet (see Chapter~\ref{ss:tmatching}). The RooUnfold package used to unfold the data does not properly handle \pT-dependent background subtraction. Therefore, the unfolding response matrix is constructed using only matched jets. Unmatched jets are defined to be background and are subtracted from the data before unfolding. 
 Unmatched jets can result from two sources: 
 \begin{description}
 \item[Pileup]: Jets coming from additional proton-proton collisions within the same bunch crossing.
@@ -23,7 +23,7 @@ The  procedures used to estimate the rate of these two types of backgrounds are 
 \subsection{Pileup jets}
 
 
-The ATLAS simulation describes the effect of pileup on hard-scatter jets well.~\cite{jetpile} The multiplicity of pileup jets has not been as fully validated, especially in the region $2.4 < |\eta| < 4.5$.  Ideally, the pileup rate could be
+The ATLAS simulation describes the effect of pileup on hard-scatter jets well~\cite{jetpile}. The multiplicity of pileup jets has not been as fully validated, especially in the region $2.4 <  |\eta| < 4.5$.  Ideally, the pileup rate could be
 estimated using the ATLAS pileup overlay simulation framework.  In this framework,
 zero bias events from data are combined with simulated hits for the hard scattering event
 and the digitization and reconstruction are performed on the combined sample.  At present,
@@ -33,7 +33,7 @@ systematic studies.  The other uses the baseline \textsc{ Powheg+Pythia} hdamp=$
 configuration, but uses tag d780 which  is affected by simulation problems with the tile cell 
 energy that can affect the JES for hard scatter jets.  In addition, this sample has
 limited statistics.   Despite these problems, the pileup overlay sample
-provide a reasonable description of pileup jets, as documented in Appendix~\ref{app:pileup}.
+provide a reasonable description of pileup jets.%, as documented in Appendix~\ref{app:pileup}.
 
 A higher statistics alternative to the overlay sample can be constructed using a hybrid technique.
 This hybrid technique takes as its input files in NTUP\_COMMON format
@@ -46,7 +46,7 @@ To properly estimate the pileup rate, the input ZeroBiasOverlay data must be lum
 to match the data.  This weighting is done as follows.  First, the run number and luminosity block number 
 for all events passing the \emubb\ data event selection is tabulated.  Second, data from the ZeroBiasOverlay
 stream is skimmed to keep only those run and luminosity block pairs present in the selected data.
-Third, \ttbar\ MC events are analysed.
+Third, \ttbar\~MC events are analysed.
 The $e$,$\mu$, \bjet s, and truth-matched additional jets are kept and the unmatched
 additional jets are deleted.  For each MC event, a ZeroBiasOverlay data event is 
 randomly selected from the skimmed data.
@@ -58,11 +58,12 @@ If a zero bias jet overlaps a lepton, then the event is removed from the sample.
 This hybrid sample provides the baseline estimate of the pileup contribution to the 
 extra jet distributions. 
 
-The dependence of the extra jet rate on the average number of interactions per bunch crossing ($\mu$) in the signal sample is used to validate this estimate. Details of this validation are provided in Appendix~\ref{app:pileup}. Figure~\ref{fig:pileupjets} shows an example of this procedure for (a) central and (b) forward jets for the lowest jet \pt\ bin used in this analysis. The figure shows the mean number of jets in events passing the baseline selection as a function of $\mu$ and the pileup contribution estimated from the ZeroBiasOverlay stream. Before pileup subtraction, the number of jets depends on $\mu$, with a larger dependence observed in the forward $\eta$ region where the JVF cut can not be used. After subtraction of the pileup using the estimate from the ZeroBiasOveray stream, this $\mu$ dependence is eliminated. For this \pt\ bin, the estimated number of pileup extra jets per
+The dependence of the extra jet rate on the average number of interactions per bunch crossing ($\mu$) in the signal sample is used to validate this estimate. %Details of this validation are provided in Appendix~\ref{app:pileup}.
+ Figure~\ref{fig:pileupjets} shows an example of this procedure for (a) central and (b) forward jets for the lowest jet \pt\ bin used in this analysis. The figure shows the mean number of jets in events passing the baseline selection as a function of $\mu$ and the pileup contribution estimated from the ZeroBiasOverlay stream. Before pileup subtraction, the number of jets depends on $\mu$, with a larger dependence observed in the forward $\eta$ region where the JVF cut can not be used. After subtraction of the pileup using the estimate from the ZeroBiasOveray stream, this $\mu$ dependence is eliminated. For this \pt\ bin, the estimated number of pileup extra jets per
 event is 0.005 (0.016) in the central(forward) region. 
 %Integrated over all \pt and $\eta$, the pileup fraction is ZZ. 
 The pileup rate decreases with jet \pT\ and is estimated to be below 0.002 for jets with $\pt>50$~\GeV.
-Systematic uncertainties on this pileup estimate are discussed in Section~\ref{ss:sysbkg}.
+Systematic uncertainties on this pileup estimate are discussed in Chapter~\ref{ss:sysbkg}.
  
  \subsection{False jets}
 Reconstruction pathologies are studied using simulated data. Because the simulation event record does not contain truth information for pileup, it is not straightforward to determine what fraction of the unmatched jets derive from pileup and what fraction are the result of other detector effects. The most straightforward way to study the rate of false jets would be to study them in a sample simulated without pileup, but no such \ttbar\ sample exists. 
@@ -76,7 +77,7 @@ this false jet component is needed in order to reproduce the shape observed in t
 
 %While Figure~\ref{fig:recodr} validates the modeling of the separation of the extra jets, additional information is needed to estimate of the false jet rate (not from pileup).
 
-Figure~\ref{fig:truthdr} shows the distance between each reconstructed jet and the nearest truth jet ($\Delta {R}_{\text{reco jet, truth jet}}$) for jets of rank=1-4. The presence of unmatched jets with $\Delta {R}_{\text{reco jet, truth jet}} < 0.4$ results from the requirement that each truth jet can only be matched to a single reconstructed jet, as described in Section~\ref{ss:tmatching}. Because the matching requires $\Delta {R}_{\text{reco jet, truth jet}} < 0.4$, all jets above this threshold are unmatched. The probability that a second (and hence, unmatched) jet is reconstructed with $\Delta {R}_{\text{reco jet, truth jet}} < 0.4$ is $\sim 0.0068$.  This number represents a lower bound on the false jet rate.
+Figure~\ref{fig:truthdr} shows the distance between each reconstructed jet and the nearest truth jet ($\Delta {R}_{\text{reco jet, truth jet}}$) for jets of rank=1-4. The presence of unmatched jets with $\Delta {R}_{\text{reco jet, truth jet}} < 0.4$ results from the requirement that each truth jet can only be matched to a single reconstructed jet, as described in Chapter~\ref{ss:tmatching}. Because the matching requires $\Delta {R}_{\text{reco jet, truth jet}} < 0.4$, all jets above this threshold are unmatched. The probability that a second (and hence, unmatched) jet is reconstructed with $\Delta {R}_{\text{reco jet, truth jet}} < 0.4$ is $\sim 0.0068$.  This number represents a lower bound on the false jet rate.
 
 The false jet rate can be estimated in another way. Figure~\ref{fig:falsecomp} shows the number of unmatched jets per event in the baseline simulation as a function of $\mu$. These unmatched jets include both the pileup and false jet contributions, with pileup dominating at high $\mu$ and false jets at low $\mu$. The rate of false jets can be determined by fitting this distribution to a first order polynomial. The intercept of this fit predicts the false jet rate, while the slope provides the pileup rate in the simulation. The fitted intercept is $0.0075 \pm   0.0014$, which is slightly higher than the estimate obtained from $\Delta {R}_{\text{reco jet, truth jet}}$ above, but is consistent
 within the statisical uncertainty on the fit.   This second technique is used to obtain the baseline false jet estimate and its uncertainty.
@@ -90,9 +91,9 @@ The false jets comprise $\sim 20\%$ of the total unmatched jets and have a \pt\ 
 \end{figure}
 
 \begin{figure}
-\subfloat{
+\subfloat[a]{
 \includegraphics[width=0.48\textwidth]{fig/Pileup/EMuCentralJVF25_30_rates.pdf}}
-\subfloat{
+\subfloat[b]{
 \includegraphics[width=0.48\textwidth]{fig/Pileup/EMuForward25_30_rates.pdf}}
 
 \caption{Mean number of reconstructed jets as a function of $<\mu>$ 
@@ -117,7 +118,7 @@ points show the results after correction.}
 \includegraphics[width=0.45\textwidth]{fig/MCComp/NLO/GrandPtVsRecoDRJet2.pdf}}
 \subfloat{
 \includegraphics[width=0.45\textwidth]{fig/MCComp/NLO/GrandPtVsRecoDRJet3.pdf}}
-\caption{Distributions of minimum reconstructed $\Delta R$ betweeen extra jets in simulation and data for (Na) the first, (b) second, (c) third and (d) fourth extra jet. }
+\caption{Distributions of minimum reconstructed $\Delta R$ betweeen extra jets in simulation and data for the the first, second, third and fourth extra jet. }
 \label{fig:recodr}
 \end{figure}
 \begin{figure}
@@ -131,7 +132,7 @@ points show the results after correction.}
 \includegraphics[width=0.45\textwidth]{fig/MCComp/NLO/GrandPtVsTruthDRJet2.pdf}}
 \subfloat{
 \includegraphics[width=0.45\textwidth]{fig/MCComp/NLO/GrandPtVsTruthDRJet3.pdf}}
-\caption{Distributions of $\Delta R$ betweeen reconstructed extra jets and the nearest truth jet for (a) the first, (b) second, (c) third and (d) fourth extra jet. }
+\caption{Distributions of $\Delta R$ betweeen reconstructed extra jets and the nearest truth jet for the first, second, third and fourth extra jet. }
 \label{fig:truthdr}
 \end{figure}
 \section{Reconstruction level distributions}

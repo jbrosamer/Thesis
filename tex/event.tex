@@ -26,10 +26,10 @@ The baseline \ttbar\ samples are produced using \textsc{  Powheg} \cite{Powheg, 
 This same MC tune has been processed using full simulation and the results of the two samples have been compared.
 %After appropriate
 %JES corrections are applied, systematic differences in the prediction are observed. 
-%The stress test in Section~\ref{sec:unfold} confirms the agreement of these two samples.
+%The stress test in Chapter~\ref{sec:unfold} confirms the agreement of these two samples.
 \textsc{  Powheg}+\textsc{  Pythia6} is the baseline suggested by the TopReconstruction twiki page as the default \ttbar\ simulation~\cite{topmc}. The atlfast2 sample with the hdamp parameter set to $\infty$ is chosen as the baseline because it has signifigantly higher statistics ($\sim 40$ times data) than either the FS or hdamp=$m_t$ samples ($\sim 20$ times data).
 Systematic uncertainties associated with the difference in the response matrices obtained from FS and atlfast are
-assessed in Section~\ref{sec:syst}.
+assessed in Chapter~\ref{ch:syst}.
 
 
 %For the baseline dataset, samples using both full and fast  simulation are analyzed to confirm that after making appropriate JES corrections, there are no differences in the predictions.
@@ -175,7 +175,7 @@ the above cut is within $\Delta R<0.4$ of the electron, the electron
 is discarded, to ensure it is cleanly separated from nearby jet activity. Electrons sharing a track with a muon are excluded by removing electrons with a muon within $\Delta \phi < 0.005$ and $\Delta \theta < 0.005$.
 
 \item[Jets:] Jets are reconstructed using the anti-$k_t$ algorithm 
-\cite{antikt} with radius parameter $R=0.4$, 
+\cite{antikt1,antikt2,antikt3} with radius parameter $R=0.4$, 
 starting from topological clusters. These are calibrated
 using the local cluster weighting (LCW) method, and corrected for the
 effects of pileup using the jet area method and a residual correction dependent
@@ -183,12 +183,12 @@ on the instantaneous luminosity and number of reconstructed primary vertices
 in the event. Jets are calibrated using an energy- and $\eta$-dependent simulation-based calibration scheme, with in-situ corrections 
 based on data \cite{jesxi}. Jets are accepted within the fiducial region $p_T>25$\,GeV and $|\eta|<4.5$. To reduce the contribution from jets 
 associated with pileup jets with $p_T<50$\,GeV
-are required to satisfy $|\textrm JVF|>0.5$, where $\textrm JVF$ is
+are required to satisfy $|\textrm{JVF}|>0.5$, where $\textrm{JVF}$ is
 the ratio of the sum of the $p_T$ of tracks associated to the jet which
 are also associated to the primary vertex, to the sum of $p_T$ of all
 tracks associated to the jet. Jets with no associated tracks or with
 $|\eta|>2.4$ at the edge of the tracker acceptance  are assigned
-$\textrm JVF=-1$ by convention and thus always accepted.
+$\textrm{JVF}=-1$ by convention and thus always accepted.
 Reconstructed jets 
 within $\Delta R<0.2$ of a selected electron are removed.
 
@@ -205,13 +205,13 @@ Events reconstructed with exactly one $e$ and $\mu$ with opposite sign and at le
 Truth objects are processed using the software package \texttt{ TopFiducial-00-00-09} in \texttt{ AnalysisTop-1.8.0}. Cuts applied to truth objects attempt to replicate the above fiducial selections for the reconstructed objects.
 
 \begin{description}
-\item[Leptons:] Stable electrons and muons are required not to come from a hadron in the Monte Carlo truth particle record, either directly or through a tau decay. This ensures that the lepton is from an electroweak decay without requiring a direct $W$-boson match. The four momenta of the bare leptons are then `dressed' by adding the four momenta of all stable photons within $\Delta R$=0.1 with status code 1 and not originating from Geant4. The dressed leptons are required to have \pt > 25 \GeV\ and $|\eta|$ < 2.5.
-\item[Jets:] Truth jets are clustered using the anti-$k_t$ algorithm \cite{antikt} with radius parameter $R=0.4$, starting from all stable particles, except for selected leptons ($e$, $\mu$, $\nu$) and the photons used to dress the leptons. Truth jets are required to have \pT > 10 \GeV, $|\eta|$ < 4.5. Though only jets with \pT > 25 \GeV\ are considered in the final result, lowering the \pt\ requirement for truth jets allows matching across the fiducial boundary. This is discussed in more detail in Section~\ref{sec:extrajets}.
+\item[Leptons:] Stable electrons and muons are required not to come from a hadron in the Monte Carlo truth particle record, either directly or through a tau decay. This ensures that the lepton is from an electroweak decay without requiring a direct $W$-boson match. The four momenta of the bare leptons are then `dressed' by adding the four momenta of all stable photons within $\Delta R$=0.1 with status code 1 and not originating from Geant4. The dressed leptons are required to have \pt $>$ 25 \GeV\ and $|\eta|$ $<$ 2.5.
+\item[Jets:] Truth jets are clustered using the anti-$k_t$ algorithm  with radius parameter $R=0.4$, starting from all stable particles, except for selected leptons ($e$, $\mu$, $\nu$) and the photons used to dress the leptons. Truth jets are required to have \pT $>$ 10 \GeV, $|\eta| <$ 4.5. Though only jets with \pT $>$ 25 \GeV\ are considered in the final result, lowering the \pt\ requirement for truth jets allows matching across the fiducial boundary. This is discussed in more detail in Chapter~\ref{ch:extrajets}.
 
-\item[$b$-tagging:] $B$ hadrons with \pT > 5 \GeV\ are associated with jets through ghost matching~\cite{ghostmatch}. Truth $b$-tagged jets have \pT > 25 \GeV, $|\eta|$ < 2.5 and at least one ghost associated $B$-hadron with $p^{{\textrm B}}_{T} > 5$ \GeV.
+\item[$b$-tagging:] $B$ hadrons with \pT $>$ 5 \GeV\ are associated with jets through ghost matching~\cite{ghostmatch}. Truth $b$-tagged jets have \pT $>$ 25 \GeV, $|\eta|$ $<$ 2.5 and at least one ghost associated $B$-hadron with $p^{{\textrm B}}_{T} > 5$ \GeV.
 
-\item[Overlap removal:] Truth objects are subject to the same overlap removal criteria as reconstructed objects, after dressing and jet reclustering. The closest jet within $\Delta R$ < 0.2 of an electron is excluded from consideration.  After such jets are removed, 
-muons  and electrons with $\Delta R$ < 0.4 of a jet are excluded. Electrons overlapping with muons are removed if $\Delta \phi_{e\mu} < 0.005$ and $\Delta \theta_{e\mu} < 0.005$.
+\item[Overlap removal:] Truth objects are subject to the same overlap removal criteria as reconstructed objects, after dressing and jet reclustering. The closest jet within $\Delta R$ $<$ 0.2 of an electron is excluded from consideration.  After such jets are removed, 
+muons  and electrons with $\Delta R$ $<$ 0.4 of a jet are excluded. Electrons overlapping with muons are removed if $\Delta \phi_{e\mu} < 0.005$ and $\Delta \theta_{e\mu} < 0.005$.
 \end{description}
 
 
@@ -220,18 +220,18 @@ Events with exactly one $e$ and $\mu$ with opposite sign and at least 2-$b$ jets
 \subsection{Truth matching}
 In addition to fiducial definitions for reconstructed from detector output, fiducial definitions for the ``true'' particles generated by the MC simulation must be made.
 \label{ss:tmatching}
-Ageometric $\Delta R$ algorithm matches reconstructed objects to truth objects satisfying the fiducial requirements above. These definitions are relevant for background unmatched extra jets, as well as various truth studies.
+A geometric $\Delta R$ algorithm matches reconstructed objects to truth objects satisfying the fiducial requirements above. These definitions are relevant for background unmatched extra jets, as well as various truth studies.
 \begin{description}
 \item[Leptons:] Each truth $e$ ($\mu$) is matched to the closest reconstructed $e$ ($\mu$) within $\Delta R < 0.02$.
-\item[Jets:] Truth jets are geometrically matched to the closest reconstructed jet within $\Delta R_{\mathrm{reco jet, truth jet}} < 0.4$. If a reconstructed jet is not matched to a truth jet, it is assumed to be either from pileup or matching inefficiency and is treated as background as discussed in Section~\ref{ss:pileup}.
+\item[Jets:] Truth jets are geometrically matched to the closest reconstructed jet within $\Delta R_{\mathrm{reco jet, truth jet}} < 0.4$. If a reconstructed jet is not matched to a truth jet, it is assumed to be either from pileup or matching inefficiency and is treated as background as discussed in Chapter~\ref{ss:pileup}.
 
 In selecting $e\mu$+2 $b$-jet events, $b$-jets are matched to truth jets before extra jets. Thus, if both an extra jet and a $b$-jet satisfy $\Delta R_{\mathrm{reco jet, truth jet}}<0.4$, the $b$-jet is matched to the truth jet and the extra jet is unmatched. If two $b$-jets or two extra jets are reconstructed within $\Delta R_{\mathrm{reco jet, truth jet}}<0.4$ of a single truth jet, the reconstructed jet with smaller $\Delta R_{\mathrm{reco jet, truth jet}}$ is matched to the truth jet and the other reconstructed jet is unmatched.
 
-Because of limited \pt\ resolution, the reconstructed \pt\ of a jet can vary significantly from its truth \pt. The \pt\ threshold for truth jets is lowered to 10 \GeV, so that jets reconstructed with \pt\ > 25 \GeV\ can match truth jets that fail the fiducial \pt\ cut. 
+Because of limited \pt\ resolution, the reconstructed \pt\ of a jet can vary significantly from its truth \pt. The \pt\ threshold for truth jets is lowered to 10 \GeV, so that jets reconstructed with $\pt > 25 \GeV$ can match truth jets that fail the fiducial \pt\ cut. 
 
 
 
-\item[Parton matching:] For some studies, the truth jets from top are identified via a parton matching procedure. Each jet is matched to the highest energy parton\footnote{Quarks (u,d,s,c,b), gluons, photons and pdgId = 0 particles.} with \pt > 5 \GeV\ within $\Delta R = 0.4$. If this parton is a decay product of the top, then the jet is considered a `top jet.'
+\item[Parton matching:] For some studies, the truth jets from top are identified via a parton matching procedure. Each jet is matched to the highest energy parton\footnote{Quarks (u,d,s,c,b), gluons, photons and pdgId = 0 particles.} with \pt $>$ 5 \GeV\ within $\Delta R = 0.4$. If this parton is a decay product of the top, then the jet is considered a `top jet.'
 \end{description}
 \section{Event selection}
 The process of selecting \emubb\ events proceeds as follows. First, events are selected from simulation and data by vetoing a small number of events failing cleaning cuts. Then events are required to have exactly one electron and one muon with opposite charges. Finally, events with at least two $b$-tagged jets are selected. In events with more than two $b$-tagged jets, the two $b$-jets with the highest MV1 are considered the $b$-jets used to select the event and the remaining $b$-jet(s) are considered extra jets. The selection requirements are identical to those in the 2012 \ttbar cross-section analysis~\cite{xsec}, with the exception of requiring \textit{at least} two $b$-tagged jets instead of \textit{exactly} two.
@@ -282,22 +282,22 @@ Total & 68201.0 & 100.0 & 12309	& 100.0 \\
 Data & 69575 &  & 12332 &   \\
 \hline \hline 
 \end{tabular}
-\caption{Number of events with opposite sign $e\mu$ and at least 2 $b$-jets in the data  compared to that from Monte Carlo, broken down into contributions from \ttbar, $Wt$ single top, Z+jets and dibosons. Only central values are shown here;  systematic uncertainties are discussed in Section~\ref{sec:syst}.}
+\caption{Number of events with opposite sign $e\mu$ and at least 2 $b$-jets in the data  compared to that from Monte Carlo, broken down into contributions from \ttbar, $Wt$ single top, Z+jets and dibosons. Only central values are shown here;  systematic uncertainties are discussed in Chapter~\ref{ch:syst}.}
 \label{t:sel}
 \end{table}
 
 \begin{table}[htp]
 \begin{center}
-\begin{tabular} {|l|l|l||l|}
+\begin{tabular} {|l|l||l|}
 \hline
-Generator & DS & $N_{\ttbar}$ & $N_{\mathrm{data}}/(N_{\text{single~top}}+N_{\ttbar})$\\
+Generator & $N_{\ttbar}$ & $N_{\mathrm{data}}/(N_{\text{single~top}}+N_{\ttbar})$\\
 \hline
-\pow+\py hdamp=$\infty$ (base) & 117050 & 11946.5 & 1.0024\\
-\pow+\py P2011C hdamp=$m_t$ & 110404 & 12095.8 & 0.9904 \\
-\mcnlohw\ & 105200 & 12208.3 & 0.9815 \\
-\madgraph+\py & 110872 & 356.33 & 0.9194 \\
-\pow+\hw & 105860 & 11856.6 & 1.0097 \\
-\peight & 117046 & 12115.6 & 0.9888 \\
+\pow+\py hdamp=$\infty$ (base) & 11946.5 & 1.0024\\
+\pow+\py P2011C hdamp=$m_t$ &  12095.8 & 0.9904 \\
+\mcnlohw\ &  12208.3 & 0.9815 \\
+\madgraph+\py & 356.33 & 0.9194 \\
+\pow+\hw &  11856.6 & 1.0097 \\
+\peight &  12115.6 & 0.9888 \\
 
 \hline
 \end{tabular}
@@ -329,7 +329,7 @@ Generator & DS & $N_{\ttbar}$ & $N_{\mathrm{data}}/(N_{\text{single~top}}+N_{\tt
 \subfloat{
 \includegraphics[width=0.45\textwidth]{fig/MCComp/NLO/BJetEta.pdf}}
 
-\caption{Distributions of the transverse momentum and $\eta$ of the $b$-jets in events with an opposite sign $e\mu$ pair  and at least 2 $b$-jets in the 2012 data. The distributions in data are compared to simulation, normalized to the same number of events as in the data  (see scale factors in Table~\ref{t:ttgen}).. In events where more than two $b$-jets are reconstructed, the two highest \pt $b$-jets are selected and the remaining $b$-jet is classified as an extra jet (see Section ~\ref{sec:extrajets}). The ratio of different MC samples to data are shown with error bars corresponding to the MC statistical uncertainty and a shaded band corresponding to the data statistical uncertainty. Systematic uncertainties are not shown.}
+\caption{Distributions of the transverse momentum and $\eta$ of the $b$-jets in events with an opposite sign $e\mu$ pair  and at least 2 $b$-jets in the 2012 data. The distributions in data are compared to simulation, normalized to the same number of events as in the data  (see scale factors in Table~\ref{t:ttgen}).. In events where more than two $b$-jets are reconstructed, the two highest \pt $b$-jets are selected and the remaining $b$-jet is classified as an extra jet (see Chapter ~\ref{ch:extrajets}). The ratio of different MC samples to data are shown with error bars corresponding to the MC statistical uncertainty and a shaded band corresponding to the data statistical uncertainty. Systematic uncertainties are not shown.}
 \label{fig:bjet}
 \end{figure}
 

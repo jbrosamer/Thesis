@@ -1,5 +1,9 @@
-\section{Types of uncertainty}
-Bias versus spread
+
+The evaluation of systematic uncertainties in this analysis follows the standard ATLAS Top group recommendations.
+
+Each systematic uncertainty is evaluated at the $1\sigma$ level. The shift is first evaluated at the reconstructed level and then propagated into the unfolding. The result is compared to the spectrum unfolded without a systematic shift. Except where otherwise indicated, individual systematics are assumed to be uncorrelated. 
+
+The final \chisq\ conclusions in this analysis rely not just on the bin errors of the final distribution, but on the full covariance matrix. The covariance matrices for systematics are evaluated in one of two ways. Some uncertainties depend on the difference between two discrete spectra (e.g. one generator unfolded against another), and the covariance is taken as the outer product of the systematic uncertainty for each bin. For nuisance parameters like JES, the full covariance matrix can be computed with pseudoexperiments varied by a random amount. The details of these two procedures are given below.
 
 \section{Detector modeling}
 Detector modeling uncertainties are evaluated using the baseline \ttbar\ simulation by varying the
@@ -28,7 +32,7 @@ are used.
 
 
 \subsection{Computation of uncertainty}
-
+\label{ss:systoy}
 The impact of these systematic uncertainties on reconstructed extra jets is evaluated by varying each individual scale factor and reanalyzing the simulated data using the same prescription as for the nominal. The standard ATLAS procedure for evaluating detector systematic uncertainties is to vary each nuisance parameter individually by $\pm 1\sigma$. However, this method does not allow the construction of a full covariance matrix. The procedure used here is similar to that used in Ref.~\cite{Bell:1470588}. A set of 1000 modified samples is constructed from the full statistics of the \powpy\ simulation. For each sample, each nuisance parameter $i$ is varied by $\lambda_i ={\textrm Gauss}(0, \sigma_i)$, where $\sigma_i$ is the nuisance parameter uncertainty. The systematic covariance matrix from these samples is then computed:
 \begin{equation}
 C_{ij}=\frac{1}{1000} \Sigma_{x=0}^{1000} \left({\mathscr N}_x^i- \left \langle{\mathscr N}^i \right \rangle \right) \left({\mathscr N}_x^j- \left \langle{\mathscr N}^j \right \rangle \right)
@@ -43,19 +47,14 @@ As a cross-check, the uncertainities obtained using this procedure are compared 
 
 
 \begin{figure}
-~
-\subfloat[Highest $p_{T}$ extra jet]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/UnfoldSys/Toy/JES1VarBandRatioJet0.pdf}}
-~
-\subfloat[2nd highest $p_{T}$ extra jet]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/UnfoldSys/Toy/JES1VarBandRatioJet1.pdf}} \\
-~
-\subfloat[3rd highest $p_{T}$ extra jet]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/UnfoldSys/Toy/JES1VarBandRatioJet2.pdf}}
-~
-\subfloat[4th highest $p_{T}$ extra jet]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/UnfoldSys/Toy/JES1VarBandRatioJet3.pdf}}
-~
 \caption{Ratio of reconstructed extra jets spectrum obtained from systematic variations of the 15 JES eigenstate nuisance parameters with respect to that obtained using the nominal parameters. The band shows the uncertainty obtained from the samples with gaussian variation of all nuisance parameters. The upper and lower lines shows uncertainty from the quadratic sum of the independent variations of each nuisance parameter by $\pm 1 \sigma$. The distribution of samples values has fitted $\mu=1$ and $\sigma$ consistent with the $\pm 1 \sigma$ method. }
 \label{fig:ToyJES1}
 \end{figure}
@@ -78,7 +77,7 @@ Since the single top contribution is treated as signal, a systematic uncertainty
 \section{Pileup and false jet background}
 \label{ss:sysbkg}
 Before unfolding, unmatched jets are subtracted from the measured data distribution. The uncertainty on the modeling of these jets is estimated 
-by taking the difference between the pileup and false jets rates obtained in Section~\ref{ss:pileup} with the
+by taking the difference between the pileup and false jets rates obtained in Chapter~\ref{ss:pileup} with the
 rate obtained from the baseline \powpy\ simulation.
 The unmatched extra jets obtained using these two methods are shown in Figure~\ref{fig:FalseComp}. 
 The two distributions agree well at low \pt\ but differ slightly at higher \pt. This systematic uncertainty is small compared to the statistical uncertainty of the samples.
@@ -87,7 +86,7 @@ The two distributions agree well at low \pt\ but differ slightly at higher \pt. 
 \end{displaymath}
 \section{Input extra jet spectrum}
 \label{ss:unfsystt}
-Uncertainty due to the modeling of the input \ttbar\ spectrum for the unfolding is taken from stress tests constructed using the method described in Section~\ref{ss:chisq}.
+Uncertainty due to the modeling of the input \ttbar\ spectrum for the unfolding is taken from stress tests constructed using the method described in Chapter~\ref{ss:stress}.
 
 Following the prescription outlined by the Top group (see twiki Ref.~\cite{topsys}), the following input generator samples and unfolding procedures are used to evaluate different components of modeling uncertainty:
 \begin{description}
@@ -120,10 +119,10 @@ Each variation is unfolded with the nominal \mcnlohw\ migration matrix. For each
 \end{displaymath}
 
 \begin{figure}
-\subfloat{
+\subfloat[a]{
 \includegraphics[width=0.45\textwidth]{fig/PDF/AvgBias.pdf}}
 ~
-\subfloat{
+\subfloat[b]{
 \includegraphics[width=0.45\textwidth]{fig/PDF/AvgFracBias.pdf}}
 ~
 \label{fig:pdfbias}
@@ -133,10 +132,10 @@ Each variation is unfolded with the nominal \mcnlohw\ migration matrix. For each
 
 
 \begin{figure}
-\subfloat{
+\subfloat[a]{
 \includegraphics[width=0.45\textwidth]{fig/Stress/110875atlfast/FracBias2Iterations.pdf}}
 ~
-\subfloat{
+\subfloat[b]{
 \includegraphics[width=0.45\textwidth]{fig/Stress/110878atlfast/FracBias2Iterations.pdf}}
 \label{fig:radbias}
 \caption{
@@ -169,13 +168,13 @@ A covariance matrix associated with the statistical uncertainty of the input dat
 Figure ~\ref{fig:SmoothSys} shows the sum of uncertainties from all sources, broken into categories as follows.
 \begin{description}
 \item[Statistics:] Statistical uncertainty on the data is returned from \texttt{ RooUnfold}
-\item[Modeling:] NLO generator, radiation, shower and migration matrix statistics uncertainties (Section~\ref{ss:unfsystt}-\ref{ss:mcstats})
-\item[PDF:] PDF variations, determined from \mcnlohw (Section~\ref{ss:pdf})
-\item[Pileup:] Uncertainties from JVF nuisance parameters (Section~\ref{ss:np}) and false jet modelling (Section~\ref{ss:sysbkg})
-\item[JES:] Jet energy scale nuisance parameters (Section~\ref{ss:np})
-\item[JER/JEFF:] Jet energy resoulation and jet finding efficiency nuisance parameters (Section~\ref{ss:np})
+\item[Modeling:] NLO generator, radiation, shower and migration matrix statistics uncertainties (Chapter~\ref{ss:unfsystt}-\ref{ss:mcstats})
+\item[PDF:] PDF variations, determined from \mcnlohw (Chapter~\ref{ss:pdf})
+\item[Pileup:] Uncertainties from JVF nuisance parameters (Chapter~\ref{ss:np}) and false jet modelling (Chapter~\ref{ss:sysbkg})
+\item[JES:] Jet energy scale nuisance parameters (Chapter~\ref{ss:np})
+\item[JER/JEFF:] Jet energy resoulation and jet finding efficiency nuisance parameters (Chapter~\ref{ss:np})
 \item[Other detector:] Lepton and $b$-tag nuisance parameters not in the JES, JER/JEFF or pileup category.
-\item[Backgrounds:] Single top rate uncertainty $Wt$ (Section \ref{ss:wt}) 
+\item[Backgrounds:] Single top rate uncertainty $Wt$ (Chapter\ref{ss:wt}) 
 \end{description}
 
 In most bins, statistical uncertainty dominates. At low jet \pt, JES is the largest source of uncertainty. Modeling is the largest source of uncertainty at high jet \pt.
@@ -187,16 +186,16 @@ In most bins, statistical uncertainty dominates. At low jet \pt, JES is the larg
 % \section{Propagation of uncertainties to multiplicity distributions}
 % Statistical uncertainties from RooUnfold and systematic uncertainties from the above procedures are calculated in bins of jet \pt\ and rank. In order to derive the multiplicity from these distributions, the uncertainties must be propagated as a multinomial distribution with a full covariance matrix. Details of this propagation are provided in Appendix~\ref{app:stats}. Pull distributions obtained from pseudoexperiments are shown in Figure~\ref{fig:multpull} and indicate that this calculation overestimates the statistical uncertainty. As recommended by the statistics committee, the final uncertainty on the multiplicity is obtained using the pseudoexperiments.
 \begin{figure}
-\subfloat[Highest $p_{T}$ extra jet]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/UnfoldSys/Jet0.pdf}}
 ~
-\subfloat[2nd highest $p_{T}$ extra jet]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/UnfoldSys/Jet1.pdf}} \\
 ~
-\subfloat[3rd highest $p_{T}$ extra jet]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/UnfoldSys/Jet2.pdf}}
 ~
-\subfloat[4th highest $p_{T}$ extra jet]{
+\subfloat{
 \includegraphics[width=0.45\textwidth]{fig/UnfoldSys/Jet3.pdf}}
 ~
 \caption{Sum of systematic uncertainties due to detector modeling. The ratio of the simulated extra jets reconstructed with each systematic variation is taken with respect to the nominal. The band shows the data statistical uncertainty for reference.}
@@ -215,10 +214,10 @@ In most bins, statistical uncertainty dominates. At low jet \pt, JES is the larg
 % \label{fig:uncmat}
 % \end{figure}
 \begin{figure}
-\subfloat{
+\subfloat[a]{
 \includegraphics[width=0.45\textwidth]{fig/Cov/Stat.pdf}}
 ~
-\subfloat{
+\subfloat[b]{
 \includegraphics[width=0.45\textwidth]{fig/Cov/Total.pdf}}
 ~
 \caption{(a) The covariance matrix associated with the statistical uncertainty of the input spectrum returned from \texttt{ RooUnfold}. (b) The covariance matrix from all sources of uncertainty, obtained by adding the covariance matrices from all sources of systematic uncertainty to (a). This matrix is used to determine the \chisq\ agreement between generators and the fully corrected data.}

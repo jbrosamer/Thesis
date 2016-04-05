@@ -19,7 +19,7 @@
 % Double spacing, if you want it.
 % \def\dsp{\def\baselinestretch{2.0}\large\normalsize}
 % \dsp
-
+\usepackage{notoccite}
 \usepackage{defs}
 \graphicspath{{fig/}}
 % If the Grad. Division insists that the first paragraph of a section
@@ -87,6 +87,9 @@ To do
 \input{tex/intro.tex}
 \chapter{Theory}
 \label{ch:theory}
+\input{tex/theory.tex}
+\chapter{Phenomenology at the LHC}
+\label{ch:pheno}
 \input{tex/theory.tex}
 \chapter{Analysis strategy}
 \label{ch:strategy}
@@ -165,7 +168,7 @@ To do
 
 
 \backmatter
-\bibliographystyle{plain}
+\bibliographystyle{ieeetr}
 \bibliography{bib/thesis,bib/atlas}
 
 \end{document}

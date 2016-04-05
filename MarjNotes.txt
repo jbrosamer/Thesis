@@ -1,0 +1,6 @@
+-Remove specifics from reference
+-Change theory chapter into 2 (phenomo)
+Pheno chapter:
+
+-change strategy to motivation
+

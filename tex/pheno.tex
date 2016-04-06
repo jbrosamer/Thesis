@@ -1,22 +1,18 @@
-\section{Predictions for hadron colliders}
-The basic principles discussed above are employed in Monte Carlo simulation to allow comprehensive predictions for various kinematic distributions of the final state products in hadron collisions.
-\subsection{Parton distribution functions}
+\section{Simulation of hadron collisions}
 
-Since the PDFs are not calculable from first principle, they are derived by fitting experimental data and then serve as input to MC calculations. 
+In order to analyze complicated processes at huge machines like the LHC, software that virtually reproduces the physics experiment is necessary. In order to account for stochastic effects, Monte Carlo (MC) methods are used to simulate a large number random events.  In the actual experiment, ATLAS detects collisions produced by the LHC and stores these \emph{events} in a data acquisition system. In the virtual simulation, event generators such as \hw~\cite{Herwig} and \py\cite{Pythia} produce final state particles. These particles are then run through a detector simulation of ATLAS built with \textsc{Geant 4}. The simulated and actual detector signals can then share the same event reconstruction framework and analysis. This allows a clear understanding of how the input physics is distorted step-by-step as it goes through the detector and reconstruction. 
 
-PDFs are generally extracted from data at a particular value of momentum transfer, characteristic of the experiment sourcing the data, and then extrapolated to other $Q^2$ values. In addition, different processes are generally most sensitive to a particular PDF over a particular range of proton momentum fraction values. For example, data from Deep Inelastic Scattering (DIS) experiments, where the probes are leptons, can be used to directly constrain only quark PDFs. Information about the gluon PDF can then be inferred indirectly since the DGLAP evolution of quarks leads to generating gluons and vice versa.
-Given this constraint, the best estimate of the PDFs are obtained by combining data from multiple experiments and processes into global fits. This is done by 3 PDF fitting collaborations: CTEQ~\cite{Lai:2010CT10}, MSTW~\cite{Martin:2009MSTW} and NNPDF~\cite{Ball:2012NNPDF}. The current knowledge of the proton PDFs according to NNPDF is shown in Figure~\ref{fig:pdfs}. At large-$x$, most of the momentum is carried by the valence quarks and up-type quarks account for about twice the momentum as compared to down-quarks. Comparing the left and right subfigures confirms that as the probe becomes more energetic, a higher fraction of the proton momentum is found in the sea quarks and gluons. 
-\subsection{Hard collision simulation}
-Description of the partonic cross-section lies in the domain of perturbative QCD and therefore lends itself to analytic calculations. Currently there exist Monte Carlo based programs that can perform these calculations automatically at both the leading order (LO) and next-to-leading order (NLO) in $\alpha_S$. The leading order matrix element is always positive making it possible to implement the calculations via the Monte Carlo method. On the other hand, at NLO there are real and virtual divergent contributions, due to soft and collinear emissions, that must cancel in order to obtain finite results. This cancellation is guaranteed for inclusive observables like the total cross-section, but not so for observables like parton multiplicity~\cite{pdgbook}. In general, perturbative QCD can only provide sensible results for infrared and collinear (IRC) safe observables, which are observables insensitive to the addition of infinitely soft particles or the splitting of a particle into two collinear emissions.
+The distortions resulting from detector imperfections and reconstruction are particularly important to this thesis, so the following chapters will employ specific terms to refer to different aspects of the simulation process. \emph{Generator-level} or \emph{truth} particles refer to those produced by the MC generator before any detector interactions. \emph{Detector-level} or \emph{reconstructed} particles refer to those that have gone through the detector simulation and been reconstructed. 
 
-\subsection{Parton shower and hadronization}
-
-\subsection{Merging fixed-order with parton shower}
-
+To go backwards from the (distorted) reconstructed to truth particles, the distortions introduced by the detector must be reversed. This correction process is referred to as \emph{unfolding} and is further discussed in Chapter~\ref{ch:unfolding}. Unfolding is necessary to compare actual data measured with the detector to theoretical predictions produced by generators.
 \section{Monte Carlo generators}
-particle level v. reco level
+In MC event generators, events are produced step-by-step, with random numbers pulled from quantum mechanical probability distributions at various stages. Averaging over a large number of events gives the expected final distribution of events. The goal is to start with a QFT matrix element in a form similar to Equation~\ref{eq:ab} and produce final state, stable particles that can be measured with a detector. Some of the available event generators go through the complete simulation process while others can only handle some of the steps.
 
-types of generators
+The steps to generate an event can be summarized as follows:
+\begin{itemize}
+\item
+\end{itemize}
+
 
 \section{Jets}
 why antikt is good

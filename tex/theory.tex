@@ -13,11 +13,11 @@ Tables~\ref{t:pspincharge}-\ref{t:pmass} summarize the properties of the fundame
 
 Fermions are spin-$\frac{1}{2}$ point-like particles that form ordinary matter. The two types of fermions are known as leptons and quarks. The three lepton generations, each with a charged lepton and a neutrino, interact via the electroweak force. The three quark generations, each with an up-type and down-type quark, interact via both the electoweak force and the strong force. The strong force combines quarks into composite particles. Three such quarks form a baryon, while two quarks form a meson. Each fermionic generation is identical to the first, except for mass. 
 
-Bosons are particles with integer spin that mediate interactions between particles. Each gauge boson corresponds to a different fundamental force, and the range each force is inversely related to the boson mass.
+Bosons are fundamental particles with integer spin that mediate interactions between particles. Observed elementary bosons are all gauge bosons, except for the Higgs.
 \begin{description}
 \item[Electromagnetic (EM) force] mediated by the massless and chargeless photon ($\gamma$). Since the photon is massless, the range of the EM force is infinite. The EM force is responsible for many common interactions, such as radiation of photons from excited atoms.
 \item[Weak force] mediated by the $W^{\pm}$ and $Z^{0}$ bosons and is responsible for nuclear reactions such as beta decay .
-\item[Strong force] mediated by gluons ($g$) is responsible for the formation of protons and neutrons. The quarks are the only fermions that interact strongly. 
+\item[Strong force] mediated by gluons ($g$) is responsible for the formation of protons and neutrons. The strong force mediates interactions between quarks and hadrons.
 \end{description}
 \begin{table}
 \begin{tabular}[b]{|l||ccc|c|c|}
@@ -79,25 +79,23 @@ Scalar boson               & \multicolumn{3} {c|} {$H$} & 0 & 0 \\
 \label{t:pmass}
 \end{table}
 
-Discovered in 2012, the Higgs boson is the final particle in the SM. In order to explain the mass difference between the photon and electroweak bosons, the symmetry between the EM and weak forces must be broken. The Higgs field interacts with the electroweak gauge bosons to provide masses while preserving the local gauge invariance of the SM.
-
-At low energy, the EM and weak forces appear distinct. Above the unification energy ($\sim 100 $\gev), the EM and weak forces are unified into a single interaction known as the electroweak interaction. The corresponding symmetry group is $SU(2)\times U(1)$, where $SU(2)$ represents the weak force and $U(1)$ represents the EM force. 
+Discovered in 2012~\cite{higgs}, the Higgs boson is the final particle in the SM. The Higgs field interacts with the electroweak gauge bosons to provide masses while preserving the local gauge invariance of the SM. At low energy, the EM and weak forces appear distinct. Above the unification energy ($\sim 100 $\gev), the EM and weak forces are unified into a single interaction known as the electroweak interaction. 
 
 
 \subsection{Quantum chromodynamics}
-Quantum chromodynics (QCD) is a gauge theory which interactions between quarks via the strong force. The six flavors of quarks ($u,d,s,c,b$ and $t$) each carry a conserved quantum number called color, which is analogous to electric charge in QED. Neither quarks nor gluons can exist as free particles. Instead, color-neutral combinations of quarks, anti-quarks and gluons called hadrons are observed. The quark and gluon consituents of a hadron are traditionally called partons.
+Quantum chromodynics (QCD) is a gauge theory describing interactions of quarks and gluons via the strong force. The six flavors of quarks  are$u,d,s,c,b$ and $t$. Quarks and gluons carry a conserved quantum number called color, which is analogous to electric charge in QED. Neither quarks nor gluons can exist as free particles. Instead, color-neutral combinations of quarks, anti-quarks and gluons called hadrons are observed. The quark and gluon consituents of a hadron are traditionally called partons.
 
 The QCD Lagrangian for the interaction between two quarks $i$ and $j$ can be written as~\cite{PDG}:
 \begin{eqnarray}
 \mathcal{L}_{QCD} = \bar{\psi}_i(i\gamma^{\mu}\partial_{\mu}\delta_{ij} - g_s\gamma^\mu t^C_{ij}\mathcal{A}^C_\mu -m\delta_{ij})\psi_j -\frac{1}{4}G^{A}_{\mu\nu}G^{\mu\nu}_A,\\
 \mbox{where } G^A_{\mu\nu} \equiv \partial_\mu \mathcal{A}^A_{\nu}-\partial_\nu \mathcal{A}^A_{\mu} - g_s f_{ABC} \mathcal{A}^B_{\mu} \mathcal{A}^C_{\nu},
 \end{eqnarray}
-where repeated indices are summed over, $\gamma^{\mu}$ are the Dirac $\gamma$ matrices. ${\psi}_i$ is the quark-field spinor, where the color index $i$ can correspond to one of three ($N_C$) quark flavors. $\mathcal{A}^{B}_{\mu}$ represents the gluon fields, where $C$ runs from 1 to $N_C^2-1=8$, corresponding to eight types of gluons. $t^{A}$ are the eight $3 \times 3$ generating matrices of $SU(3)$ and $f_{ABC}$ the group structure constants of $SU(3)$. The fundamental parameters are the coupling $g_s$ and the quark masses $m$.
+where repeated indices are summed over, $\gamma^{\mu}$ are the Dirac $\gamma$ matrices. ${\psi}_i$ is the quark-field spinor, where the color index $i$ can correspond to one of three ($N_C$) quark flavors. $\mathcal{A}^{B}_{\mu}$ represents the gluon fields, where $C$ runs from 1 to $N_C^2-1=8$, corresponding to eight types of gluons.  The eight $3 \times 3$ generating matrices of $SU(3)$ are labeled as $t^{A}$ and $f_{ABC}$ the group structure constants of $SU(3)$. The fundamental parameters are the coupling $g_s$ and the quark masses $m$.
 
-The structure of the Lagrangian predicts three types of vertices: a quark-antiquark-gluon ($q\bar{q}g$) vertex proportional to $g_s$, a three gluon vertex  proportional to $g_s$, and a four gluon vertex proportional to $g_s^2$. Since gluons carry color charge, they can directly couple to other gluons, unlike other bosons. These self-interaction vertices mean that QCD has divergent terms that are not found in other SM sectors.
+The structure of the Lagrangian predicts three types of vertices: a quark-antiquark-gluon ($q\bar{q}g$) vertex proportional to $g_s$, a three gluon vertex  proportional to $g_s$, and a four gluon vertex proportional to $g_s^2$. Since gluons carry color charge, they can directly couple to other gluons.
 \subsubsection{Running of the coupling}
 
-In the context of perturbative QCD, \emph{order} refers to the degree of $\alpha_S$ used in the calulation: leading order (LO), next-to-leading order (NLO)next-to-next-to leading order (NNLO), etc. Pertubative QCD calculations at NLO and beyond necessarily involve these divergent quark and gluon loops. These divergences must be removed in order to obtain a physical result. In order to remove the divergences, the strong coupling constant must be ``renormalized'' and expressed as a function of an (unphysical) renormalization scale $\mu_R$. Notably, QCD predictions change depending on the scale of the probe. This is sometimes referred to as the ``running'' of the coupling constant. Predictions for a given process are evaluated with $\mu_R$ as close to the momentum transfer $Q$ as possible, so that $\alpha_s(\mu_R \simeq Q)$ gives the effective strength of the strong force in that particular process. 
+In the context of perturbative QCD, \emph{order} refers to the degree of $\alpha_S$ used in the calulation: leading order (LO), next-to-leading order (NLO)next-to-next-to leading order (NNLO), etc. Pertubative QCD calculations at NLO and beyond necessarily involve these divergent quark and gluon loops. These divergences must be removed in order to obtain a physical result. In order to remove the divergences, the strong coupling constant must be ``renormalized'' and expressed as a function of an (unphysical) renormalization scale $\mu_R$. If a calculation could be carried out to full order, there would be no $\mu_R$ dependence, so the the $\mu_R$ dependence indicates uncertainty from higher order corrections. Pertubative QCD predictions change depending on the scale of the probe. This is sometimes referred to as the ``running'' of the coupling constant. Predictions for a given process are evaluated with $\mu_R$ as close to the momentum transfer $Q$ as possible, so that $\alpha_s(\mu_R \simeq Q)$ gives the effective strength of the strong force in that particular process. 
 
 The strong coupling constant $\alpha_S \equiv g_s^2/4\pi$ is related the renormalization scale $\mu_R$ by the renormalization group equation (RGE):
 \begin{equation}
@@ -106,7 +104,7 @@ The strong coupling constant $\alpha_S \equiv g_s^2/4\pi$ is related the renorma
 \end{equation}
 where the coefficients $b$ are called the beta-function coefficients and depend on the number of quark colors. The values of the beta coefficients up to $b_3$ can be found in Ref.~\cite{vanRitbergen:1997va}. 
 
-Figure~\ref{fig:alphas} shows the NLO QCD prediction for $\alpha_S$ as a function of $Q$, as well as several experimentally measured values of $\alpha_S$ for discrete energy scales. Experimental measurement agrees very well with the theoretical predictions. The negative sign on the right side of Eqn.\ref{eq:rge} means that the strong coupling becomes weaker as the scale increases: $\alpha_S \sim 0.1$ for momentum transfers $100 \gev \lesssim Q \lesssim 1 \tev$. This is the origin of the previously mentioned asymptomic freedom, which allows partons to be considered approximately free at high energy. The divergence of the coupling constant at low energy results in the formation of stable hadrons and is called ``confinement.''
+Figure~\ref{fig:alphas} shows the NLO QCD prediction for $\alpha_S$ as a function of $Q$, as well as several experimentally measured values of $\alpha_S$ for discrete energy scales. While the value of $\alpha_S$ cannot be predicted, its dependence on $Q$ can. Experimental measurement of the scale dependence agrees well with the theoretical predictions. The negative sign on the right side of Eqn.\ref{eq:rge} means that the strong coupling becomes weaker as the scale increases: $\alpha_S \sim 0.1$ for momentum transfers $100 \gev \lesssim Q \lesssim 1 \tev$. This running is the origin of \emph{asymptomic freedom}, which allows partons to be considered approximately free at high energy. The divergence of the coupling constant at low energy results in the formation of stable hadrons and is called \emph{confinement.}
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{fig/thry/RunningAlpha.png}
@@ -122,7 +120,7 @@ In high energy scattering, the proton cannot be modeled as three free non-intera
  Since the PDFs deal with the non-perturbative regime of QCD, PDFs must be determined by global fits to experimental measurements of deep inelastic and other hard-scattering processes. PDFs derived from measurements of one process can be used for predictions in a different process. For example, positron-proton scattering data from the HERA experiment can be used to make predictions for proton-proton collision at the LHC. One common PDF set used at the LHC, called MSTW, is shown in Figure~\ref{fig:mstw}.
 
 PDF measurements depend on the scale of the hard probe, so theoretical calculations are needed to evolve the PDFs between experimental data points. The differential equations governing the $\mu^2$ dependence of the PDFs are called the DGLAP equations and are derived in Ref.~\cite{Altarelli:1977zs}. Much like the RGE introduces an arbitrary $\mu_R$, the DGLAP equations introduce a factorization scale $\mu_F$ to absorb the divergences from soft parton emissions. To avoid unnaturally large logarithms in the pertubative expansion,  $\mu_F$ and $\mu_R$ are usually assumed to be equal and of the order of the typical momentum scales of the hard scattering process. The theoretical uncertainty from the arbitrary choice of $\mu_F$ and $\mu_R$ is usually evaluated by repeating the calculation with the scale doubled and halved.
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{fig/thry/mstw.png}
 \caption{MSTW 2008 NLO PDFs at $Q^2= 10 \gev^2$ and $Q^2= 10^4 \gev^2$~\cite{mstw}.}
@@ -133,7 +131,7 @@ PDF measurements depend on the scale of the hard probe, so theoretical calculati
 \subsubsection{Factorization}
 
 
-Because of the scale dependence of QCD, interactions can be separated into two regimes, with the transition around the QCD confinement scale, $\Lambda_{QCD} \sim 200$ MeV, the energy at which QCD because non-perturbative. At low energy, $\alpha_S$ is of order unity, so perturbative expansion is not possible. The quarks are bound together by soft gluon emissions into a proton. At scales far above the QCD confinement scale, the partons can be considered free objects and can be treated with perturbative expansion.
+Because of the scale dependence of QCD, interactions can be separated into two regimes, with the transition around the QCD confinement scale, $\Lambda_{QCD} \sim 200$ MeV, the energy at which QCD because non-perturbative. At low energy, $\alpha_S$ is of order unity, so perturbative expansion is not possible. The quarks are bound together by soft gluon exchange into a hadron. At scales far above the QCD confinement scale, the partons can be considered free objects and can be treated with perturbative expansion.
 
 The hard scatter interaction with momentum transfer $Q$ occurs on a time scale that goes as $\tau \sim 1/Q$ which is much larger than the time scale of interactions between protons $\tau \sim 1/\Lambda_{QCD}$. This fact allows high energy proton collisions to be \textit{factorized} into two independent processes: the PDF, which a phenomelogical description of the momentum distribution among the partons inside the proton which depends only on the momentum scale, and the partonic cross section $\hat{\sigma}$, which uses perturbative QCD to determine the calculates the scatter of the hard probe from one of the free partons inside the proton.
 
@@ -161,15 +159,15 @@ which is diagramatically represented in Figure~\ref{fig:factorize}. The partonic
 
 
 \section{Top quark physics}
-The top quark was first discovered at Fermilab in 1995~\cite{Abe:1995hr}\cite{Abachi:1995iq}. As the heaviest known fundamental particle, the top quark is an important probe of the SM and extensions of the SM. Before the Large Hadron Collider (LHC), the Tevatron provided the only experimental observation of the top. The LHC produces a top quark every few seconds, about a hundred times more frequently than the Tevatron. This signifigant increase in statistics allows precision measurements of the top at the LHC, which is sometimes called a ``Top Factory.'' 
+The top quark was first discovered at Fermilab in 1995~\cite{Abe:1995hr}\cite{Abachi:1995iq}. As the heaviest known fundamental particle, the top quark is an important probe of the SM and extensions of the SM. Before the LHC, the Tevatron provided the only experimental observation of the top. The LHC produces a top quark every few seconds, about a hundred times more frequently than the Tevatron. This signifigant increase in statistics allows precision measurements of the top at the LHC, which is sometimes called a ``Top Factory.'' 
 
 Because of its large mass, the top quark plays a special role in the SM. The top mass is about the same as a gold atom nucleus, 40 times larger than the next heaviest quark and $10^5$ times heavier than the lightest quark. The mass of the top quark has been precisely measured in different decay channels at both the LHC and the Tevatron. Figure~\ref{fig:topmass} shows a recent summary of these measurements, which can be combined to give a world average of $173.34 \pm 0.76$ for the top quark mass.
 
- The top has a very short lifetime ($\sim 5 \e{-25}$ s), so it is the only quark that decays before it can form a hadron with other quarks. This unique property means that the top is the only ``bare'' quark that can be accessed at the LHC. The top is also the only quark with Yukawa coupling to the Higgs boson of order unity. Thus, accurately measuring its properties (mass, coupling, cross section, branching ratios) provides an important information about Quantum Chromodynamics (QCD), the SM description of interactions between quarks via the strong force. 
+ The top has a very short lifetime ($\sim 5 \e{-25}$ s), so it is the only quark that decays before it can form a hadron with other quarks. This unique property means that the top is the only ``bare'' quark that can be accessed experimentally.
 
 
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{fig/thry/mtopSummaryAll.pdf}
 \caption{Summary of the ATLAS direct $m_{top}$ measurements. The results are compared with the ATLAS, Tevatron and Tevatron+LHC $m_{top}$ combinations. For each measurement, the statistical uncertainty, the sum of the remaining uncertainties are reported separately.}
@@ -178,33 +176,34 @@ Because of its large mass, the top quark plays a special role in the SM. The top
 
 \subsection{Top quark production at the LHC}
 
-In $pp$ collision at the LHC, top quarks are mostly produced in pairs through the leading order QCD processes  $gg \rightarrow \ttbar$ and $q\bar{q} \rightarrow \ttbar$. The Feynman diagrams for these processes are shown in Figure~\ref{fig:ttdiag}. At Tevatron with $p\bar{p}$ collisions, \ttbar production was dominated by quark annihilation ($\sim 85$\%). At the LHC, the higher collision energy and lack of valence anti-quarks in the proton result in gluon-fusion dominated \ttbar production ($\sim 85$\%)~\cite{PDG}. The total \ttbar cross-section has been computed at next-to-next-to leading order (NNLO) with next-to-next-to-leading-log soft gluon resummation (NNLL) in Ref.~\cite{Czakon:2013goa} with a final theoretical uncertainty of $\sim 3 \%$ and found to agree with experimental measurements. Figure~\ref{fig:ttxsec} compares this calculation with measurements made at both in the LHC and Tevatron in various decay channels.
+In $pp$ collisions at the LHC, top quarks are mainly produced in pairs through the QCD processes  $gg \rightarrow \ttbar$ and $q\bar{q} \rightarrow \ttbar$. The Feynman diagrams for these processes are shown in Figure~\ref{fig:ttdiag}. At Tevatron with $p\bar{p}$ collisions, \ttbar production was dominated by quark annihilation ($\sim 85$\%). At the LHC, the higher collision energy and lack of valence anti-quarks in the proton result in gluon-fusion dominated \ttbar production ($\sim 85$\%)~\cite{PDG}. The total \ttbar cross-section has been computed at next-to-next-to leading order (NNLO) with next-to-next-to-leading-log soft gluon resummation (NNLL) in Ref.~\cite{Czakon:2013goa} with a final theoretical uncertainty of $\sim 3 \%$ and found to agree with experimental measurements. Figure~\ref{fig:ttxsec} compares this calculation with measurements made at both in the LHC and Tevatron in various decay channels.
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{fig/thry/fig_ttbar.png}
 \caption{Feynman diagrams for \ttbar production at leading order QCD}
 \label{fig:ttdiag}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{fig/thry/tt_xsec_vsroots.pdf}
 \caption{Summary of LHC and Tevatron measurements of the top-pair production cross-section as a function of the centre-of-mass energy compared to the NNLO QCD calculation complemented with NNLL resummation (top++2.0). The theory band represents uncertainties due to renormalisation and factorisation scale, parton density functions and the strong coupling. The measurements and the theory calculation is quoted at $m_{top}$=172.5 GeV. Measurements made at the same centre-of-mass energy are slightly offset for clarity.}
 \label{fig:ttxsec}
 \end{figure}
 
-Top quarks can also be produced singly via electroweak processes. Because the weak coupling is much smaller than the strong coupling, fewer quarks are produced singly than in pairs. The Feynman diagrams for single top production are shown in Figure~\ref{fig:tdiag}. Single production can mediated by virtual $s$-channel and $t$-channel $W$-bosons. These production channels provide sensitivity to physics beyond the SM. Single tops are also produced in association with a $W$-boson ($Wt$-associated production). While negligible at the Tevatron, at the LHC, $Wt$-associated production provide a sizeable contribution to single top production. The inclusive cross-section for $s$-channel, $t$-channel and $Wt$-associated single top production has been computed to NNLO. This calculation is compared with the ATLAS experimental measurements of each channel in Figure~\ref{fig:txsec}.
+Top quarks can also be produced singly via electroweak processes. Because the weak coupling is much smaller than the strong coupling, fewer top quarks are produced singly than in pairs. The Feynman diagrams for single top production are shown in Figure~\ref{fig:tdiag}. Single production can mediated by virtual $s$-channel and $t$-channel $W$-bosons. These production channels provide sensitivity to physics beyond the SM. Single tops are also produced in association with a $W$-boson ($Wt$-associated production). While negligible at the Tevatron, at the LHC, $Wt$-associated production provide a sizeable contribution to single top production. The inclusive cross-section for $s$-channel, $t$-channel and $Wt$-associated single top production has been computed to NNLO. This calculation is compared with the ATLAS experimental measurements of each channel in Figure~\ref{fig:txsec}.
+
+The calculation of $Wt$ at NLO is non-trivial since the NLO $Wt$ production process interferes with the LO \ttbar\ production\cite{White:2009yt}. Because of this interference, NLO $Wt$ is not well-defined and a prescription must be adopted to deal with the interference to calculate $Wt$ production beyond LO. The two most common prescriptions are \emph{diagram removal} (DR) and \emph{diagram subtraction} (DS). In the DS method, the resonant \ttbar\ effects are removed at the cross-section level.  In the DR method, the resonant \ttbar\ effects are removed from $Wt$ at amplitude level. The difference between these two methods essentially corresponds to the interference between \ttbar\ and $Wt$ production.
 
 
-
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{fig/thry/singletop_allchanvsroots_ATLASonly.pdf}
 \caption{Summary of ATLAS measurements of the single top production cross-sections in various channels as a function of the center of mass energy compared to a theoretical calculation based on NLO QCD complemented with NNLL resummation. For the $s$-channel only an upper limit is shown.}
 \label{fig:txsec}
 \end{figure}
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{fig/thry/fig_singletop.png}
 \caption{Feynman diagrams for single top quark production at leading order QCD. From left to right: $t$-channel production as flavor excitation; $t$-channel production as $W$-gluon fusion; $s$-channel production; $Wt$-channel production.}
@@ -212,9 +211,21 @@ Top quarks can also be produced singly via electroweak processes. Because the we
 \end{figure}
 
 \subsection{Top quark decays}
-At lowest order in the SM, the top quark can only decay to a $W$ boson and a down-type quark: $t \rightarrow qW$ where $q=b,s,d$. The rate of each of these decays is proportional to the square of the Cabibbo-Kobayashi-Masakawa (CKM) matrix, $|V_{tq}|^2$. Measured from experiment, the CKM matrix governs quark mixing in flavor-changing weak decays~\cite{PDG}.
+In the SM, the top quark decays to a $W$ boson and a down-type quark: $t \rightarrow qW$ where $q=b,s,d$. The rate of each of these decays is proportional to the square of the Cabibbo-Kobayashi-Masakawa (CKM) matrix, $|V_{tq}|^2$~\cite{PDG}. Measured from experiment, the CKM matrix governs quark mixing in flavor-changing weak decays.
 
-Weak hadron decays and the unitiary of the CKM matrix constrain the value of $0.9990 < |V_{tb}| < 0.9992$ at the 95\% C.L~\cite{Chetyrkin:1999ys}. Top quarks nearly always decay with $t \rightarrow Wb$.
+
+
+Weak hadron decays and the unitiary of the CKM matrix constrain the value of $0.9990 < |V_{tb}| < 0.9992$ at the 95\% C.L~\cite{Chetyrkin:1999ys}. Top quarks nearly always decay with $t \rightarrow Wb$. Figure~\ref{fig:tdec} shows the decay of a top quark, both hadronically and leptonically.
+
+\begin{figure}[h]
+\centering
+\subfloat{
+\includegraphics[width=0.8\textwidth]{fig/thry/ttdecqq.png}}
+\subfloat{
+\includegraphics[width=0.8\textwidth]{fig/thry/ttdecqq.png}}
+\caption{Feynman diagrams for top quark decay. On the left, the top quark is shown decaying hadronically. On the right, the top quark is shown decaying leptonically.}
+\label{fig:tdec}
+\end{figure}
 
 Experimentally, the decay modes of \ttbar are distinguished by the decay of the two $W$-bosons:
 \begin{description}

@@ -1,23 +1,23 @@
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {table}{\numberline {2.1}{\ignorespaces Spin and charge of particles in the SM.\relax }}{3}
-\contentsline {table}{\numberline {2.2}{\ignorespaces Mass of particles in the SM, taken from Ref.\nobreakspace {}\cite {PDG}.\relax }}{4}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Spin and charge of particles in the SM.\relax }}{4}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Mass of particles in the SM, taken from Ref.\nobreakspace {}\cite {PDG}.\relax }}{5}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {table}{\numberline {7.1}{\ignorespaces Number of events with opposite sign $e\mu $ and at least 2 $b$-jets in the data compared to that from Monte Carlo, broken down into contributions from \ensuremath {t\bar {t}}\xspace , $Wt$ single top, Z+jets and dibosons. Only central values are shown here; systematic uncertainties are discussed in Chapter\nobreakspace {}10\hbox {}.\relax }}{60}
-\contentsline {table}{\numberline {7.2}{\ignorespaces Number of events with an opposite sign $e\mu $ and at least 2 $b$-jets for different \ensuremath {t\bar {t}}\xspace generators. The last column gives scale factor to normalize the sum of the \ensuremath {t\bar {t}}\xspace \ simulatation and single top yields ($N_{\mathrm {single\nobreakspace {}top}}=361.4$) to the data yield (12332).\relax }}{60}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Number of events with opposite sign $e\mu $ and at least 2 $b$-jets in the data compared to that from Monte Carlo, broken down into contributions from \ensuremath {t\bar {t}}\xspace , $Wt$ single top, Z+jets and dibosons. Only central values are shown here; systematic uncertainties are discussed in Chapter\nobreakspace {}10\hbox {}.\relax }}{61}
+\contentsline {table}{\numberline {7.2}{\ignorespaces Number of events with an opposite sign $e\mu $ and at least 2 $b$-jets for different \ensuremath {t\bar {t}}\xspace generators. The last column gives scale factor to normalize the sum of the \ensuremath {t\bar {t}}\xspace \ simulatation and single top yields ($N_{\mathrm {single\nobreakspace {}top}}=361.4$) to the data yield (12332).\relax }}{61}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {table}{\numberline {9.1}{\ignorespaces Binning for unfolding of extra jets. Jets are binned simultaneously in both rank (\ensuremath {p_{\text {T}}}\xspace order) and \ensuremath {p_{\text {T}}}\xspace . For each jet rank, variable sized \ensuremath {p_{\text {T}}}\xspace bins are chosen so that at least 10 data events fall in each bin. The first bin in \ensuremath {p_{\text {T}}}\xspace for each rank is treated as underflow bins. These bins are not reported as part of the measurement.}}{74}
-\contentsline {table}{\numberline {9.2}{\ignorespaces Number of events passing different combinations of truth and reconstructed selection requirements.\relax }}{79}
-\contentsline {table}{\numberline {9.3}{\ignorespaces Number of selected reconstructed events that fail truth selection categorized by reason they have failed. The selections are applied sequentially in the order listed in the table.\relax }}{79}
-\contentsline {table}{\numberline {9.4}{\ignorespaces Number of truth events that fail reconstruction selection categorized by reason they have failed. The selections are applied sequentially in the order listed in the table.\relax }}{83}
+\contentsline {table}{\numberline {9.1}{\ignorespaces Binning for unfolding of extra jets. Jets are binned simultaneously in both rank (\ensuremath {p_{\text {T}}}\xspace order) and \ensuremath {p_{\text {T}}}\xspace . For each jet rank, variable sized \ensuremath {p_{\text {T}}}\xspace bins are chosen so that at least 10 data events fall in each bin. The first bin in \ensuremath {p_{\text {T}}}\xspace for each rank is treated as underflow bins. These bins are not reported as part of the measurement.}}{75}
+\contentsline {table}{\numberline {9.2}{\ignorespaces Number of events passing different combinations of truth and reconstructed selection requirements.\relax }}{80}
+\contentsline {table}{\numberline {9.3}{\ignorespaces Number of selected reconstructed events that fail truth selection categorized by reason they have failed. The selections are applied sequentially in the order listed in the table.\relax }}{80}
+\contentsline {table}{\numberline {9.4}{\ignorespaces Number of truth events that fail reconstruction selection categorized by reason they have failed. The selections are applied sequentially in the order listed in the table.\relax }}{84}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {table}{\numberline {11.1}{\ignorespaces $\chi ^2$ between extra jet \ensuremath {p_{\text {T}}}\xspace \ spectra in fully corrected data and different generators. The first column represents the agreement including only (diagonal) statistical uncertainties. The second column also includes the covariance due to systematic uncertainties (primarily JES).\relax }}{103}
+\contentsline {table}{\numberline {11.1}{\ignorespaces $\chi ^2$ between extra jet \ensuremath {p_{\text {T}}}\xspace \ spectra in fully corrected data and different generators. The first column represents the agreement including only (diagonal) statistical uncertainties. The second column also includes the covariance due to systematic uncertainties (primarily JES).\relax }}{104}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}

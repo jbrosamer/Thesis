@@ -1,7 +1,7 @@
 \section{The Large Hadron Collider}
 The Large Hadron Collider (LHC)`\cite{cern-faq} is the largest and most powerful particle collider that has ever been built. Construction of the LHC involved a collaboration of more than 10,000 scientist from more than 100 countries and was completed in 2008, after a decade of work. The cost of the machine alone is about 5 billion USD (3 billion Euro). The main goal of the LHC is to investigate unsolved questions in our current understanding of particle physics, such as the details of the Higgs mechanism, the existence of new particles from SUSY or extra dimensions and the source of dark matter and dark energy.
 
-The European Organization for Nuclear Research (CERN) built the LHC in a tunnel underneath the border of France and Switzerland, near the city of Geneva. The LHC occupies a large tunnel 27 km in circumference that was originally constrcted in the 1990s for the Large Electron Positron collider (LEP). Hadrons (either protons or ions) are accelerated and focused into two beams traveling in opposite directions around this tunnel. These beams are then made to collide with very high energy at one of the four collision points along the ring where the paths of the two beams intersect. Each of these points is home to one of the four main LHC experiments: A Large Ion Collider
+The European Organization for Nuclear Research (CERN) built the LHC in a tunnel underneath the border of France and Switzerland, near the city of Geneva. The LHC occupies a large tunnel 27 km in circumference that was originally constructed in the 1990s for the Large Electron Positron collider (LEP). Hadrons (either protons or ions) are accelerated and focused into two beams traveling in opposite directions around this tunnel. These beams then collide with very high energy at each of the four collision points along the ring where the paths of the two beams intersect. Each collision point is home to one of the four main LHC experiments: A Large Ion Collider
 Experiment (ALICE)~\cite{cern-jinst-alice}, ATLAS~\cite{cern-jinst-atlas}, the Compact Muon Solenoid (CMS)~\cite{cern-jinst-cms}, and the Large Hadron Collider beauty (LHCb) experiment~\cite{cern-jinst-lhcb}. ALICE is a detector that looks at collisions of lead ions to study the properties of quark-gluon plasma. ATLAS is a general-purpose detector that looks for a wide range of possible new types of physics, including the Higgs boson, SUSY, and extra dimensions. CMS is an additional general-purpose detector, designed and run independently from ATLAS, but with the same goals in mind. LHCb is a detector specially designed to study the asymmetry between matter and anti-matter in the interactions of B-particles. Figure~\ref{fig:lhc-exp} shows a aerial view diagram with the locations of these four experiments along the LHC ring. The location of the LHC ring in relation to the city of Geneva and the French-Swiss border is also illustrated.
 
 \begin{figure}[tp]
@@ -35,21 +35,21 @@ Given two equally bunched beams, the \emph{instantaneous luminosity} ($\mathcal{
 \begin{equation}\label{eqn:lumi}
   \mathcal{L} = f \frac{n_1 n_2}{4\pi \sigma_x\sigma_y},
 \end{equation}
-where $f=\SI{11245.5}{\hertz}$ is the collision frequency of the LHC beams; $n_{1}$ and $n_{2}$ are the numbers of protons in each beam; and $\sigma_{x}$ and $\sigma_{y}$ are the RMS beam widths in the horizontall (bend) and vertical directions. The maximum instantaneous luminosity of the LHC in 2012 was 7.7$\times$10$^{33}$.
+where $f=\SI{11245.5}{\hertz}$ is the collision frequency of the LHC beams; $n_{1}$ and $n_{2}$ are the numbers of protons in each beam; and $\sigma_{x}$ and $\sigma_{y}$ are the RMS beam widths in the horizontal (bend) and vertical directions. The maximum instantaneous luminosity of the LHC in 2012 was 7.7$\times$10$^{33}$ cm$^{-2}$ s$^{-1}$.
 
-The instaneous luminosity must be integrated over time because the beam conditions that go into Equation~\ref{eqn:lumi} are always changing over the duration of a run. The integral over time and varied beam conditions is called the \emph{integrated luminosity} and can be used to relate the number of events $N$ for a given physics process to its cross section $\sigma$:
+The instantaneous luminosity must be integrated over time to obtain total luminosity. The beam conditions that go into Equation~\ref{eqn:lumi} change over the duration of a run. The integral over time and varied beam conditions is called the \emph{integrated luminosity} and can be used to relate the number of events $N$ for a given physics process to its cross section $\sigma$:
 \begin{equation}\label{eqn:nevt}
   N = \sigma \times \int{\mathcal{L}(t) dt}
 \end{equation}
-In 2012, the total integrated luminosity of the LHC was 20.3$^{-1}$fb with uncertainty of 2.8\% \cite{Lumi}. The cumulative luminosity recorded over the course of 2012 is shown in Figure~\ref{fig:2012lumi}.
+In 2012, the total integrated luminosity of the LHC was 20.3 fb$^{-1}$ with uncertainty of 2.8\% \cite{Lumi}. The cumulative luminosity recorded over the course of 2012 is shown in Figure~\ref{fig:2012lumi}.
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.90\textwidth]{fig/atlas/intlumivstime2012DQ.eps}
-  \caption{Cumulative luminosity versus time delivered to (green), recorded by ATLAS (yellow), and certified to be good quality data (blue) during stable beams and for pp collisions at 8 TeV centre-of-mass energy in 2012. Luminosity can be lost due to data acquisition inefficiency or other effects.}
+  \caption{Cumulative luminosity versus time delivered to (green), recorded by ATLAS (yellow), and certified to be good quality data (blue) during stable beams and for pp collisions at 8 TeV center-of-mass energy in 2012. Luminosity can be lost due to data acquisition inefficiency or other effects.}
   \label{fig:2012lumi}
 \end{figure}
 
-The beam conditions also determine the number of proton-proton interactions that occur in a single bunch crossing. When a single bunch crossing produces multiple separate proton-proton collisions, these events are referred to as \textit{pileup}. Pileup presents a signifigant challenge since it can rapidly increase the combinatoric complexity of reconstructing events and quickly degrades the performance of the reconstruction algorithms. In 2012, pileup was much larger than anticipated. Figure~\ref{fig:atlas-pileup} shows the mean number of interactions per bunch crossing for 2011 and 2012, demonstrating the substantial increase of pileup events in the latter. Reconstruction challenges were overcome by optimizing the existing reconstruction algorithms, as well as new techniques for subtracting pileup events from the physics of interest. 
+The beam conditions also determine the number of proton-proton interactions that occur in a single bunch crossing. When a single bunch crossing produces multiple separate proton-proton collisions, these events are referred to as \textit{pileup}. Pileup presents a significant challenge since it can rapidly increase the combinatoric complexity of reconstructing events and degrade the performance of the reconstruction algorithms. Figure~\ref{fig:atlas-pileup} shows the mean number of interactions per bunch crossing for 2011 and 2012, demonstrating the substantial increase of pileup events in the latter. Reconstruction challenges were overcome by optimizing the existing reconstruction algorithms, as well as new techniques for subtracting pileup events from the physics of interest~\cite{pileup}. 
 
 \begin{figure}[tp]
   \centering
@@ -68,9 +68,9 @@ The ATLAS detector is a general purpose detector centered over one of the four i
   \caption{Computer generated illustration of the whole ATLAS detector detector, with various subdetectors highlighted\cite{Pequenao:1095924}.}
   \label{fig:atlas-cgi}
 \end{figure}
-In order to detect a wide range of physics in proton-proton collisons, ATLAS must measure the trajectory and energy of many different kinds of particles, including electron, muons, photons, kaons, protons and neutrons. Once these stable final-state particles are identified, information about the heavier, unstable particles can be inferred. This process is called \emph{reconstruction} and is discussed in detail in Chapter~\ref{ch:objects}.
+In order to detect a wide range of physics processes in proton-proton collisions, ATLAS must measure the trajectory and energy of many different kinds of particles, including electron, muons, photons, pions, kaons, protons and neutrons. Once these stable final-state particles are detected, information about the heavier, unstable particles can be inferred. This process is called \emph{reconstruction} and is discussed in detail in Chapter~\ref{ch:objects}.
 
-ATLAS consists of specialized subdetectors designed to capture different phenomena. These subdetectors are arranged as increasingly larger cocentric cylinders around the interaction point (IP) where the LHC proton beams collide. There are three main specialized sub-systems: the \emph{inner detector} (ID), which is located just outside the beamline and uses silicon and transition radiation systems to track the trajectory of charged particles; the \emph{calorimeters}, which are located radially outward from the ID and designed to measure the energy of particles with a shower sampling method; and the \emph{muon system}, which is located farthest from the IP and measures muon momentum and trajectory. Details of the subdetectors will be explored below. An overview of interaction of different types of particles with the subdetectors as they travel through the detector is illustrated in Figure~\ref{fig:atlas-wedge}.
+ATLAS consists of specialized subdetectors designed to capture different phenomena. These subdetectors are arranged as increasingly larger concentric cylinders around the interaction point (IP) where the LHC proton beams collide. There are three main specialized sub-systems: the \emph{inner detector} (ID), which is located just outside the beamline and uses silicon and transition radiation systems to track the trajectory of charged particles; the \emph{calorimeters}, which are located radially outward from the ID and designed to measure the energy of particles with a shower sampling method; and the \emph{muon system}, which is located farthest from the IP and measures muon momentum and trajectory. Details of the subdetectors are provided below. An overview of interaction of different types of particles with the subdetectors as they travel through the detector is illustrated in Figure~\ref{fig:atlas-wedge}.
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.90\textwidth]{fig/atlas/atlas-wedge.jpg}
@@ -78,18 +78,18 @@ ATLAS consists of specialized subdetectors designed to capture different phenome
   \label{fig:atlas-wedge}
 \end{figure}
 
-In addition, ATLAS has a magnet system that bends the trajectory of charged particles as they travel through the detector. This allows the particles' momenta to be precisely calculated using the classical Lorentz force equation. The magnet system consists of a double configuration. Just outside the ID is a solenoidal magnet that produces a field of approximately 2 Tesla. A large toroidal magnet within the outermost part of the detector produces a 1-2 Tesla field.
+ATLAS has a magnet system that bends the trajectory of charged particles as they travel through the detector. This allows the particles' momenta to be precisely calculated using the classical Lorentz force equation. The magnet system consists of a double configuration. Just outside the ID is a solenoid magnet that produces a field of approximately 2 Tesla. A large toroidal magnet within the outermost part of the detector produces a 1 to 2 Tesla field.
 
 
 \subsection{Coordinate system}
 
 
-ATLAS uses a right-handed coordinate system with its origin at the IP in the center of the detector, which is illustrated in Figure~\ref{fig:atlas-coord}. The $z$-axis along the beamline with the positive direction counter-clockwise around the LHC. The $x-y$ plane is defined such that the coordinate system is right-handed, with the $x$-axis pointing from the IP to the center of the LHC, and the $y$-axis pointing upwards. This plane is usually referred to as the transverse plane, since it is perpendicular to the beamline. Cylindrical coordinates, $r$ and $\phi$, are used in the transverse plane with $\phi$ defined as the azimuthal angle around the beamline. Instead of the polar angle from the beamline, $\theta$, pseudorapidity is typically used and can be defined as:
+ATLAS uses a right-handed coordinate system with its origin at the IP in the center of the detector, which is illustrated in Figure~\ref{fig:atlas-coord}. The $z$-axis along the beamline with the positive direction counter-clockwise around the LHC. The $x-y$ plane is defined such that the coordinate system is right-handed, with the $x$-axis pointing from the IP to the center of the LHC, and the $y$-axis pointing upwards. This plane is usually referred to as the transverse plane, since it is perpendicular to the beamline. Cylindrical coordinates, $r$ and $\phi$, are used in the transverse plane with $\phi$ defined as the azimuthal angle around the beamline. Instead of the polar angle from the beamline, $\theta$, pseudorapidity is typically used and is defined as:
 \begin{equation}
 \eta = -\text{ln}(\text{tan}\frac{\theta}{2})
 \label{eq:eta}
 \end{equation}
-The pseudorapidity is used because in the limit of a massless particle, it is invariant with respect to Lorentz boosts along the beamline. Then, solid angle distances $\Delta R$ can be measured with the difference in pseudorapidity and azimuthal angle:
+The pseudorapidity is used because in the limit of a massless particle, it is invariant with respect to Lorentz boosts along the beamline. The solid angle distances $\Delta R$ can be measured using the difference in pseudorapidity and azimuthal angle:
 \begin{equation}
 \Delta R = \sqrt{\Delta \phi^2 + \Delta \eta^2}
 \label{eq:dR}
@@ -118,12 +118,12 @@ The pseudorapidity is used because in the limit of a massless particle, it is in
 
 
 \section{Inner detector}
-The ID is a series of detectors that functions as a tracking system to measure the momenta and trajectory of charged particles. This also allows reconstruction of the primary and secondary vertices of the collision. The innermost part of the entire detector is the pixel detector, 3 layers of silicon that accurately measure the three-dimensional spatial position of charged particles. Next is the SemiConductor Tracker (SCT), 4 layers of double-sided silicon strip modules which accurately measure tracks in the $r-\phi$ plane and are double sided to provide stereo information along the $z$ axis. The outermost component of the ID is the Transition Radiation Tracker (TRT), straw tubes filled with Xenon gas interleaved with polymer layers which provides additional trajectory measurement and differentiate between electron and hadrons. Figure~\ref{fig:id-scheme} shows a schematic outline of the entire inner detector, and Figure~\ref{fig:id-barrel} illustrates a cut-away view of the inner detector barrel.
+The ID is a series of detectors that function as a tracking system to measure the momenta and trajectory of charged particles~\cite{cern-jinst-atlas}. This also allows reconstruction of the primary and secondary vertices of the collision. The innermost part of the entire detector is the pixel detector, 3 layers of silicon that accurately measure the three-dimensional spatial position of charged particles. Next is the SemiConductor Tracker (SCT), 4 layers of double-sided silicon strip modules which accurately measure tracks in the $r-\phi$ plane and are double sided to provide stereo information along the $z$ axis. The outermost component of the ID is the Transition Radiation Tracker (TRT), straw tubes filled with Xenon gas interleaved with polymer layers which provides additional trajectory measurement and differentiate between electron and hadrons. Figure~\ref{fig:id-scheme} shows a schematic outline of the entire inner detector, and Figure~\ref{fig:id-barrel} illustrates a cut-away view of the inner detector barrel.
 
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.7\textwidth]{fig/atlas/id-schem}
-  \caption{Schematic view of the Inner Detector: an $r-z$ slice of the cylindrival barrel, disc endcaps with support tubes, and the solenoid magnet. Lines of constant $\eta$ are drawn~\cite{cern-jinst-atlas}.}
+  \caption{Schematic view of the Inner Detector: an $r-z$ slice of the cylindrical barrel, disc endcaps with support tubes, and the solenoid magnet. Lines of constant $\eta$ are drawn~\cite{cern-jinst-atlas}.}
   \label{fig:id-scheme}
 \end{figure}
 \begin{figure}[tp]
@@ -158,7 +158,7 @@ Transition radiation, produced when a charged particle crosses the boundary betw
 
 
 \section{Calorimeters}
-The calorimeter system  stops and measures the energy of electrons, photons and jets with full coverage in $\phi$ and $|\eta|<4.9$. This is done with separate electromagnetic and hadronic calorimeters, both with barrel and endcap components. A combined forward calorimeter provides high $\eta$ measurements. ATLAS calorimeters are sampling calorimeters, which means that only part of the shower energy is observed. Absorbing material used to initiate showers is interleaved with active material for detecting the showers. The layout of the calorimeters can be seen in Figure~\ref{fig:calo}. 
+The calorimeter system  stops and measures the energy of electrons, photons and jets with full coverage in $\phi$ and $|\eta|<4.9$. This is done with separate electromagnetic and hadronic calorimeters, both with barrel and endcap components. A forward calorimeter provides high $\eta$ measurements. ATLAS calorimeters are sampling calorimeters, which means that only part of the shower energy is observed. Absorbing material used to initiate showers is interleaved with active material for detecting the showers. The layout of the calorimeters can be seen in Figure~\ref{fig:calo}. 
 
 \begin{figure}[tp]
   \centering
@@ -193,7 +193,7 @@ The hadronic calorimeter is divided into three components: the barrel tile calor
 \label{ss:cluster}
 In order to identify particles, information from the shape of the calorimeter showers must be used. EM particles like photons and electrons produce narrow showers which are largely contained in the EM calorimeters. Hadrons produce broader showers and tend to travel farther into the hadronic calorimeters. Hadronic showers can also contain EM deposits from decays before the calorimeters, such as a neutral pion becoming two photons. In order to turn energy deposits in cells into clusters, information from all of the calorimeters is used as inputs to one of two principal algorithms\cite{ATL-LARG-PUB-2008-002}. The \emph{sliding-window} algorithm clusters cells within fixed-sized rectangles. This algorithm is generally used for electron, photon and tau identification. 
 
-The second algorithm is the \emph{topological} algorithm, which clusters together neighboring cells on the condition that the energy deposit in the cell is significantly more than the expected noise. This algorithm is generally used for jet and missing transverse energy reconstruction.
+The second algorithm is the \emph{topological} algorithm, which clusters together neighboring cells on the condition that the energy deposit in the cell is significantly more than the expected noise. This algorithm is generally used for jet and missing transverse energy reconstruction. The clusters that result from this algorithm are called \emph{topoclusters.}
 
 
 \section{Muon System}
@@ -213,7 +213,7 @@ The MS also has two types of trigger chambers: Resistive Plate Chambers (RPC) in
 
 
 \section{The trigger system}
-At hadron colliders, only a very small fraction of the proton-proton collisions result in events with interesting physics. The majority of events are low energy jets, which aren't useful for SM measurements or new physics searches. With bunch crossings every 50 ns, recording and reconstructing all of the collisions would take an unreasonable amount of data storage and computing power. Therefore, it is necessary to determine whether a collision is interesting immediately after it occurs with minimal analysis. 
+At hadron colliders, only a very small fraction of the proton-proton collisions can be feasibly recorded. The majority of events are low energy jets and events that can be used for new physics searches or precision measurements like the Higgs are rarer. With bunch crossings every 50 ns, recording and reconstructing all of the collisions would take an unreasonable amount of data storage and computing power. It would also be impossible to write out events at this rate. Therefore, it is necessary to determine whether a collision will be recorded immediately after it occurs with minimal analysis. 
 
 The process quickly filtering events to record only those of physics interest is called \emph{triggering.} Processes which take place in the trigger system are referred to as \emph{online}. Processes which take place after triggering, such as particle reconstruction, are called \emph{offline}.
 

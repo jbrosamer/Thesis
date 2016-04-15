@@ -49,11 +49,7 @@ plus 0--3 partons. The heavy flavor overlap procedure (HFOR) \cite{hfor} is used
 Diboson production is simulated using \textsc{  Alpgen+Herwig} with up to three additional partons.
 
 \subsection{Pileup jet samples}
-Samples using pileup overlay simulation in \ttbar\ events are used to study background to the extra jet distributions. The only sample with sufficient statistics uses \textsc{  Powheg+Pythia} with the baseline tune. The sample was processed using tag \texttt{ d708} which is affected by a simulation problem in the tile cell energy. An additional sample has been requested, but production is delayed by problems with ProdSys2.\footnote{JIRA entry \textsc{  ATLMCPROD-821}} 
-
-Because of limitations with the available overlay samples, a data driven estimate of the pileup is used for the baseline
-analysis.  This estimate uses 
-data from the \texttt{ data12\_8TeV.physics\_ZeroBiasOverlay}, which are events taken from data to estimate pileup.  This sample is studied as an alternative to the standard minimum bias overlay in the other samples.
+Modeling of pileup collisions (see Chapter~\ref{ch:atlas}) is studied both using the default \powpy\ generator as well as a data driven estimate. The data driven \emph{overlay} sample takes pileup events from data and combines them with \ttbar\ events from \powpy\. The difference between these two estimates is taken as a systematic uncertainty.
 \section{Object definitions}
 The object and event selection used in this thesis follows the generic ATLAS recommendations for 2012, with two exceptions.  The first change is a loosening of the electron isolation criteria, which is possible due to the low background  $e\mu$ final state. This loosened requirement is also used in Ref.~\cite{xsec}. The second change is to relax the $\eta$ requirement on  jets to $|\eta|<4.5$.
 
@@ -63,13 +59,12 @@ The analysis relies on the selection of electrons, muons and jets, and
 the tagging of jets as $b$-jets.
 \begin{description}
 \item[Muons:] Combined muons (reconstructed in both the muon spectrometer
-and inner detector) are selected with the \texttt{ MuID} algorithm, and 
-required to satisfy $p_T>25$\,GeV and $|\eta|<2.5$.  Following the 2012 recommendations from the MuonCP group, muons must have
+and inner detector) are required to satisfy $p_T>25$\,GeV and $|\eta|<2.5$.  Muons must have
 \begin{itemize}
 \item at least one pixel hit
 \item at least 5 SCT hits
 \item fewer than 3 holes in pixel and SCT layers combined
-\item In the region $0.1 < |\eta| < 1.9 $: $n_{TRT Hits} + n_{TRT Outliers} > 5$ and $\frac{n_{TRT Hits}}{n_{TRT Hits} + n_{TRT Outliers}} < 0.9$
+\item In the region $0.1 < |\eta| < 1.9 $: $n_{TRT Hits} + n_{TRT Outliers} > 5$ and $\frac{n_{TRT Hits}}{n_{TRT Hits} + n_{TRT Outliers}} < 0.9$, where an outliter is a TRT straw with a signal but not crossed by the nearby track.
 \end{itemize}
 
 The impact parameter
@@ -89,12 +84,12 @@ required to satisfy $z_0<2$\,mm. In addition
 to the calorimeter isolation requirements implicit in \texttt{ tight++},
 the calorimeter energy in a cone of radius $\Delta R<0.2$ around the
 electron (excluding the deposit from the electron itself) is required
-to satisfy $\texttt{ ETCone20}<6$\,GeV, and the sum of $p_T$ of tracks
+to be less than $6$\,GeV, and the sum of $p_T$ of tracks
 in a cone of radius $\Delta R<0.3$ (excluding the electron track) is
-required to satisfy $\texttt{ pTCone30}<6$\,GeV. Using the
-EGamma group \texttt{ EisoTool2012} \cite{eisotool}, further
+required to be less than 6 \GeV. Further
 kinematic-dependent cuts are applied to these two isolation variables,
 corresponding to a 98\,\% efficiency on true prompt electrons. 
+\item[Overlap removal:]
 To prevent double-counting
 of electron energy deposits as jets, jets within $\Delta R<0.2$ of 
 a reconstructed electron are removed. If the nearest jet surviving
@@ -120,16 +115,14 @@ Reconstructed jets
 within $\Delta R<0.2$ of a selected electron are removed.
 
 \item[$b$-tagging:] Jets within the central region ($|\eta| < 2.5$) are $b$-tagged using the MV1 algorithm 
-\cite{btagcom,btagptrel},
-which combines the outputs of the IP3D, SV1 and JetFitterCombNN algorithms
-into a multivariate discriminant $w$ with values between zero and one. 
+\cite{btagcom,btagptrel}, which outputs a multivariate discriminant $w$ with values between zero and one. 
 Light-quark and gluon jets tend to have values close to zero, and 
 $b$-flavored jets close to one, with charm jets somewhere in between. Jets are defined as being $b$-tagged if the MV1 weight $w$ is larger than a cut value 0.7892, which corresponds to the $b$-tagging working 
 point having approximately 70\% $b$-tagging efficiency for $b$-jets in \ttbar\ events, although the exact efficiency varies significantly with $p_T$. The $b$-tagging calibration used is the default in \texttt{ TopRootCore}, which is based on the system8 muon and jet calibration method~\cite{btagsys8}.
 \end{description}
 Events reconstructed with exactly one $e$ and $\mu$ with opposite sign and at least 2-$b$ jets as defined above pass the reconstruction-level fiducial selection. In the case of Monte Carlo, selected events are reweighted to reproduce the same distributions of $\mu$, the average number of interactions per bunch crossing, as in the data. The samples are also reweighted with scale factors to reproduce the electron and muon reconstruction and trigger efficiencies, and the width of the primary vertex distribution in $z$, as measured in the data. Finally, scale factors are applied to account for $b$-tagging efficiencies.
 \subsection{Truth objects}
-Truth objects are processed using the software package \texttt{ TopFiducial-00-00-09} in \texttt{ AnalysisTop-1.8.0}. Cuts applied to truth objects attempt to replicate the above fiducial selections for the reconstructed objects.
+In addition to fiducial definitions for reconstructed from detector output, fiducial definitions for the ``true'' particles generated by the MC simulation must be made. The cuts applied to truth objects attempt to replicate the above fiducial selections for the reconstructed objects as closely as possible.
 
 \begin{description}
 \item[Leptons:] Stable electrons and muons are required not to come from a hadron in the Monte Carlo truth particle record, either directly or through a tau decay. This ensures that the lepton is from an electroweak decay without requiring a direct $W$-boson match. The four momenta of the bare leptons are then `dressed' by adding the four momenta of all stable photons within $\Delta R$=0.1 with status code 1 and not originating from Geant4. The dressed leptons are required to have \pt $>$ 25 \GeV\ and $|\eta|$ $<$ 2.5.
@@ -145,14 +138,14 @@ muons  and electrons with $\Delta R$ $<$ 0.4 of a jet are excluded. Electrons ov
 Events with exactly one $e$ and $\mu$ with opposite sign and at least 2-$b$ jets as defined above pass the fiducial truth selection.
 
 \subsection{Truth matching}
-In addition to fiducial definitions for reconstructed from detector output, fiducial definitions for the ``true'' particles generated by the MC simulation must be made.
+
 \label{ss:tmatching}
-A geometric $\Delta R$ algorithm matches reconstructed objects to truth objects satisfying the fiducial requirements above. These definitions are relevant for background unmatched extra jets, as well as various truth studies.
+In order to correct reconstructed objects back to truth level, a prescription must be adopted to match reconstructed and truth objects. A geometric $\Delta R$ algorithm matches reconstructed objects to truth objects satisfying the fiducial requirements above. These definitions are relevant for background unmatched extra jets, as well as various truth studies.
 \begin{description}
 \item[Leptons:] Each truth $e$ ($\mu$) is matched to the closest reconstructed $e$ ($\mu$) within $\Delta R < 0.02$.
 \item[Jets:] Truth jets are geometrically matched to the closest reconstructed jet within $\Delta R_{\mathrm{reco jet, truth jet}} < 0.4$. If a reconstructed jet is not matched to a truth jet, it is assumed to be either from pileup or matching inefficiency and is treated as background as discussed in Chapter~\ref{ss:pileup}.
 
-In selecting $e\mu$+2 $b$-jet events, $b$-jets are matched to truth jets before extra jets. Thus, if both an extra jet and a $b$-jet satisfy $\Delta R_{\mathrm{reco jet, truth jet}}<0.4$, the $b$-jet is matched to the truth jet and the extra jet is unmatched. If two $b$-jets or two extra jets are reconstructed within $\Delta R_{\mathrm{reco jet, truth jet}}<0.4$ of a single truth jet, the reconstructed jet with smaller $\Delta R_{\mathrm{reco jet, truth jet}}$ is matched to the truth jet and the other reconstructed jet is unmatched.
+In selecting $e\mu$+2 $b$-jet events, $b$-jets are matched to truth jets before extra jets are matched to truth jets. Thus, if both an extra jet and a $b$-jet satisfy $\Delta R_{\mathrm{reco jet, truth jet}}<0.4$, the $b$-jet is matched to the truth jet and the extra jet is unmatched. If two $b$-jets or two extra jets are reconstructed within $\Delta R_{\mathrm{reco jet, truth jet}}<0.4$ of a single truth jet, the reconstructed jet with smaller $\Delta R_{\mathrm{reco jet, truth jet}}$ is matched to the truth jet and the other reconstructed jet is unmatched.
 
 Because of limited \pt\ resolution, the reconstructed \pt\ of a jet can vary significantly from its truth \pt. The \pt\ threshold for truth jets is lowered to 10 \GeV, so that jets reconstructed with $\pt > 25 \GeV$ can match truth jets that fail the fiducial \pt\ cut. 
 
@@ -161,7 +154,7 @@ Because of limited \pt\ resolution, the reconstructed \pt\ of a jet can vary sig
 \item[Parton matching:] For some studies, the truth jets from top are identified via a parton matching procedure. Each jet is matched to the highest energy parton\footnote{Quarks (u,d,s,c,b), gluons, photons and pdgId = 0 particles.} with \pt $>$ 5 \GeV\ within $\Delta R = 0.4$. If this parton is a decay product of the top, then the jet is considered a `top jet.'
 \end{description}
 \section{Event selection}
-The process of selecting \emubb\ events proceeds as follows. First, events are selected from simulation and data by vetoing a small number of events failing cleaning cuts. Then events are required to have exactly one electron and one muon with opposite charges. Finally, events with at least two $b$-tagged jets are selected. In events with more than two $b$-tagged jets, the two $b$-jets with the highest MV1 are considered the $b$-jets used to select the event and the remaining $b$-jet(s) are considered extra jets. The selection requirements are identical to those in the 2012 \ttbar cross-section analysis~\cite{xsec}, with the exception of requiring \textit{at least} two $b$-tagged jets instead of \textit{exactly} two.
+The process of selecting \emubb\ events proceeds as follows. First, events are selected from simulation and data by vetoing a small number of events failing cleaning cuts defined below. Then events are required to have exactly one electron and one muon with opposite charges. Finally, events with at least two $b$-tagged jets are selected. In events with more than two $b$-tagged jets, the two $b$-jets with the highest MV1 are considered the $b$-jets used to select the event and the remaining $b$-jet(s) are considered extra jets. The selection requirements are identical to those in the 2012 \ttbar cross-section analysis~\cite{xsec}, with the exception of requiring \textit{at least} two $b$-tagged jets instead of \textit{exactly} two.
 
 \subsection{Cleaning cuts}
 
@@ -174,12 +167,12 @@ an electron and a muon, and potentially giving rise to a fake $e\mu$ event.  Suc
 
 \subsection{Event yields}
 
-The numbers of events with exactly one $e$ and one $\mu$ before and after the $b$-jet requirement are given in Table~\ref{t:sel}. The events are selected from the 2012 \rts=8 \TeV data with 20.3 \ifb. Simulation predictions are categorized into contributions from \ttbar, $Wt$ single top, $Z$+jets and dibosons. 
+The numbers of events with exactly one $e$ and one $\mu$ before and after the $b$-jet requirement are given in Table~\ref{t:sel}. Simulation predictions are categorized into contributions from \ttbar, $Wt$ single top, $Z$+jets and dibosons. 
 
 After the selection of $e\mu$ opposite-sign pairs, the biggest contribution (60\%) is from \ttbar events with the second largest from $Z$+jets (21.8\%). The $e\mu$ event rates agree to  better than 3\% with those from other ongoing 2012 top analyses as documented in \texttt{ TopEventChallenge}\cite{topeventchallenge}. The events with at least 2 $b$-jets are heavily dominated by \ttbar events, with a small $\sim 3\%$ contribution from single top. $Z$+jets and dibosons make up less than 0.1\% of events passing the final selection, and are thus neglected in this analysis.
 
 
-The number of selected events in simulation and data agree to within better than 3\%, demonstrating that the Monte Carlo reproduces the data quite well. Table~\ref{t:ttgen} compares the number of selected events from the baseline \ttbar simulation to those from other \ttbar generators. The two \pow+\py\ simulations and \mcnlohw\ all agree with each other to within ~2\%. The \madpy\ simulation gives about 10\% more events. The reason for this difference is not well understood. The last column in Table~\ref{t:ttgen} gives the scale factor used to normalize each \ttbar generator to the number of events in data (including the single top contribution).
+The number of selected events in simulation and data agree to within better than 3\%, demonstrating that the Monte Carlo reproduces the data quite well. Table~\ref{t:ttgen} compares the number of selected events from the baseline \ttbar simulation to those from other \ttbar generators. The two \pow+\py\ simulations and \mcnlohw\ all agree with each other to within ~2\%. The \madpy\ simulation gives about 10\% more events. The last column in Table~\ref{t:ttgen} gives the scale factor used to normalize each \ttbar generator to the number of events in data (including the single top contribution).
 
 %To facilitate comparison with Ref.~\cite{xsecnote}, Table~\ref{t:exact2sel} gives the number of \ttbar simulation and data events with exactly 2 $b$-jets. Removing events with more than 2 $b$-jets reduces the number of events by ~2\% in both simulation and data. The event counts given in Table 4.2 of Ref.~\cite{xsecnote} are not directly comparable because they exclude contributions from misidentified leptons and correspond to a greater luminosity of 20.3\ifb. Adding back in the misidentified lepton contribution and then scaling by $20.1/20.3=0.989$ gives an `adjusted' event count in the final column. This analysis finds 2.1\% more events in data and 0.3\% more events in simulation than Ref.~\cite{xsecnote}. These differences are likely due to the new calibrations used in this analysis.
 

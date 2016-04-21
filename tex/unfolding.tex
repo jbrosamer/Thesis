@@ -1,14 +1,14 @@
 \section{Introduction to unfolding}
-Kinematic distributions measured by a detector contain distortions due to limited acceptance, resolution and biases. The data must be corrected for these effects in order to allow for direct comparison with theoretical models or other experimental measurements. This process of correcting the detector or reconstructed level back to the generator or truth level is called \emph{unfolding}.
+Kinematic distributions measured by a detector contain distortions due to limited acceptance, resolution and biases. The data must be corrected for these effects in order to allow direct comparison with theoretical models or other experimental measurements. This process of correcting the detector or reconstructed level back to the generator or truth level is called \emph{unfolding}.
 
 
-Unfolding begins with building a \emph{response} (a.k.a. migration) matrix. The response matrix is a 2-dimensional representation of how the truth value of an observable relates to the measured value, as distorted by characteristic detector effects. The response matrix is built from simulation on an event-by-event basis.
+Unfolding begins with building a \emph{response} (a.k.a. migration) matrix. The response matrix is a 2-dimensional representation of how the truth value of an observable relates to the measured value, as distorted by characteristic detector effects. The response matrix is built from simulated data.
 
-In order to go from a reconstructed distribution to a truth distribution, the response matrix must be inverted. Since some bins of the matrix may be sparsely populated, the matrix is close to singular and a \emph{regularization} must be introduced to suppress unphysical bin-to-bin fluctuations. In this analysis, the iterative Bayesian algorithm is chosen, though the Singular Value Decomposition (SVD) technique was also considered.
+In order to go from a reconstructed distribution to a truth distribution, the response matrix must be inverted. However, some bins of the matrix may be sparsely populated, and information loss occurs from detector imperfections. Directly inverting the matrix produces unphysical bin-to-bin fluctuations, so an unfolding uses \emph{regularization} to smooth the result and surpress these unphysical fluctuations. In this analysis, the iterative Bayesian algorithm is chosen, though the Singular Value Decomposition (SVD) technique was also considered.
 
 \section{Procedure}
 This section outlines the procedure used to unfold the reconstructed \pt and multiplicity of the 
-extra jets using the software package\texttt{RooUnfold}~\cite{roounfold}.\footnote{Due to important bug fixes necessary for error propagation in this analysis, the development version of RooUnfold is used.}
+extra jets using the software package \texttt{RooUnfold}~\cite{roounfold}.\footnote{Due to important bug fixes necessary for error propagation in this analysis, the development version of RooUnfold is used.}
 This procedure corrects the background-subtracted measured spectrum to the true
 spectum for events that pass the fiducial requirements at both the truth and the reconstruction level.
 Detector effects can distort the true extra jet spectrum in several ways.  Hard scattering jets can be lost due to
@@ -26,9 +26,7 @@ The full correction procedure is given by the equation:
 {\mathscr N}^j_{\textrm{bkgnd}} \right ) \ .
 \label{eqn:unffinal}
 \end{equation}
-\noindent  
-
-${\mathscr N}^j_{\textrm {reco}}$ gives the raw distribution measured from data. The estimated extra jet background, ${\mathscr N}^j_{\textrm{bkgd}}$ is subtracted from this raw distribution. 
+\noindent  ${\mathscr N}^j_{\textrm {reco}}$ gives the raw distribution measured from data. The estimated extra jet background, ${\mathscr N}^j_{\textrm{bkgd}}$ is subtracted from this raw distribution. 
 A `feed-in' factor $g^j$ corrects for migration across the fiducial boundary (cases where the reconstructed jet has
 $\pT>25$~GeV but the truth jet has $\pT>25$~GeV). The migration matrix ${\mathbf M}_{\textrm{reco, j}}^{\textrm{true, i}}$ 
 relates the number of jets in truth bin $i$ to the number in reconstructed bin $j$. The correction factor $f^i$ 
@@ -139,8 +137,7 @@ Jet rank & Bin number &  Jet \pt (\GeV) \\
 
 \subsection{Unfolding procedure}
 \label{ss:unfproc}
-The raw measured spectrum of extra jets is distorted by detector effects such as limited acceptance and efficiency and mismeasurement of jet \pt. 
-In order to compare the data to theoretical predictions, the data must be `unfolded' to obtain the true, underlying physical extra jets. This unfolding algorithm corrects the number of jets reconstructed in each bin ${\mathscr N}^i_{\textrm {reco} }(\pt,R)$ for detector effects to obtain the unfolded ${\mathscr N}^i_{\textrm{unf} }(\pt,R)$ according to:
+The unfolding algorithm corrects the number of jets reconstructed in each bin ${\mathscr N}^i_{\textrm {reco} }(\pt,R)$ for detector effects to obtain the unfolded ${\mathscr N}^i_{\textrm{unf} }(\pt,R)$ according to:
 
 \begin{equation}
 {\mathscr N}^i_{\textrm {unf}}= \sum_j \left ({\mathbf M}^{-1} \right )_{\textrm{reco,} j}^{\textrm{true,} i} g^j \left ({\mathscr N}^j_{\textrm {reco}}-{\mathscr N}^j_{\textrm{bkgd}}\right )
@@ -154,9 +151,10 @@ First, the estimated extra jet background, ${\mathscr N}^j_{\textrm{bkgd}}$ is s
 detector effects result in a single truth jet being split into 
 two jets in the reconstruction. In simulation, background removal is done by requiring a match to a truth jet. 
 
-Next, a factor $g$ corrects for migration across the fiducial boundary in reconstruction. For each bin $j$, $g^j$ gives the fraction of reconstructed jets matched to truth jets inside the fiducial boundary ($>25 \gev$):
+Next, a factor $g$ corrects for migration across the fiducial boundary in reconstruction (cases where the reconstructed jet has
+$\pT>25$~GeV but the truth jet has $\pT>25$~GeV). For each bin $j$, $g^j$ gives the fraction of reconstructed jets matched to truth jets inside the fiducial boundary ($>25 \gev$):
 \begin{displaymath}
-g^j \equiv \frac{{\mathscr N}^j_{\textrm {reco match > 25 \gev}}} {{\mathscr N}^j_{\textrm {all reco}}}
+g^j \equiv \frac{{\mathscr N}^j_{\textrm {reco match }> 25 \gev}} {{\mathscr N}^j_{\textrm {all reco}}}
 \label{eqn:feedin}
 \end{displaymath}
 Figure~\ref{fig:feedin} shows this factor estimated for several NLO \ttbar\ generators. The baseline \powpy\ is used to correct the data.

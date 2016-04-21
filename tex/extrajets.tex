@@ -5,7 +5,7 @@ Jets in selected events are divided into two categories: the two $b$-jets used f
 \section{Matching criteria}
 As described in Chapter~\ref{ss:tmatching}, a geometric algorithm matches reconstructed jets to truth jets. The $b$-jets are matched before the extra jets and no two reconstructed jets are allowed to match to the same truth jet. Though required to have reconstructed $\pt>25 \GeV$, reconstructed jets are matched to truth jets with $\pt>10 \GeV$. This procedure allows the unfolding to account for migration over the selection boundary.
 
-In the $\sim 2\%$ of events with more than two reconstructed $b$-jets, the two jets with the highest MV1 weight are classified as the selected $b$-jets and the remaining jets are treated as extra jets. In the events that contain more than two reconstructed $b$-jets, this prescription selects $b$-jets that are matched to the top decay products with 74\% accuracy. In contrast, choosing the two highest \pt $b$-jets in these same events selects $b$-jets from the top decay 68\% of the time. In simulated events with exactly 2 reconstructed $b$-jets, 96\% of selected $b$-jets descend from the top quark; the remainder are consistent with mistagged~\cite{btagmiscal} non $b$-jets.
+In the $\sim 2\%$ of events with more than two reconstructed $b$-jets, the two reconstructed jets with the highest MV1 weights are classified as the selected $b$-jets and the remaining jets are treated as extra jets. In the events that contain more than two reconstructed $b$-jets, this prescription selects $b$-jets that are matched to the top decay products with 74\% accuracy. In contrast, choosing the two highest \pt $b$-jets in these same events selects $b$-jets from the top decay 68\% of the time. In simulated events with exactly 2 reconstructed $b$-jets, 96\% of selected $b$-jets descend from the top quark; the remainder are consistent with mistagged~\cite{btagmiscal} non $b$-jets. Such misclassification of $b$-jets is accounted for in the correction procedure described in Chapter~\ref{ch:unfolding}.
 
 
 
@@ -23,22 +23,15 @@ The  procedures used to estimate the rate of these two types of backgrounds are 
 \subsection{Pileup jets}
 
 
-The ATLAS simulation describes the effect of pileup on hard-scatter jets well~\cite{jetpile}. The multiplicity of pileup jets has not been as fully validated, especially in the region $2.4 <  |\eta| < 4.5$.  Ideally, the pileup rate could be
+The ATLAS simulation describes the effect of pileup on hard-scatter jets well~\cite{jetpile}. However, the multiplicity of pileup jets has not been as fully validated, especially in the region $2.4 <  |\eta| < 4.5$.  Ideally, the pileup rate could be
 estimated using the ATLAS pileup overlay simulation framework.  In this framework,
 zero bias events from data are combined with simulated hits for the hard scattering event
-and the digitization and reconstruction are performed on the combined sample.  At present,
-only two $t\overline t$ pileup overlay samples exist.  One, using \textsc{ MC@NLO} for the hard scattering,
-contains only 400,000 no-all-hadronic events and is too small to use for
-systematic studies.  The other uses the baseline \textsc{ Powheg+Pythia} hdamp=$\infty$
-configuration, but uses tag d780 which  is affected by simulation problems with the tile cell 
-energy that can affect the JES for hard scatter jets.  In addition, this sample has
-limited statistics.   Despite these problems, the pileup overlay sample
-provide a reasonable description of pileup jets.%, as documented in Appendix~\ref{app:pileup}.
+and the digitization and reconstruction are performed on the combined sample. However,
+no sample with sufficiently high statistics presently exists.  
 
 A higher statistics alternative to the overlay sample can be constructed using a hybrid technique.
-This hybrid technique takes as its input files in NTUP\_COMMON format
-from the baseline simulation and from the ZeroBiasOverlay data steam (the same stream that is 
-used as input to the standard overlay simulation).  
+This hybrid technique takes as its input files 
+from the baseline simulation and from the ZeroBiasOverlay data steam~\footnote{Real data events collected with a zero-bias trigger that selects purely random events. The events from this stream can be combined or ``overlaid'' on a generated process to simulate pileup. See Ref.~\cite{minbias} for more information.}.  
 Unmatched jets are removed from the baseline simulation
 and the matched jets are combined with reconstructed jets from the zero bias data.  
 
@@ -46,7 +39,7 @@ To properly estimate the pileup rate, the input ZeroBiasOverlay data must be lum
 to match the data.  This weighting is done as follows.  First, the run number and luminosity block number 
 for all events passing the \emubb\ data event selection is tabulated.  Second, data from the ZeroBiasOverlay
 stream is skimmed to keep only those run and luminosity block pairs present in the selected data.
-Third, \ttbar\~MC events are analysed.
+Third, \ttbar\ MC events are analysed.
 The $e$,$\mu$, \bjet s, and truth-matched additional jets are kept and the unmatched
 additional jets are deleted.  For each MC event, a ZeroBiasOverlay data event is 
 randomly selected from the skimmed data.
@@ -66,7 +59,7 @@ The pileup rate decreases with jet \pT\ and is estimated to be below 0.002 for j
 Systematic uncertainties on this pileup estimate are discussed in Chapter~\ref{ss:sysbkg}.
  
  \subsection{False jets}
-Reconstruction pathologies are studied using simulated data. Because the simulation event record does not contain truth information for pileup, it is not straightforward to determine what fraction of the unmatched jets derive from pileup and what fraction are the result of other detector effects. The most straightforward way to study the rate of false jets would be to study them in a sample simulated without pileup, but no such \ttbar\ sample exists. 
+Reconstruction pathologies are studied using simulated data. Because the simulation event record does not contain truth information for pileup, it is not straightforward to determine what fraction of the unmatched jets derive from pileup and what fraction are the result of other detector effects. The simplest way to study the rate of false jets would be to study them in a sample simulated without pileup, but no such \ttbar\ sample exists. 
 
 The rate of false jets is estimated by studying the $\Delta {R}$ between extra jets. While the $\eta-\phi$ position of pileup jets is uncorrelated with the position of truth jets, false jets from reconstruction pathologies should be preferentially close to truth jets (since they are derived from particles in these truth jets).  
 Figure~\ref{fig:recodr} shows the distance between each reconstructed jet and the nearest additional reconstructed jet in the event ($\Delta {R}_{\text{reco jet, reco jet}}$) in simulation and in data for jets of rank=1-4. The data is in good agreement with the simulation. 
@@ -82,7 +75,7 @@ Figure~\ref{fig:truthdr} shows the distance between each reconstructed jet and t
 The false jet rate can be estimated in another way. Figure~\ref{fig:falsecomp} shows the number of unmatched jets per event in the baseline simulation as a function of $\mu$. These unmatched jets include both the pileup and false jet contributions, with pileup dominating at high $\mu$ and false jets at low $\mu$. The rate of false jets can be determined by fitting this distribution to a first order polynomial. The intercept of this fit predicts the false jet rate, while the slope provides the pileup rate in the simulation. The fitted intercept is $0.0075 \pm   0.0014$, which is slightly higher than the estimate obtained from $\Delta {R}_{\text{reco jet, truth jet}}$ above, but is consistent
 within the statisical uncertainty on the fit.   This second technique is used to obtain the baseline false jet estimate and its uncertainty.
 
-The false jets comprise $\sim 20\%$ of the total unmatched jets and have a \pt\ and rank dependence similar to pileup jets. These two contributions are treated as a single background in the subtraction procedure.
+The false jets comprise $\sim 20\%$ of the total unmatched jets and have a \pt\ and rank dependence similar to pileup jets. These two contributions are combined and treated as a single background in the subtraction procedure.
 \begin{figure}
 \centering
 \includegraphics[width=0.9\textwidth]{fig/MCComp/NLO/ExtraJetEta.pdf}
@@ -137,7 +130,7 @@ points show the results after correction.}
 \end{figure}
 \section{Reconstruction level distributions}
 
-Figures~\ref{fig:nrecojets} and~\ref{fig:recojetpt} compare the multiplicity and \pt of reconstructed extra jets in data and \ttbar simulation, where the simulation has been normalized to the number of events in data. Statistical uncertainity on the data is shown as a gray band on the ratio plot and statistical uncertainty on the simulation is shown as a error bars on the ratio.  Systematic uncertainities are not shown. 
+Figures~\ref{fig:nrecojets} and~\ref{fig:recojetpt} compare the multiplicity and \pt of reconstructed extra jets in data and \ttbar simulation, where the simulation has been normalized to the number of events in data. Statistical uncertainity on the data is shown as a gray band on the ratio plot and statistical uncertainty on the simulation is shown as error bars on the ratio.  Systematic uncertainities are not shown. 
 %For both the simulation and the data in Figure~\ref{fig:nrecojets}, jets from pileup are not included. 
 %Pileup and false jet backgrounds have been removed from both the data and the simulation.
 In data, background from pileup jets is subtracted, while in simulation, reconstructed jets are required to have a truth match. The multiplicity 

@@ -1,0 +1,30 @@
+Generic expression for DPS in proton-proton scattering \cite{DPS}:
+\begin{equation}
+\sigma^{DPS}_{(pp \rightarrow ab)} = \frac{m}{2} \frac {\sigma^{SPS}_{(pp \rightarrow a)} \cdot \sigma^{SPS}_{(pp \rightarrow b)}}{\sigma_{(eff, pp)}}
+\end{equation}
+where $m=2$ if $a$ and $b$ are distinguishable, $m=1$ if not.
+
+Fit $\sigma_{eff}= 15$ mb  from $W(\rightarrow l \nu ) + 2$ jets\cite{Jpsi}:
+
+Divide out signal cross section to get $P$ that DPS occurs with another process $b$\cite{Jpsi}:
+\begin{equation}
+P_{t\overline{t} |dijet } = \sigma{dijet} / \sigma_{eff}
+\end{equation}
+
+From \ttbar\ cross-section measurement\cite{xsec}: $\sigma {t\overline{t}} = 242.1 \pm 1.7 \pm 5.5 \pm 7.5 \pm 4.2$ pb at $\sqrt{s}=8$ TeV, so we have uncertainty $\sim 8 \%$. Let's assume that we need
+\begin{equation}
+P_{t\overline{t} |dijet }= \sigma{dijet} / \sigma_{eff} \approx 1 \%
+\end{equation}
+
+Use \py\ to generate 5000 events for inclusive dijets at  $\sqrt{s}=8$ TeV. From log file, $ \sigma{dijet, total} = 5.379 \times 10^6$ nb.
+\begin{equation}
+P_{t\overline{t} |dijet }= \frac{N_{p_{T}^{jet} <p_{T}^{max} }}{N_{total}} \cdot 5.379 \times 10^6 nb / 15 mb 
+\end{equation}
+\begin{equation}
+0.01=  0.3586 \frac{N_{p_{T}^{jet} <p_{T}^{max} }}{N_{total}} 
+\end{equation}
+\begin{equation}
+.02786=\frac{N_{p_{T}^{jet} <p_{T}^{max} }}{N_{total}}=\frac{N_{p_{T}^{jet} <29.5 GeV}}{N_{total}}
+\end{equation}
+where $\frac{N_{p_{T}^{jet} <p_{T}^{max} }}{N_{total}}$ is calculated from the NTUP\_TRUTH for the generated sample.
+\clearpage

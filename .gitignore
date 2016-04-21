@@ -11,10 +11,12 @@ thesis.pdf
 *.run.xml 
 *.cb 
 *.ind 
+*.root
 *.idx 
 *.ilg 
 *.inx 
 *.synctex.gz 
+*.svn
 *~ 
 ~*
 .DS_Store

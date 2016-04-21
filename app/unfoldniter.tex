@@ -3,11 +3,11 @@
 \label{app:stressiter}
 
 
-The optimization of the number of iterations for the Bayesian unfolding is done by studying the performance of the unfolding in stress tests. The response matrix is taken from the baseline ttbar sample(\powpy\ + 3\% $Wt$). The input reconstructed distribution are obtained from each of NLO alternate ttbar generators listed in Table~\ref{t:ttsamples}. The same 3\% $Wt$ contribution is included for each generator.
+The optimization of the number of iterations for the Bayesian unfolding is done by studying the performance of the unfolding in stress tests. The response matrix is taken from the baseline ttbar sample(\powpy\ + 3\% $Wt$). The input reconstructed distribution are obtained from each of NLO alternate ttbar generators discussed in Chapter~\ref{ss:mcsignal}. The same 3\% $Wt$ contribution is included for each generator.
 
-One thousand pseudoexperiments are constructed from each generator as in Section~\ref{ss:chisq}. These pseudoexperiments are then unfolded, varying the number of iterations from one to nine. A number of metrics are studied to understand the behavior of the unfolding.
+One thousand pseudoexperiments are constructed from each generator as in Chapter~\ref{ss:stress}. These pseudoexperiments are then unfolded, varying the number of iterations from one to nine. A number of metrics are studied to understand the behavior of the unfolding.
 \begin{description}
-\item[Mean bias:] The bias is calculated as $N_{\textrm{ unfolded}}-N_{\textrm{ true}}$ averaged One thousand pseudoexperiments.
+\item[Mean bias:] The bias is calculated as $N_{\textrm{ unfolded}}-N_{\textrm{ true}}$ averaged one thousand pseudoexperiments.
 
 Figures \ref{fig:powhwbias}-\ref{fig:mcnlohwbias} show the mean and $\sigma$ of the bias for each of the 41 bins, obtained from a Gaussian fit over all one thousand pseudoexperiments for one through four iterations. Figures \ref{fig:powhwfrbias}-\ref{fig:mcnlohwfrbias} show the fractional bias, taken as the ratio of the bias spectrum to the truth. As the number of iterations is increased, the $\sigma$ of the bias increases. 
 
@@ -25,7 +25,7 @@ $$
 
 where ${\sigma_{\textrm{ ret}}}^{i}_{j}$ is the uncertainty by \texttt{RooUnfold} for bin $j$ and pseudoexperiment $i$. These mean \textrm{ ret}urned errors are shown in Table~\ref{t:err} for Bayesian unfolding with $N_{\textrm{ iter}}$=1-9. For one iteration, the mean error is $\sim$ 8 jets for all generators. In all cases, the error increases with $N_{\textrm{ iter}}$.
 \item[Pull:] The pull is calculated as $(N_{\textrm{ unfolded}}-N_{\textrm{ true}})/\sigma$, where $\sigma$ is the bin error \textrm{ ret}urned by \texttt{RooUnfold}.
-Figures~\ref{fig:powhwpull}-\ref{fig:mcnlohwpull} show the mean and $\sigma$ of the pull for each of the 41 bins, obtained from a Gaussian fit over all One thousand pseudoexperiments for one through four iterations. The scatter in the means of the pull shows the same behavior as that of the bias. For $N_{\textrm{ iter}}$=1, the \textrm{ ret}urned error does not properly represent the spread seen among the pseudoexperiments. For $N_{\textrm{ iter}} \geq 2$, the width of the pull is close to 1 for all generators and all bins.  
+Figures~\ref{fig:powhwpull}-\ref{fig:mcnlopull} show the mean and $\sigma$ of the pull for each of the 41 bins, obtained from a Gaussian fit over all One thousand pseudoexperiments for one through four iterations. The scatter in the means of the pull shows the same behavior as that of the bias. For $N_{\textrm{ iter}}$=1, the \textrm{ ret}urned error does not properly represent the spread seen among the pseudoexperiments. For $N_{\textrm{ iter}} \geq 2$, the width of the pull is close to 1 for all generators and all bins.  
 \item[\chisq:] All of the metrics listed are insensitive to bin-to-bin correlations. To understand whether the unfolding is properly handling such correlations, the unfolded and fully corrected distributions for each generator are compared to that generator's truth distribution using the full chisq calculation in Equation\ref{eq:unfchi2}. Table~\ref{t:stresschi} and Figure~\ref{f:stresschi} show the \chisq\ for varying number of iterations.
 
 For the baseline generator, the chisq is properly normalized, giving $\sim$43 for 41 degrees of freedom, independent of $N_{\textrm{ iter}}$. For the alternative generators, with $N_{\textrm{ iter}}=1$, the chisq vary from $\sim$140-$\sim$260. As $N_{\textrm{ iter}}$ increases, the chisq decreases, roughly stabilizing for $N_{\textrm{ iter}} \geq 6$. This decrease in chisq is largely due to the increase in size of the uncertainty rather than improvement in the unfolding itself, as seen from the above metrics. 

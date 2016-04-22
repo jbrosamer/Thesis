@@ -1,34 +1,35 @@
 
 The evaluation of systematic uncertainties in this analysis follows the standard ATLAS Top group recommendations.
 
-Each systematic uncertainty is evaluated at the $1\sigma$ level. The shift is first evaluated at the reconstructed level and then propagated into the unfolding. The result is compared to the spectrum unfolded without a systematic shift. Except where otherwise indicated, individual systematics are assumed to be uncorrelated. 
+Each systematic uncertainty is evaluated at the $1\sigma$ level. The shift is first evaluated at the reconstructed level and then propagated into the unfolding. The result is compared to the spectrum unfolded without a systematic shift. Except where otherwise indicated, individual systematic uncertainties are assumed to be uncorrelated. 
 
-The final \chisq\ conclusions in this analysis rely not just on the bin errors of the final distribution, but on the full covariance matrix. The covariance matrices for systematics are evaluated in one of two ways. Some uncertainties depend on the difference between two discrete spectra (e.g. one generator unfolded against another), and the covariance is taken as the outer product of the systematic uncertainty for each bin. For nuisance parameters like JES, the full covariance matrix can be computed with pseudoexperiments varied by a random amount. The details of these two procedures are given below.
+The final \chisq\ conclusions in this analysis rely not just on the bin errors of the final distribution, but on the full covariance matrix. The covariance matrices for systematics are evaluated in one of two ways. Some uncertainties depend on the difference between two discrete spectra (e.g. one generator unfolded against another), and the covariance is taken as the outer product of the systematic uncertainty for each bin. For nuisance parameters such as JES, the full covariance matrix can be computed using pseudoexperiments where the relevant parameter is varied according to a Gaussian probability distribution. The details of these two procedures are given below.
 
 \section{Detector modeling}
 Detector modeling uncertainties are evaluated using the baseline \ttbar\ simulation by varying the
-default scale factors within their systematic uncertainties using the \texttt{ TopRootCore} framework. Jet-related uncertainties, primarily the jet energy scale, are the biggest source of detector modeling uncertainity. Uncertainities due to lepton isolation, reconstruction, identification and trigger efficiencies have been evaluated, but found to be negligible. 
+default scale factors within their systematic uncertainties. Jet-related uncertainties, primarily the jet energy scale, are the biggest source of detector modeling uncertainity. Uncertainities due to lepton isolation, reconstruction, identification and trigger efficiencies have been evaluated, but found to be negligible. 
 
 
 %The differences between the varied and nominal unfolded distributions are added in quadrature, symmetrizing if necessary. Finally, the distributions are smoothed with a gaussian kernel procedure to reduce non-physical bin-to-bin fluctuations. 
 \subsection{Nuisance parameters}
 \label{ss:np}
-Jet energy scale uncertainties are evaluated using the \texttt{ JetUncertainties-00-08-25} package and the 
-\texttt{ InsituJES2012\_23NP\_ByCategory.config} configuration.
-Each of the 23 nuisance parameters is independently varied.
-The jet energy resolution (JER) uncertainty is derived from measurements of the jet response in data and found to agree well with simulation. The uncertainty is evaluated using the \texttt{ ApplyJetResolutionSmearing-00-01-04} package.  Jet energy is smeared using
+Jet energy scale uncertainties are evaluated according to the procedure outlined in Reference~\cite{JES}.
+Each of the 23 \emph{nuisance parameters} (independent sources of uncertainty) is independently varied.
+The jet energy resolution (JER) uncertainty is derived from measurements of the jet response in data and found to agree well with simulation. Jet energy is smeared using
 a function that depends on  \pt\ and $\eta$.    Because this procedure only allows for an increase in resolution, 
 the resulting uncertainty is symmetrized.
 %The systematic uncertainty due to the JVF cut was estimated by varying the JVF with the \texttt{ JVFUncertaintyTool-00-00-04}.
 %The jet reconstruction efficiency and its uncertainty were measured in data using the fraction track-jets matched to calorimeter jets.
 % The difference between simulation and data is taken as the uncertainty. 
-The uncertainty on the jet finding efficiency is parametrized in the  \texttt{ JetEffiProvider-00-00-05} tool.
-This uncertainty is propagated to the extra jet distribution by randomly dropping jets in the nominal simulation
+The uncertainty on the jet finding efficiency is evaluated by randomly dropping jets in the nominal simulation
 and reanalyzing the resulting data.  The resulting difference is then symmetrized. 
 
 
-The $b$-tagging scale factor and uncertainty for $b$-tagging efficiency and mistag is evaluated using the \texttt{ BTaggingCalibrationDataInterface}. To avoid using efficiencies and mistag rates measured from the same events as this analysis, the System~8 calibrations
-are used.
+The $b$-tagging scale factor and uncertainty for $b$-tagging efficiency and mistag is also evaluated using results discussed in Reference~\cite{btagpaper}. The modeling of the electron
+and muon trigger and identification efficiencies, energy scales and resolutions 
+were studied using $Z\rightarrow ee/\mu\mu$, $J/\psi\rightarrow ee/\mu\mu$ and
+$W\rightarrow e\nu$ events in data and simulation, using the techniques
+described in References \cite{PERF-2013-03,PERF-2013-05,PERF-2014-05}.
 
 
 \subsection{Computation of uncertainty}
@@ -40,7 +41,7 @@ C_{ij}=\frac{1}{1000} \Sigma_{x=0}^{1000} \left({\mathscr N}_x^i- \left \langle{
 \end{equation}
 where $\left \langle{\mathscr N}^j \right \rangle$ is the average jets in bin $j$ over all samples and ${\mathscr N}_x^j$ is the number of jets in bin $j$ in a single sample $x$. 
 
-As a cross-check, the uncertainities obtained using this procedure are compared to those obtained using the standard method for the most signifigant subset of nuisance parameters. Figure~\ref{fig:ToyJES1} shows the uncertainties from the 15 JES eigenstates on the \pt\ for jets of rank=1-4. The band shows the uncertainty obtained from the samples with gaussian variation of all nuisance parameters. The upper and lower lines shows uncertainty from the quadratic sum of the independent variations of each nuisance parameter by $\pm 1 \sigma$. The distribution of samples values has fitted $\mu=1$ and $\sigma$ consistent with the $\pm 1 \sigma$ method.
+As a cross-check, the uncertainities obtained using this procedure are compared to those obtained using the standard ATLAS method for the most signifigant subset of nuisance parameters. Figure~\ref{fig:ToyJES1} shows the uncertainties from the 15 JES eigenstates on the \pt\ for jets of rank=1-4. The band shows the uncertainty obtained from the samples with gaussian variation of all nuisance parameters. The upper and lower lines shows uncertainty from the quadratic sum of the independent variations of each nuisance parameter by $\pm 1 \sigma$. The distribution of samples values has fitted $\mu=1$ and $\sigma$ consistent with the $\pm 1 \sigma$ method.
 
 
 
@@ -163,16 +164,17 @@ Fractional bias distributions for pseudoexperiments from \madpy\ radiation sampl
 
 \section{Combined uncertainty}
 %%%%%SHOULD THIS SECTION MOVE????
-A covariance matrix associated with the statistical uncertainty of the input data spectrum returned from \texttt{ RooUnfold}. The covariance due to all sources of uncertainty described above is then added to obtain the final uncertainty on the corrected data. Figure~\ref{fig:cov}  shows (a) the statistical covariance matrix  and (b) total covariance matrix for the unfolded data. The diagonal elements of total matrix are used to obtain uncertainties on the bins of \pt\ and rank. The entire matrix is used to assess the \chisq agreement between data and generators. 
+A covariance matrix associated with the statistical uncertainty of the input data spectrum is returned from \texttt{RooUnfold}. The covariance matrix due to all sources of uncertainty described above is then added to the \texttt{ RooUnfold} matrix to obtain the final uncertainty on the corrected data. Figure~\ref{fig:cov}  shows (a) the statistical covariance matrix  and (b) total covariance matrix for the unfolded data. The diagonal elements of total matrix are used to obtain uncertainties on unfolded data in bins of \pt\ and rank. The entire matrix is used to assess the agreement between data and generators. 
 
 Figure ~\ref{fig:SmoothSys} shows the sum of uncertainties from all sources, broken into categories as follows.
 \begin{description}
-\item[Statistics:] Statistical uncertainty on the data is returned from \texttt{ RooUnfold}
-\item[Modeling:] NLO generator, radiation, shower and migration matrix statistics uncertainties (Chapter~\ref{ss:unfsystt}-\ref{ss:mcstats})
+\item[Data Statistics:] Statistical uncertainty on the data is returned from \texttt{ RooUnfold}
+\item[\ttbar\ modeling:] NLO generator, radiation, and parton shower uncertainties(Chapter~\ref{ss:unfsystt})
+\item[MC Stats:] Migration matrix statistics uncertainties (Chapter~\ref{ss:mcstats})
 \item[PDF:] PDF variations, determined from \mcnlohw (Chapter~\ref{ss:pdf})
-\item[Pileup:] Uncertainties from JVF nuisance parameters (Chapter~\ref{ss:np}) and false jet modelling (Chapter~\ref{ss:sysbkg})
+\item[JVF/Unmatched Jets:] Uncertainties from JVF nuisance parameters (Chapter~\ref{ss:np}) and false jet modeling (Chapter~\ref{ss:sysbkg})
 \item[JES:] Jet energy scale nuisance parameters (Chapter~\ref{ss:np})
-\item[JER/JEFF:] Jet energy resoulation and jet finding efficiency nuisance parameters (Chapter~\ref{ss:np})
+\item[JER/JEFF:] Jet energy resolution and jet finding efficiency nuisance parameters (Chapter~\ref{ss:np})
 \item[Other detector:] Lepton and $b$-tag nuisance parameters not in the JES, JER/JEFF or pileup category.
 \item[Backgrounds:] Single top rate uncertainty $Wt$ (Chapter\ref{ss:wt}) 
 \end{description}

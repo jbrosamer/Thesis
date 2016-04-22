@@ -157,7 +157,8 @@ $\pT>25$~GeV but the truth jet has $\pT>25$~GeV). For each bin $j$, $g^j$ gives 
 g^j \equiv \frac{{\mathscr N}^j_{\textrm {reco match }> 25 \gev}} {{\mathscr N}^j_{\textrm {all reco}}}
 \label{eqn:feedin}
 \end{displaymath}
-Figure~\ref{fig:feedin} shows this factor estimated for several NLO \ttbar\ generators. The baseline \powpy\ is used to correct the data.
+Figure~\ref{fig:feedin} shows this factor estimated for several NLO \ttbar\ generators. The baseline \\
+\powpy\ is used to correct the data.
 
 The response matrix ${\mathbf M}_{\textrm{reco, j}}^{\textrm{true, i}}$ gives the number of jets reconstructed with bin number $j$; bin number $i$ is obtained from true \pt\ and rank.
 The matrix is 
@@ -175,7 +176,6 @@ In RooUnfold, detector inefficiencies (cases where a true object is not reconstr
 The response matrix is inverted using iterative Bayesian unfolding~\cite{DAgostini:1994zf}, which reduces fluctuations from instabilities in 
 the inversion process. The number of iterations has been set to 2. Details on the procedure used to determine the optimal number of iterations are described in Appendix~\ref{app:stressiter}. 
 %This Appendix also shows the results of unfolding with alternate migration matrices. 
-Singular value decomposition unfolding cannot be used since the input spectrum is not smooth~\cite{svd}.
 \begin{figure}
 \includegraphics[width=0.45\textwidth]{fig/Unfolding/FeedIn.pdf}
 \includegraphics[width=0.45\textwidth]{fig/Unfolding/FeedInFrac.pdf}
@@ -201,7 +201,7 @@ different kinematics from events passing the truth only selection.  Therefore, t
 distributions obtained from the unfolding are biased with respect to the truth selection.
 In addition, a secondary contribution to the bias results from events where one of the two reconstructed
 $b$-jets is in fact a mistag.
-These biases are corrected using a bin-by-bin correction factor that is applied after the unfolding. 
+Both of these biases are corrected using a single bin-by-bin correction factor that is applied after the unfolding. 
 
 To understand the contributions to this correction, events that fall outside the combined truth and reconstructed
 fiducial region are classified and their kinematic distributions are studied. 
@@ -218,7 +218,7 @@ and 4.15\%\ of these are \textit{misclassifed} events that fail.
 This table breaks these events into 5 categories:
 %\begin{description}
 \begin{enumerate}
-\item{Lepton fiducial:} dressed truth $e$ or $\mu$ fails the fiducial $p_{T}$ or $\eta$ cuts, while 
+\item{Lepton fiducial:} truth $e$ or $\mu$ fails the fiducial $p_{T}$ or $\eta$ cuts, while 
 reconstructed $e$ or $\mu$ passes.
 \item{Lepton jet overlap:}dressed truth $e$ or $\mu$  overlaps with a truth jet, while reconstructed $e$ or $\mu$ does not overlap with a reconstructed jet.
 \item{Lepton non-prompt:} truth $e$ or $\mu$ leptons result from the decay of a hadron or are other background (such as
@@ -430,7 +430,7 @@ The agreement between an unfolded spectrum and truth distribution can be estimat
 \chi^2= \left( {\mathscr N}_{\textrm {unf}}- {\mathscr N}_{\textrm {true}} \right)^{T} X^{-1}\left( {\mathscr N}_{\textrm {unf}}- {\mathscr N}_{\textrm {true}} \right)
 \label{eq:unfchi2}
 \end{equation}
- The inverse covariance matrix, $X^{-1}$, is determined using SVD with \texttt{ SciPy}~\cite{scipy}.
+ The inverse covariance matrix, $X^{-1}$, is determined using Singular Value Decomposition (SVD) with \texttt{ SciPy}~\cite{scipy}.
 
 This \chisq\ is used validate the unfolding procedure with different MC generators in Chapter~\ref{ss:close}-\ref{ss:stress}, as well as to assess the agreement of generators with the fully corrected data in Chapter~\ref{ch:results}.
 \subsection{Closure test}
@@ -460,7 +460,7 @@ inverse covariance matrix returned from RooUnfold appropriately estimates the co
 `Stress' tests assess the effect of the input \pt\ spectrum on the unfolding algorithm by unfolding pseudoexperiments produced from alternate \ttbar\~MC generators (described in Chapter ~\ref{ss:mcsignal}) using the response matrix and correction factors
 obtained from the baseline. 
 
-To study the stability of the unfolding with respect to changes in the input jet \pt\ and multiplicity spectra, pseudoexperiments are constructed by reweighting the truth jet spectrum in the baseline MC sample. The weight for each bin is given by the ratio of the alternative generator to the baseline\footnote{An alternative reweighting procedure where the ratios were fit to a smooth function was also studied. Changes with respect to the procedure described here were small}. This procedure isolates the uncertainty associated with the choice of spectrum from other sources of instability (e.g. JES), which are accounted for separately. %ADD MORE EXPLANATION??
+To study the stability of the unfolding with respect to changes in the input jet \pt\ and multiplicity spectra, pseudoexperiments are constructed by reweighting the truth jet spectrum in the baseline MC sample. The weight for each bin is given by the ratio of the alternative generator to the baseline\footnote{An alternative reweighting procedure where the ratios were fit to a smooth function was also studied. Changes with respect to the procedure described here were small}. This procedure isolates the uncertainty associated with the choice of spectrum from other generator-independent sources of instability (e.g. JES), which are accounted for separately. %ADD MORE EXPLANATION??
 
 Stress tests have been performed using the following samples: \pow+\py, \pow+\hw, \madpy, \mcnlohw, \peight, \hdamp, RadHi \madpy\ and RadLo \madpy. Each of the alternate \ttbar\ samples are unfolded with 1000 pseudoexperiments against a migration matrix filled from the baseline \ttbar\ simulation. In both the migration matrix and the samples, a 3\% constribution from single top is included. Correction factors ($f$ and $g$ in Equation~\ref{eqn:unffinal}) are also taken from the baseline.
 

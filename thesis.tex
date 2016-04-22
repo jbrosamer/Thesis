@@ -91,6 +91,7 @@ To do
 \chapter{Phenomenology at the LHC}
 \label{ch:pheno}
 \input{tex/pheno.tex}
+
 \chapter{The ATLAS detector and the LHC}
 \label{ch:atlas}
 \input{tex/atlas.tex}
@@ -118,7 +119,9 @@ To do
 \chapter{Conclusions}
 \label{ch:conclusions}
 \input{tex/conclusions.tex}
+
 \appendix
+\iffalse
 \chapter{Extra jets}
 \section{Truth distributions}
 \subsection{Kinematic distributions for $b$- and extra jets at truth level}
@@ -139,6 +142,7 @@ To do
 \section{Detector level systematics}
 \label{app:sys}
 \input{app/unfoldsys.tex}
+
 \section{Misidentified events}
 \subsection{Study of  events that pass reconstruction event selection but fail truth selection}
 \label{app:reconottruth}
@@ -157,11 +161,13 @@ To do
 \section{Estimated double parton scattering as a function of minimum jet \pt}
 \label{app:dps}
 \input{app/dps.tex}
-\chapter{Modeling hadron decays}
+\fi
+\chapter{Generator studies}
 \label{app:evtgen}
+\input{app/evtgen.tex}
 
 \backmatter
 \bibliographystyle{ieeetr}
-\bibliography{bib/thesis,bib/atlas}
+\bibliography{bib/thesis,bib/atlas,bib/HFNote}
 
 \end{document}

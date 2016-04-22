@@ -1,0 +1,774 @@
+Decay anti-B0
+# Updated to PDG 2008
+#                   b -> c semileptonic
+#
+0.0493 D*+     e-      anti-nu_e                       PHOTOS  HQET 0.77 1.33 0.92; #[Reconstructed PDG2011]#JB change to match 2011 PDG
+0.0218 D+      e-      anti-nu_e                       PHOTOS  ISGW2; #[Reconstructed PDG2011]#JB rescaled to match PDG 2011 SL inc BR
+0.00753608113379275 D_1+   e-   anti-nu_e          PHOTOS  ISGW2;#JB rescaled to match PDG 2011 SL inc BR
+0.00279114116066398 D_0*+   e-   anti-nu_e          PHOTOS  ISGW2;#JB rescaled to match PDG 2011 SL inc BR
+0.00697785290165995 D'_1+   e-   anti-nu_e          PHOTOS  ISGW2;#JB rescaled to match PDG 2011 SL inc BR
+0.00307025527673038 D_2*+   e-   anti-nu_e          PHOTOS  ISGW2;#JB rescaled to match PDG 2011 SL inc BR
+0.000418671174099597 D*+  pi0   e-   anti-nu_e      PHOTOS  GOITY_ROBERTS;#JB rescaled to match PDG 2011 SL inc BR
+0.00683829584362675 D*0     pi+     e-      anti-nu_e               PHOTOS  GOITY_ROBERTS; #[Reconstructed PDG2011]#JB rescaled to match PDG 2011 SL inc BR
+0.00139557058033199 D+   pi0   e-   anti-nu_e      PHOTOS  GOITY_ROBERTS;#JB rescaled to match PDG 2011 SL inc BR
+0.0699180860746327 D*+     mu-     anti-nu_mu                      PHOTOS  HQET 0.77 1.33 0.92; #[Reconstructed PDG2011]#JB change to match 2011 PDG
+0.0302838815932042 D+      mu-     anti-nu_mu                      PHOTOS  ISGW2; #[Reconstructed PDG2011]#JB rescaled to match PDG 2011 SL inc BR
+0.00753608113379275 D_1+   mu-  anti-nu_mu         PHOTOS  ISGW2;#JB rescaled to match PDG 2011 SL inc BR
+0.00279114116066398 D_0*+   mu-  anti-nu_mu         PHOTOS  ISGW2;#JB rescaled to match PDG 2011 SL inc BR
+0.00697785290165995 D'_1+   mu-  anti-nu_mu         PHOTOS  ISGW2;#JB rescaled to match PDG 2011 SL inc BR
+0.00307025527673038 D_2*+   mu-  anti-nu_mu         PHOTOS  ISGW2;#JB rescaled to match PDG 2011 SL inc BR
+0.000418671174099597 D*+  pi0   mu-  anti-nu_mu    PHOTOS   GOITY_ROBERTS;#JB rescaled to match PDG 2011 SL inc BR
+0.00683829584362675 D*0     pi+     mu-     anti-nu_mu              PHOTOS   GOITY_ROBERTS; #[Reconstructed PDG2011]#JB rescaled to match PDG 2011 SL inc BR
+0.00139557058033199 D+   pi0   mu-  anti-nu_mu    PHOTOS   GOITY_ROBERTS;#JB rescaled to match PDG 2011 SL inc BR
+0.0184 D*+     tau-    anti-nu_tau                     ISGW2; #[Reconstructed PDG2011]#JB change to match 2011 PDG
+0.0102 D+      tau-    anti-nu_tau                     ISGW2; #[Reconstructed PDG2011]#JB change to match 2011 PDG
+0.00181424175443159 D_1+   tau- anti-nu_tau                 ISGW2;#JB rescaled to match PDG 2011 SL inc BR
+0.00181424175443159 D_0*+   tau- anti-nu_tau                 ISGW2;#JB rescaled to match PDG 2011 SL inc BR
+0.00279114116066398 D'_1+   tau- anti-nu_tau                 ISGW2;#JB rescaled to match PDG 2011 SL inc BR
+0.00279114116066398 D_2*+   tau- anti-nu_tau                 ISGW2;#JB rescaled to match PDG 2011 SL inc BR
+0.0001870064577644870  pi+     e-      anti-nu_e                       PHOTOS   ISGW2; #[Reconstructed PDG2011]#JB rescaled to match PDG 2011 SL inc BR
+0.0003447059333420010  rho+    e-      anti-nu_e                       PHOTOS   ISGW2; #[Reconstructed PDG2011]#JB rescaled to match PDG 2011 SL inc BR
+0.00264041953798813   Xu+  e-  anti-nu_e         PHOTOS    VUB 4.8 1.29 0.22 20 0.30 0.55 1.20 0.61 1.26 0.85 1.34 1.08 1.41 1.21 1.48 1.30 1.55 1.30 1.61 1.33 1.67 1.36 1.73 1.39 1.79 1.33 1.84 1.42 1.90 1.39 1.95 1.39 2.00 1.37 2.50 1.30 3.00 0.74 3.50 0.99 4.00 1.09 4.50 1.00;#JB rescaled to match PDG 2011 SL inc BR
+0.00018700645776448700 pi+     mu-     anti-nu_mu                      PHOTOS   ISGW2; #[Reconstructed PDG2011]#JB rescaled to match PDG 2011 SL inc BR
+0.00034470593334200100 rho+    mu-     anti-nu_mu                      PHOTOS   ISGW2; #[Reconstructed PDG2011]#JB rescaled to match PDG 2011 SL inc BR
+0.00264041953798813   Xu+  mu-  anti-nu_mu      PHOTOS       VUB 4.8 1.29 0.22 20 0.30 0.55 1.20 0.61 1.26 0.85 1.34 1.08 1.41 1.21 1.48 1.30 1.55 1.30 1.61 1.33 1.67 1.36 1.73 1.39 1.79 1.33 1.84 1.42 1.90 1.39 1.95 1.39 2.00 1.37 2.50 1.30 3.00 0.74 3.50 0.99 4.00 1.09 4.50 1.00;#JB rescaled to match PDG 2011 SL inc BR
+0.0000837342348199194   pi+    tau- anti-nu_tau                 ISGW2;#JB rescaled to match PDG 2011 SL inc BR
+0.000115832358167555   rho+   tau- anti-nu_tau                 ISGW2;#JB rescaled to match PDG 2011 SL inc BR
+0.000125601352229879   a_1+    tau- anti-nu_tau                 ISGW2;#JB rescaled to match PDG 2011 SL inc BR
+0.0000111645646426559   b_1+    tau- anti-nu_tau                 ISGW2;#JB rescaled to match PDG 2011 SL inc BR
+0.0000111645646426559   a_0+    tau- anti-nu_tau                 ISGW2;#JB rescaled to match PDG 2011 SL inc BR
+0.0000111645646426559   a_2+    tau- anti-nu_tau                 ISGW2;#JB rescaled to match PDG 2011 SL inc BR
+0.226479397705858 anti-u  d       c       anti-d                  PYTHIA         48; #[Reconstructed PDG2011]#JB rescaled to add up to 1 after SL changes
+0.0386068444535871 anti-u  d       c       anti-d                  PYTHIA         25; #[Reconstructed PDG2011]#JB rescaled to add up to 1 after SL changes
+0.0176248944611405 anti-u  s       c       anti-d                  PYTHIA         23; #[Reconstructed PDG2011]#JB rescaled to add up to 1 after SL changes
+0.0151070401690444 anti-u  c       d       anti-d                  PYTHIA         48; #[Reconstructed PDG2011]#JB rescaled to add up to 1 after SL changes
+0.000755339082691895 anti-u  c       s       anti-d                  PYTHIA         48; #[Reconstructed PDG2011]#JB rescaled to add up to 1 after SL changes
+0.0621066478558254 anti-c  s       c       anti-d                  PYTHIA         13; #[Reconstructed PDG2011]#JB rescaled to add up to 1 after SL changes
+0.00503570770188784 anti-c  d       c       anti-d                  PYTHIA         13; #[Reconstructed PDG2011]#JB rescaled to add up to 1 after SL changes
+0.00251785429209615 anti-u  d       u       anti-d                  PYTHIA         48; #[Reconstructed PDG2011]#JB rescaled to add up to 1 after SL changes
+0.00335713846792523 anti-c  s       u       anti-d                  PYTHIA         48; #[Reconstructed PDG2011]#JB rescaled to add up to 1 after SL changes
+0.0017204998710694 anti-u  u       d       anti-d                  PYTHIA         48; #[Reconstructed PDG2011]#JB rescaled to add up to 1 after SL changes
+0.0000587703000101707 anti-d  d       d       anti-d                  PYTHIA         48; #[Reconstructed PDG2011]#JB rescaled to add up to 1 after SL changes
+0.0000755252616854919 anti-s  s       d       anti-d                  PYTHIA         48; #[Reconstructed PDG2011]#JB rescaled to add up to 1 after SL changes
+0.00184637648361784 anti-u  u       s       anti-d                  PYTHIA         48; #[Reconstructed PDG2011]#JB rescaled to add up to 1 after SL changes
+0.00151067904768825 anti-d  d       s       anti-d                  PYTHIA         48; #[Reconstructed PDG2011]#JB rescaled to add up to 1 after SL changes
+0.00125892670489585 anti-s  s       s       anti-d                  PYTHIA         48; #[Reconstructed PDG2011]#JB rescaled to add up to 1 after SL changes
+Decay B0
+# Updated to PDG 2008
+#                   b -> c semileptonic
+#
+0.0493 D*-     e+      nu_e                            PHOTOS HQET 0.77 1.33 0.92; #[Reconstructed PDG2011] # Changed by JB to pdg value
+0.0218 D-      e+      nu_e                            PHOTOS ISGW2; #[Reconstructed PDG2011] # Changed by JB to pdg value
+0.00753608113379275 D_1-   e+   nu_e           PHOTOS ISGW2; # Changed by JB rescaled for correct inclusive SL
+0.00279114116066398 D_0*-   e+   nu_e           PHOTOS ISGW2; # Changed by JB rescaled for correct inclusive SL
+0.00697785290165995 D'_1-   e+   nu_e           PHOTOS ISGW2; # Changed by JB rescaled for correct inclusive SL
+0.00307025527673038 D_2*-   e+   nu_e           PHOTOS ISGW2; # Changed by JB rescaled for correct inclusive SL
+0.000418671174099597 D*-  pi0   e+   nu_e       PHOTOS GOITY_ROBERTS; # Changed by JB rescaled for correct inclusive SL
+0.00683829584362675 anti-D*0 pi-     e+      nu_e                   PHOTOS GOITY_ROBERTS; #[Reconstructed PDG2011] # Changed by JB rescaled for correct inclusive SL
+0.00139557058033199 D-   pi0   e+   nu_e       PHOTOS GOITY_ROBERTS; # Changed by JB rescaled for correct inclusive SL
+0.0699180860746327 D*-     mu+     nu_mu                           PHOTOS HQET 0.77 1.33 0.92; #[Reconstructed PDG2011] # Changed by JB to pdg value
+0.0302838815932042 D-      mu+     nu_mu                           PHOTOS ISGW2; #[Reconstructed PDG2011] # Changed by JB to pdg value
+0.00753608113379275 D_1-   mu+  nu_mu           PHOTOS ISGW2; # Changed by JB rescaled for correct inclusive SL
+0.00279114116066398 D_0*-   mu+  nu_mu          PHOTOS  ISGW2; # Changed by JB rescaled for correct inclusive SL
+0.00697785290165995 D'_1-   mu+  nu_mu          PHOTOS  ISGW2; # Changed by JB rescaled for correct inclusive SL
+0.00307025527673038 D_2*-   mu+  nu_mu          PHOTOS  ISGW2; # Changed by JB rescaled for correct inclusive SL
+0.000418671174099597 D*-  pi0   mu+  nu_mu       PHOTOS GOITY_ROBERTS; # Changed by JB rescaled for correct inclusive SL
+0.00683829584362675 anti-D*0 pi-     mu+     nu_mu                  PHOTOS     GOITY_ROBERTS; #[Reconstructed PDG2011] # Changed by JB rescaled for correct inclusive SL
+0.00139557058033199 D-   pi0   mu+  nu_mu       PHOTOS GOITY_ROBERTS; # Changed by JB rescaled for correct inclusive SL
+0.0184 D*-     tau+    nu_tau                          ISGW2; #[Reconstructed PDG2011] # Changed by JB to pdg value
+0.0102 D-      tau+    nu_tau                          ISGW2; #[Reconstructed PDG2011] # Changed by JB to pdg value
+0.00181424175443159 D_1-   tau+ nu_tau                  ISGW2; # Changed by JB rescaled by same factor as SL e decays
+0.00181424175443159 D_0*-   tau+ nu_tau                  ISGW2; # Changed by JB rescaled by same factor as SL e decays
+0.00279114116066398 D'_1-   tau+ nu_tau                  ISGW2; # Changed by JB rescaled by same factor as SL e decays
+0.00279114116066398 D_2*-   tau+ nu_tau                  ISGW2; # Changed by JB rescaled by same factor as SL e decays
+0.000187006457764487 pi-     e+      nu_e                            PHOTOS  ISGW2; #[Reconstructed PDG2011] # Changed by JB rescaled for correct inclusive SL decay
+0.000344705933342001 rho-    e+      nu_e                            PHOTOS  ISGW2; #[Reconstructed PDG2011] # Changed by JB rescaled for correct inclusive SL decay
+0.00264041953798813  Xu-  e+  nu_e VUB 4.8 1.29 0.22 20 0.30 0.55 1.20 0.61 1.26 0.85 1.34 1.08 1.41 1.21 1.48 1.30 1.55 1.30 1.61 1.33 1.67 1.36 1.73 1.39 1.79 1.33 1.84 1.42 1.90 1.39 1.95 1.39 2.00 1.37 2.50 1.30  3.00 0.74 3.50 0.99 4.00 1.09 4.50 1.00; # Changed by JB rescaled for correct inclusive SL decay
+0.00018700645776448700 pi-     mu+     nu_mu                           PHOTOS  ISGW2; #[Reconstructed PDG2011] # Changed by JB rescaled for correct inclusive SL decay
+0.00034470593334200100 rho-    mu+     nu_mu                           PHOTOS  ISGW2; #[Reconstructed PDG2011] # Changed by JB rescaled for correct inclusive SL decay
+0.00264041953798813  Xu-  mu+  nu_mu  VUB 4.8 1.29 0.22 20 0.30 0.55 1.20 0.61 1.26 0.85 1.34 1.08 1.41 1.21 1.48 1.30 1.55 1.30 1.61 1.33 1.67 1.36 1.73 1.39 1.79 1.33 1.84 1.42 1.90 1.39 1.95 1.39 2.00 1.37 2.50 1.30 3.00 0.74 3.50 0.99 4.00 1.09 4.50 1.00; # Changed by JB rescaled for correct inclusive SL decay
+0.0000837342348199194  pi-    tau+ nu_tau                ISGW2; # Changed by JB rescaled by same factor as SL e decay
+0.000115832358167555  rho-   tau+ nu_tau                ISGW2; # Changed by JB rescaled by same factor as SL e decay
+0.000125601352229879  a_1-    tau+ nu_tau                ISGW2; # Changed by JB rescaled by same factor as SL e decay
+0.0000111645646426559  b_1-    tau+ nu_tau                ISGW2; # Changed by JB rescaled by same factor as SL e decay
+0.0000111645646426559  a_0-    tau+ nu_tau                ISGW2; # Changed by JB rescaled by same factor as SL e decay
+0.0000111645646426559  a_2-    tau+ nu_tau                ISGW2; # Changed by JB rescaled by same factor as SL e decay
+0.227214067721154 u       anti-d  anti-c  d                       PYTHIA         48; #[Reconstructed PDG2011] # Changed by JB rescaled by same factor as SL e decay
+0.0387320794856964  u       anti-d  anti-c  d                       PYTHIA         48; #[Reconstructed PDG2011] # Changed by JB rescaled by same factor as SL e decay
+0.0176820677120559  u       anti-d  anti-c  d                       PYTHIA         13; #[Reconstructed PDG2011] # Changed by JB rescaled by same factor as SL e decay
+0.0151560458395985  u       anti-s  anti-c  d                       PYTHIA         13; #[Reconstructed PDG2011] # Changed by JB rescaled by same factor as SL e decay
+0.000757789482708023  u       anti-c  anti-d  d                       PYTHIA         48; #[Reconstructed PDG2011] # Changed by JB rescaled by same factor as SL e decay
+0.0623081140121567  u       anti-c  anti-s  d                       PYTHIA         48; #[Reconstructed PDG2011] # Changed by JB rescaled by same factor as SL e decay
+0.00505204286455249  c       anti-s  anti-c  d                       PYTHIA         13; #[Reconstructed PDG2011] # Changed by JB rescaled by same factor as SL e decay
+0.00252602187245741  c       anti-d  anti-c  d                       PYTHIA         13; #[Reconstructed PDG2011] # Changed by JB rescaled by same factor as SL e decay
+0.00336802857636833  u       anti-d  anti-u  d                       PYTHIA         48; #[Reconstructed PDG2011] # Changed by JB rescaled by same factor as SL e decay
+0.00172608152175611  c       anti-s  anti-u  d                       PYTHIA         48; #[Reconstructed PDG2011] # Changed by JB rescaled by same factor as SL e decay
+0.0000589605063203927  u       anti-u  anti-d  d                       PYTHIA         48; #[Reconstructed PDG2011] # Changed by JB rescaled by same factor as SL e decay
+0.0000757710250098332  d       anti-d  anti-d  d                       PYTHIA         48; #[Reconstructed PDG2011] # Changed by JB rescaled by same factor as SL e decay
+0.00185236597653094  s       anti-s  anti-d  d                       PYTHIA         48; #[Reconstructed PDG2011] # Changed by JB rescaled by same factor as SL e decay
+0.00151557984577838  u       anti-u  anti-s  d                       PYTHIA         48; #[Reconstructed PDG2011] # Changed by JB rescaled by same factor as SL e decay
+0.00126301093622871  d       anti-d  anti-s  d                       PYTHIA         48; #[Reconstructed PDG2011] # Changed by JB rescaled by same factor as SL e decay
+0.004782163  s       anti-s  anti-s  d                       PYTHIA         48; #[Reconstructed PDG2011] # Changed by JB rescaled by same factor as SL e decay
+Decay B-
+# Updated to PDG 2008
+#                  b -> c semileptonic
+#
+0.057 D*0     e-      anti-nu_e                       PHOTOS  HQET 0.77 1.33 0.92; #[Reconstructed PDG2011] #JB change to 2011 PDG value
+0.0223 D0      e-      anti-nu_e                       PHOTOS  ISGW2; #[Reconstructed PDG2011] #JB change to 2011 PDG value
+0.00648476821256864 D_10   e-   anti-nu_e         PHOTOS  ISGW2; #JB rescaled to add up to PDG inc SL
+0.00389086092754118 D_0*0   e-   anti-nu_e         PHOTOS  ISGW2; #JB rescaled to add up to PDG inc SL
+0.00113483443719951 D'_10   e-   anti-nu_e         PHOTOS  ISGW2; #JB rescaled to add up to PDG inc SL
+0.00291814569565589 D_2*0   e-   anti-nu_e         PHOTOS  ISGW2; #JB rescaled to add up to PDG inc SL
+0.00988927152416717 D*+     pi-     e-      anti-nu_e               PHOTOS  GOITY_ROBERTS; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.000486357615942648 D*0  pi0   e-   anti-nu_e     PHOTOS  GOITY_ROBERTS; #JB rescaled to add up to PDG inc SL
+0.00162119205314216 D0   pi0   e-   anti-nu_e     PHOTOS  GOITY_ROBERTS; #JB rescaled to add up to PDG inc SL
+0.057 D*0     mu-     anti-nu_mu                      PHOTOS   HQET 0.77 1.33 0.92; #[Reconstructed PDG2011] #JB change to 2011 PDG value
+0.0223 D0      mu-     anti-nu_mu                      PHOTOS   ISGW2; #[Reconstructed PDG2011] #JB change to 2011 PDG value
+0.00648476821256864 D_10  mu-  anti-nu_mu         PHOTOS   ISGW2; #JB rescaled to add up to PDG inc SL
+0.00389086092754118 D_0*0  mu-  anti-nu_mu        PHOTOS    ISGW2; #JB rescaled to add up to PDG inc SL
+0.00113483443719951 D'_10  mu-  anti-nu_mu        PHOTOS    ISGW2; #JB rescaled to add up to PDG inc SL
+0.00291814569565589 D_2*0  mu-  anti-nu_mu        PHOTOS    ISGW2; #JB rescaled to add up to PDG inc SL
+0.00988927152416717 D*+     pi-     mu-     anti-nu_mu              PHOTOS   GOITY_ROBERTS; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.000486357615942648 D*0   pi0   mu-   anti-nu_mu  PHOTOS   GOITY_ROBERTS; #JB rescaled to add up to PDG inc SL
+0.00162119205314216 D0    pi0   mu-   anti-nu_mu  PHOTOS   GOITY_ROBERTS; #JB rescaled to add up to PDG inc SL
+0.0188 D*0     tau-    anti-nu_tau                     ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.0077 D0      tau-    anti-nu_tau                     ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.00210754966908481 D_10   tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.00210754966908481 D_0*0   tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.00324238410628432 D'_10   tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.00324238410628432 D_2*0   tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.000124831788091946 pi0     e-      anti-nu_e                       PHOTOS   ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.0000599841059662599 eta     e-      anti-nu_e                       PHOTOS   ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.000207512582802196 rho0    e-      anti-nu_e                       PHOTOS   ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.000186437086111348 omega   e-      anti-nu_e                       PHOTOS   ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.000437721854348383   eta'   e-   anti-nu_e        PHOTOS   ISGW2; #JB rescaled to add up to PDG inc SL
+0.00315808211952093   Xu0   e-  anti-nu_e         VUB 4.8 1.29 0.22 20 0.30 0.54 1.20 0.95 1.26 0.78 1.34 0.98 1.41 0.91 1.48 1.23 1.55 1.36 1.61 1.39 1.67 1.38 1.73 1.43 1.79 1.41 1.84 1.42 1.90 1.45 1.95 1.40 2.00 1.42 2.50 1.31 3.00 1.36 3.50 1.15 4.00 1.01 4.50 1.51; #JB rescaled to add up to PDG inc SL
+0.000124831788091946 pi0     mu-     anti-nu_mu                      PHOTOS   ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.0000599841059662599 eta     mu-     anti-nu_mu                      PHOTOS   ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.000207512582802196 rho0    mu-     anti-nu_mu                      PHOTOS   ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.000186437086111348 omega   mu-     anti-nu_mu                      PHOTOS   ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.000437721854348383   eta'   mu-  anti-nu_mu       PHOTOS   ISGW2; #JB rescaled to add up to PDG inc SL
+0.00315808211952093   Xu0   mu-  anti-nu_mu         VUB 4.8 1.29 0.22 20 0.30 0.54 1.20 0.95 1.26 0.78 1.34 0.98 1.41 0.91 1.48 1.23 1.55 1.36 1.61 1.39 1.67 1.38 1.73 1.43 1.79 1.41 1.84 1.42 1.90 1.45 1.95 1.40 2.00 1.42 2.50 1.31 3.00 1.36 3.50 1.15 4.00 1.01 4.50 1.51; #JB rescaled to add up to PDG inc SL
+0.0000486357615942648   pi0    tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000194543046377059   eta    tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000680900662319707   rho0   tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000680900662319707   omega   tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000291814569565589   eta'   tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000745748344445393   a_10    tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000437721854348383   b_10    tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.00000648476821256864   a_00    tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.00000324238410628432   f_0     tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.00000324238410628432   f'_0    tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000372874172222697   f_1     tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000372874172222697   f'_1    tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000210754966908481   h_1     tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000210754966908481   h'_1    tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000324238410628432   f_2     tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000324238410628432   f'_2    tau- anti-nu_tau                 ISGW2; #JB rescaled to add up to PDG inc SL
+0.205674414227145  anti-u  d       c       anti-u                  PYTHIA         48; #[Reconstructed PDG2011] #JB rescaled to add up to 1
+0.039260243235704  anti-u  d       c       anti-u                  PYTHIA         13; #[Reconstructed PDG2011] #JB rescaled to add up to 2
+0.0205431451523135  anti-u  s       c       anti-u                  PYTHIA         13; #[Reconstructed PDG2011] #JB rescaled to add up to 3
+0.0675641263565733  anti-c  s       c       anti-u                  PYTHIA         13; #[Reconstructed PDG2011] #JB rescaled to add up to 4
+0.00365209136279978  anti-c  d       c       anti-u                  PYTHIA         13; #[Reconstructed PDG2011] #JB rescaled to add up to 5
+0.00273906875335369  anti-u  d       u       anti-u                  PYTHIA         48; #[Reconstructed PDG2011] #JB rescaled to add up to 6
+0.00365209136279978  anti-c  s       u       anti-u                  PYTHIA         48; #[Reconstructed PDG2011] #JB rescaled to add up to 7
+0.00187170953083442  anti-u  u       d       anti-u                  PYTHIA         48; #[Reconstructed PDG2011] #JB rescaled to add up to 8
+0.0000639296667129716  anti-d  d       d       anti-u                  PYTHIA         48; #[Reconstructed PDG2011] #JB rescaled to add up to 9
+0.0000821950214836964  anti-s  s       d       anti-u                  PYTHIA         48; #[Reconstructed PDG2011] #JB rescaled to add up to 10
+0.00200870246666116  anti-u  u       s       anti-u                  PYTHIA         48; #[Reconstructed PDG2011] #JB rescaled to add up to 11
+0.00164347584758947  anti-d  d       s       anti-u                  PYTHIA         48; #[Reconstructed PDG2011] #JB rescaled to add up to 12
+0.00136957785240227  anti-s  s       s       anti-u                  PYTHIA         48; #[Reconstructed PDG2011] #JB rescaled to add up to 13
+# Updated to PDG 2008, modified by JB 1/2014
+Decay B+
+# Updated to PDG 2008, modified by JB 1/2014
+#                  b -> c semileptonic
+#
+0.057 anti-D*0 e+      nu_e                           PHOTOS  HQET 0.77 1.33 0.92; #[Reconstructed PDG2011] #JB change to 2011 PDG value
+0.0223 anti-D0 e+      nu_e                            PHOTOS  ISGW2; #[Reconstructed PDG2011] #JB change to 2011 PDG value
+0.00648476821256864 anti-D_10   e+   nu_e        PHOTOS  ISGW2; #JB rescaled to add up to PDG inc SL
+0.00389086092754118 anti-D_0*0   e+   nu_e        PHOTOS  ISGW2; #JB rescaled to add up to PDG inc SL
+0.00113483443719951 anti-D'_10   e+   nu_e        PHOTOS  ISGW2; #JB rescaled to add up to PDG inc SL
+0.00291814569565589 anti-D_2*0   e+   nu_e        PHOTOS  ISGW2; #JB rescaled to add up to PDG inc SL
+0.00988927152416717 D*-     pi+     e+  nu_e      PHOTOS  GOITY_ROBERTS; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.000486357615942648 anti-D*0  pi0   e+   nu_e    PHOTOS  GOITY_ROBERTS; #JB rescaled to add up to PDG inc SL 
+0.00162119205314216 anti-D0  pi0   e+   nu_e    PHOTOS  GOITY_ROBERTS; #JB rescaled to add up to PDG inc SL
+0.057 anti-D*0 mu+     nu_mu                          PHOTOS   HQET 0.77 1.33 0.92; #[Reconstructed PDG2011] #JB change to 2011 PDG value
+0.0223 anti-D0 mu+     nu_mu                           PHOTOS  ISGW2; #[Reconstructed PDG2011] #JB change to 2011 PDG value
+0.00648476821256864 anti-D_10   mu+  nu_mu       PHOTOS   ISGW2; #JB rescaled to add up to PDG inc SL
+0.00389086092754118 anti-D_0*0   mu+  nu_mu      PHOTOS    ISGW2; #JB rescaled to add up to PDG inc SL
+0.00113483443719951 anti-D'_10   mu+  nu_mu      PHOTOS    ISGW2; #JB rescaled to add up to PDG inc SL
+0.00291814569565589 anti-D_2*0   mu+  nu_mu      PHOTOS    ISGW2; #JB rescaled to add up to PDG inc SL
+0.00988927152416717 D*-     pi+     mu+     nu_mu                   PHOTOS    GOITY_ROBERTS; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.000486357615942648 anti-D*0  pi0   mu+   nu_mu  PHOTOS         GOITY_ROBERTS; #JB rescaled to add up to PDG inc SL
+0.00162119205314216 anti-D0  pi0   mu+   nu_mu   PHOTOS        GOITY_ROBERTS; #JB rescaled to add up to PDG inc SL
+0.0188 anti-D*0 tau+    nu_tau                         ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.0077 anti-D0 tau+    nu_tau                          ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.00210754966908481 anti-D_10   tau+ nu_tau                ISGW2; #JB rescaled to add up to PDG inc SL
+0.00210754966908481 anti-D_0*0   tau+ nu_tau                ISGW2; #JB rescaled to add up to PDG inc SL
+0.00324238410628432 anti-D'_10   tau+ nu_tau                ISGW2; #JB rescaled to add up to PDG inc SL
+0.00324238410628432 anti-D_2*0   tau+ nu_tau                ISGW2; #JB rescaled to add up to PDG inc SL
+0.000124831788091946  pi0     e+      nu_e                            PHOTOS  ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.0000599841059662599  eta     e+      nu_e                            PHOTOS  ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.000207512582802196  rho0    e+      nu_e                            PHOTOS  ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.000186437086111348  omega   e+      nu_e                            PHOTOS  ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.000437721854348383   eta'   e+   nu_e        PHOTOS  ISGW2; #JB rescaled to add up to PDG inc SL
+0.00315808211952093   Xu0   e+  nu_e         VUB 4.8 1.29 0.22 20 0.30 0.54 1.20 0.95 1.26 0.78 1.34 0.98 1.41 0.91 1.48 1.23 1.55 1.36 1.61 1.39 1.67 1.38 1.73 1.43 1.79 1.41 1.84 1.42 1.90 1.45 1.95 1.40 2.00 1.42 2.50 1.31 3.00 1.36 3.50 1.15 4.00 1.01 4.50 1.51; #JB rescaled to add up to PDG inc SL
+0.000124831788091946  pi0     mu+     nu_mu                           PHOTOS  ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.0000599841059662599  eta     mu+     nu_mu                           PHOTOS  ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.000207512582802196  rho0    mu+     nu_mu                           PHOTOS  ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.000186437086111348  omega   mu+     nu_mu                           PHOTOS  ISGW2; #[Reconstructed PDG2011] #JB rescaled to add up to PDG inc SL
+0.000437721854348383   eta'   mu+  nu_mu       PHOTOS  ISGW2; #JB rescaled to add up to PDG inc SL
+0.00315808211952093   Xu0   mu+  nu_mu         VUB 4.8 1.29 0.22 20 0.30 0.54 1.20 0.95 1.26 0.78 1.34 0.98 1.41 0.91 1.48 1.23 1.55 1.36 1.61 1.39 1.67 1.38 1.73 1.43 1.79 1.41 1.84 1.42 1.90 1.45 1.95 1.40 2.00 1.42 2.50 1.31 3.00 1.36 3.50 1.15 4.00 1.01 4.50 1.51; #JB rescaled to add up to PDG inc SL
+0.0000486357615942648   pi0    tau+ nu_tau              ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000194543046377059   eta    tau+ nu_tau              ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000680900662319707   rho0   tau+ nu_tau              ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000680900662319707   omega   tau+ nu_tau              ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000291814569565589   eta'   tau+ nu_tau              ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000745748344445393   a_10    tau+ nu_tau              ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000437721854348383   b_10    tau+ nu_tau              ISGW2; #JB rescaled to add up to PDG inc SL
+0.00000648476821256864   a_00    tau+ nu_tau              ISGW2; #JB rescaled to add up to PDG inc SL
+0.00000324238410628432   f_0     tau+ nu_tau              ISGW2; #JB rescaled to add up to PDG inc SL
+0.00000324238410628432   f'_0    tau+ nu_tau              ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000372874172222697   f_1     tau+ nu_tau              ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000372874172222697   f'_1    tau+ nu_tau              ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000210754966908481   h_1     tau+ nu_tau              ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000210754966908481   h'_1    tau+ nu_tau              ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000324238410628432   f_2     tau+ nu_tau              ISGW2; #JB rescaled to add up to PDG inc SL
+0.0000324238410628432   f'_2    tau+ nu_tau              ISGW2; #JB rescaled to add up to PDG inc SL
+0.208508936935808  u       anti-d  anti-c  u                       PYTHIA         48; #[Reconstructed PDG2011] #JB rescaled to add up to 1
+0.0398013122423543  u       anti-d  anti-c  u                       PYTHIA         13; #[Reconstructed PDG2011] #JB rescaled to add up to 2
+0.0208262625816759  u       anti-s  anti-c  u                       PYTHIA         13; #[Reconstructed PDG2011] #JB rescaled to add up to 3
+0.0684952681865786  c       anti-s  anti-c  u                       PYTHIA         13; #[Reconstructed PDG2011] #JB rescaled to add up to 4
+0.00370242302870421  c       anti-d  anti-c  u                       PYTHIA         13; #[Reconstructed PDG2011] #JB rescaled to add up to 5
+0.00277681750596907  u       anti-d  anti-u  u                       PYTHIA         48; #[Reconstructed PDG2011] #JB rescaled to add up to 6
+0.00370242302870421  c       anti-s  anti-u  u                       PYTHIA         48; #[Reconstructed PDG2011] #JB rescaled to add up to 7
+0.00189750468473875  u       anti-u  anti-d  u                       PYTHIA         48; #[Reconstructed PDG2011] #JB rescaled to add up to 8
+0.000064810719870391  d       anti-d  anti-d  u                       PYTHIA         48; #[Reconstructed PDG2011] #JB rescaled to add up to 9
+0.0000833278004723233  s       anti-s  anti-d  u                       PYTHIA         48; #[Reconstructed PDG2011] #JB rescaled to add up to 10
+0.00203638560254413  u       anti-u  anti-s  u                       PYTHIA         48; #[Reconstructed PDG2011] #JB rescaled to add up to 11
+0.00166612557594113  d       anti-d  anti-s  u                       PYTHIA         48; #[Reconstructed PDG2011] #JB rescaled to add up to 12
+0.00138845282787506  s       anti-s  anti-s  u                       PYTHIA         48; #[Reconstructed PDG2011] #JB rescaled to add up to 13
+#
+#
+#   D+ Meson
+#
+Decay D+
+0.0554   anti-K*0  e+  nu_e           PHOTOS   ISGW2;
+0.0900   anti-K0    e+  nu_e           PHOTOS   ISGW2;
+0.0036   anti-K_10  e+  nu_e           PHOTOS   ISGW2;
+0.0038   anti-K_2*0 e+  nu_e           PHOTOS   ISGW2;
+0.0043   pi0  e+  nu_e           PHOTOS   ISGW2;
+0.0026   eta  e+  nu_e           PHOTOS   ISGW2;
+0.0005   eta' e+  nu_e           PHOTOS   ISGW2;
+0.0028   rho0 e+  nu_e           PHOTOS   ISGW2;
+0.0028   omega e+  nu_e          PHOTOS   ISGW2;
+0.0027   K-  pi+  e+ nu_e        PHOTOS   PHSP;
+0.0014   anti-K0  pi0  e+  nu_e  PHOTOS   PHSP;
+#
+0.0533   anti-K*0  mu+  nu_mu         PHOTOS  ISGW2;
+0.0874   anti-K0    mu+  nu_mu         PHOTOS  ISGW2;
+0.0036   anti-K_10  mu+  nu_mu         PHOTOS  ISGW2;
+0.0038   anti-K_2*0 mu+  nu_mu         PHOTOS  ISGW2;
+0.0043   pi0  mu+  nu_mu         PHOTOS  ISGW2;
+0.0026   eta  mu+  nu_mu         PHOTOS  ISGW2;
+0.0005   eta' mu+  nu_mu         PHOTOS  ISGW2;
+0.0028   rho0 mu+  nu_mu         PHOTOS  ISGW2;
+0.0028   omega mu+  nu_mu         PHOTOS  ISGW2;
+0.0027   K-  pi+  mu+ nu_mu        PHOTOS   PHSP;
+0.0014   anti-K0  pi0  mu+  nu_mu  PHOTOS   PHSP;
+#
+#
+0.0004   mu+ nu_mu                PHOTOS   SLN;
+0.0010   tau+ nu_tau                       SLN;
+#
+0.0282   anti-K0   pi+                         PHSP;
+0.0800   a_1+ anti-K0                           SVS;
+0.0508   anti-K'_10  pi+                       SVS;
+0.0115   anti-K_0*0N  pi+                PHSP;
+0.0210   anti-K*0 rho+                  SVV_HELAMP  1.0 0.0 1.0 0.0 1.0 0.0;
+#
+# the Dalitz mode below includes K*bar(892)0 pi+, 
+# K*bar(1430)0 pi+, and K*bar(1680)0 pi+ resonances.
+0.0920   K-  pi+  pi+                    D_DALITZ;
+# the Dalitz mode below includes K0bar rho+, 
+# and K*bar(892)0 pi+ resonances
+0.0970   anti-K0   pi+  pi0              D_DALITZ;
+0.0100   anti-K0   eta  pi+                    PHSP;
+0.0050   anti-K0   rho0  pi+                   PHSP;
+0.0050   anti-K0   omega  pi+                   PHSP;
+0.0110   K-  rho+  pi+                   PHSP;
+0.0070   K*- pi+  pi+                    PHSP;
+0.0100   anti-K*0 pi0  pi+                    PHSP;
+0.0100   anti-K*0 eta  pi+                    PHSP;
+0.0078   anti-K*0 rho0  pi+                   PHSP;
+0.0050   anti-K*0 omega  pi+                   PHSP;
+0.0100   K*- rho+  pi+                   PHSP;
+#
+0.0120   K-  pi+  pi+   pi0              PHSP;
+0.0000   anti-K0   pi+  pi+   pi-              PHSP;
+0.0188   anti-K0   pi+  pi0   pi0              PHSP;
+0.0022   K-  pi+  pi+   pi+   pi-        PHSP;
+0.005   K-  pi+  pi+   pi0   pi0        PHSP;
+0.0087   anti-K0   pi+  pi+   pi-   pi0        PHSP;
+0.0035   anti-K0   pi+  pi0   pi0   pi0        PHSP;
+#
+0.0100   anti-K0   anti-K0    K+                     PHSP;
+0.0070   phi pi+                         SVS;
+0.0230   phi pi+  pi0                    PHSP;
+0.0074   anti-K0   K+                          PHSP;
+0.0042   anti-K*0  K+                         SVS;
+0.0310   K*+  anti-K0                          SVS;
+0.0180   anti-K*0 K*+                         SVV_HELAMP 1.0 0.0 1.0 0.0 1.0 0.0;
+0.0046   K+   K-  pi+                    PHSP;
+0.0010   K+  anti-K0   pi0                     PHSP;
+0.0010   anti-K0   K0  pi+                     PHSP;
+0.0010   K*+ K-  pi+                     PHSP;
+0.0010   K+  K*- pi+                     PHSP;
+0.0010   K*+ anti-K0   pi0                     PHSP;
+0.0010   K+  anti-K*0 pi0                     PHSP;
+0.0010   anti-K*0 K0  pi+                     PHSP;
+0.0010   anti-K0   K*0 pi+                     PHSP;
+#
+0.0026   pi0 pi+                         PHSP;
+0.0010   rho0 pi+                        SVS;
+0.0020   pi+  pi+  pi-                   PHSP;
+0.0015   pi+  pi0  pi0                   PHSP;
+0.0090   pi+  pi+  pi-  pi0              PHSP;
+0.0050   pi+  pi0  pi0  pi0              PHSP;
+0.0076   eta pi+                        PHSP;
+0.0030   eta pi+ pi0                    PHSP;
+0.0030   eta pi+ pi+ pi-                PHSP;
+0.0020   eta pi+ pi0 pi0                PHSP;
+#lange jul22,2002
+0.0021  pi+ pi+ pi+ pi- pi-              PHSP;
+Enddecay
+#
+#
+Decay D-
+
+0.0554   K*0  e-  anti-nu_e          PHOTOS    ISGW2;
+0.0900   K0   e-  anti-nu_e          PHOTOS    ISGW2;
+0.0036   K_10  e-  anti-nu_e          PHOTOS    ISGW2;
+0.0038   K_2*0 e-  anti-nu_e          PHOTOS    ISGW2;
+0.0043   pi0  e-  anti-nu_e          PHOTOS    ISGW2;
+0.0026   eta  e-  anti-nu_e          PHOTOS    ISGW2;
+0.0005   eta' e-  anti-nu_e          PHOTOS    ISGW2;
+0.0028   rho0 e-  anti-nu_e          PHOTOS    ISGW2;
+0.0028   omega e-  anti-nu_e          PHOTOS    ISGW2;
+0.0027   K+  pi-  e- anti-nu_e        PHOTOS   PHSP;
+0.0014   K0  pi0  e- anti-nu_e        PHOTOS   PHSP;
+#
+0.0533   K*0  mu-  anti-nu_mu         PHOTOS  ISGW2;
+0.0874   K0   mu-  anti-nu_mu         PHOTOS  ISGW2;
+0.0036   K_10  mu-  anti-nu_mu         PHOTOS  ISGW2;
+0.0038   K_2*0 mu-  anti-nu_mu         PHOTOS  ISGW2;
+0.0043   pi0  mu-  anti-nu_mu         PHOTOS  ISGW2;
+0.0026   eta  mu-  anti-nu_mu         PHOTOS  ISGW2;
+0.0005   eta' mu-  anti-nu_mu         PHOTOS  ISGW2;
+0.0028   rho0 mu-  anti-nu_mu         PHOTOS  ISGW2;
+0.0028   omega mu-  anti-nu_mu         PHOTOS  ISGW2;
+0.0027   K+  pi-  mu- anti-nu_mu        PHOTOS   PHSP;
+0.0014   K0  pi0  mu- anti-nu_mu       PHOTOS   PHSP;
+#
+0.0004   mu- anti-nu_mu               PHOTOS   SLN;
+0.0010   tau- anti-nu_tau                      SLN;
+#
+0.0282   K0  pi-                          PHSP;
+0.0800   a_1- K0                           SVS;
+0.0508   K'_10  pi-                        SVS;
+0.0115   K_0*0N  pi-                        PHSP;
+0.0210   K*0 rho-                        SVV_HELAMP  1.0 0.0 1.0 0.0 1.0 0.0;
+#
+# the Dalitz mode below includes K*(892)0 pi-, K*(1430)0 pi-, and K*(1680)0 pi- resonances.
+0.0920   K+  pi-  pi-                    D_DALITZ;
+# the Dalitz mode below includes K0 rho-, and K*(892)0 pi- resonances.
+0.0970   K0  pi-  pi0                    D_DALITZ;
+0.0100   K0  eta  pi-                    PHSP;
+0.0050   K0  rho0  pi-                   PHSP;
+0.0050   K0  omega  pi-                   PHSP;
+0.0110   K+  rho-  pi-                   PHSP;
+0.0070   K*+ pi-  pi-                    PHSP;
+0.0100   K*0 pi0  pi-                    PHSP;
+0.0100   K*0 eta  pi-                    PHSP;
+0.0078   K*0 rho0  pi-                   PHSP;
+0.0050   K*0 omega  pi-                   PHSP;
+0.0100   K*+ rho-  pi-                   PHSP;
+#
+0.0120   K+  pi-  pi-   pi0              PHSP;
+0.0000   K0  pi-  pi-   pi+              PHSP;
+0.0188   K0  pi-  pi0   pi0              PHSP;
+0.0022   K+  pi-  pi-   pi-   pi+        PHSP;
+0.005    K+  pi-  pi-   pi0   pi0        PHSP;
+0.0087   K0  pi-  pi-   pi+   pi0        PHSP;
+0.0035   K0  pi-  pi0   pi0   pi0        PHSP;
+#
+0.0100   K0  K0   K-                     PHSP;
+0.0070   phi pi-                         SVS;
+0.0230   phi pi-  pi0                    PHSP;
+0.0074   K0  K-                          PHSP;
+0.0042   K*0  K-                         SVS;
+0.0310   K*-  K0                         SVS;
+0.0180   K*0 K*-                         SVV_HELAMP 1.0 0.0 1.0 0.0 1.0 0.0;
+0.0046   K-   K+  pi-                    PHSP;
+0.0010   K-  K0  pi0                     PHSP;
+0.0010   anti-K0   K0  pi-                     PHSP;
+0.0010   K*- K+  pi-                     PHSP;
+0.0010   K-  K*+ pi-                     PHSP;
+0.0010   K*- K0  pi0                     PHSP;
+0.0010   K-  K*0 pi0                     PHSP;
+0.0010   K*0 anti-K0   pi-                     PHSP;
+0.0010   K0  anti-K*0 pi-                     PHSP;
+#
+0.0026   pi0 pi-                         PHSP;
+0.0010   rho0 pi-                        SVS;
+0.0020   pi-  pi+  pi-                   PHSP;
+0.0015   pi-  pi0  pi0                   PHSP;
+0.0090   pi-  pi+  pi-  pi0              PHSP;
+0.0050   pi-  pi0  pi0  pi0              PHSP;
+0.0076   eta pi-                         PHSP;
+0.0030   eta pi- pi0                     PHSP;
+0.0030   eta pi- pi+ pi-                 PHSP;
+0.0020   eta pi- pi0 pi0                 PHSP;
+#lange jul22,2002
+0.0021  pi+ pi- pi+ pi- pi-              PHSP;
+Enddecay
+#
+Decay D0
+# updated according to suggestions by P. Roudeau,
+# using PDG2004 measurements and imposing the equality
+# of sl partial widths for D+ and D0.
+# Include additional decay anti-K0 pi- e+ nu_e , K- pi0 e+ nu_e.
+#
+0.0225   K*-  e+  nu_e           PHOTOS   ISGW2;
+0.0350   K-   e+  nu_e           PHOTOS   ISGW2;
+0.0014   K_1-  e+  nu_e           PHOTOS   ISGW2;
+0.0015   K_2*- e+  nu_e           PHOTOS   ISGW2;
+0.0034   pi-  e+  nu_e           PHOTOS   ISGW2;
+0.0022   rho- e+  nu_e           PHOTOS   ISGW2;
+0.0011   anti-K0  pi-  e+  nu_e  PHOTOS   PHSP;
+0.0006   K-  pi0  e+  nu_e       PHOTOS   PHSP;
+#
+0.0214   K*-  mu+ nu_mu          PHOTOS  ISGW2;
+0.0340   K-   mu+ nu_mu          PHOTOS  ISGW2;
+0.0014   K_1-  mu+ nu_mu          PHOTOS  ISGW2;
+0.0015   K_2*- mu+ nu_mu          PHOTOS  ISGW2;
+0.0034   pi-  mu+ nu_mu            PHOTOS  ISGW2;
+0.0022   rho- mu+ nu_mu            PHOTOS  ISGW2;
+0.0011   anti-K0  pi-  mu+  nu_mu  PHOTOS   PHSP;
+0.0006   K-  pi0  mu+  nu_mu       PHOTOS   PHSP;
+#
+0.0383   K-  pi+                         PHSP;
+0.0212   anti-K0   pi0                         PHSP;
+0.0071   anti-K0   eta                         PHSP;
+0.0172   anti-K0   eta'                        PHSP;
+0.0210   omega anti-K0                          SVS;
+0.0190   anti-K*0 eta                         SVS;
+0.0020   anti-K*0 eta'                        SVS;
+0.0730   a_1+ K-                          SVS;
+0.0610   K*- rho+                        SVV_HELAMP  1.0 0.0 1.0 0.0 1.0 0.0;
+0.0146   anti-K*0 rho0                   SVV_HELAMP  1.0 0.0 1.0 0.0 1.0 0.0;
+0.0110   anti-K*0 omega                  SVV_HELAMP  1.0 0.0 1.0 0.0 1.0 0.0;
+# the Dalitz mode below includes K*bar(892)0 pi0, 
+# K*(892)- pi+, and K- rho(770)+ resonances
+0.1390   K-  pi+  pi0                    D_DALITZ;
+0.0085   K*BR pi0                        SVS;
+0.0107   K_1- pi+                         SVS;
+0.0071   anti-K_10 pi0                         SVS;
+#
+# the Dalitz mode below includes K*(892)- pi+ and Kbar0 rho(770)0 resonances
+0.0540   anti-K0   pi+  pi-                    D_DALITZ;
+0.0078   anti-K0   pi0  pi0                    PHSP;
+0.0225   anti-K*0 pi+  pi-                    PHSP;
+0.0116   anti-K*0 pi0  pi0                    PHSP;
+0.0100   K*- pi+  pi0                    PHSP;
+0.0068   K-  rho+ pi0                    PHSP;
+0.0060   K-  pi+  rho0                   PHSP;
+0.0303   K-  pi+  omega                   PHSP;
+0.0100   K-  pi+  eta                    PHSP;
+0.0075   K-  pi+  eta'                   PHSP;
+0.0074   K-  pi+  pi+   pi-              PHSP;
+0.0085   anti-K0   pi+  pi-   pi0              PHSP;
+#
+# K- pi+ pi0 pi0 is (15 +/- 5)% in the PDG, but we decrease it to 
+# have everything add to 1 and get enough neutral kaons:
+0.02575  K-  pi+  pi0   pi0              PHSP;
+#
+0.0143   anti-K0   pi0  pi0   pi0              PHSP;
+0.0038   K-  pi+  pi+   pi-   pi0        PHSP;
+0.0038   K-  pi+  pi0   pi0   pi0        PHSP;
+0.0058   anti-K0   pi+  pi-   pi+   pi-        PHSP;
+# 
+0.0638   anti-K0   pi+  pi-   pi0   pi0        PHSP;
+0.0192   anti-K0   pi+  pi-   pi0   pi0   pi0  PHSP;
+#
+0.0086   phi anti-K0                           SVS;
+0.0051   anti-K0   K+   K-                     PHSP;
+0.0008   K_S0 K_S0  K_S0                    PHSP;
+0.0043   K+  K-                          PHSP;
+0.0006   K_S0 K_S0                         PHSP;
+0.0006   K_L0 K_L0                         PHSP;
+0.0004   K*0 anti-K0                           SVS;
+0.0008   anti-K*0 K0                          SVS;
+0.0018   K*- K+                          SVS;
+0.0035   K*+ K-                          SVS;
+0.0014   anti-K*0 K*0                         SVV_HELAMP 1.0 0.0 1.0 0.0 1.0 0.0;
+0.0007   phi pi0                         SVS;
+0.0011   phi pi+  pi-                    PHSP;
+0.0025   K+  K-   pi+  pi-               PHSP;
+0.0030   K+  K-   pi0  pi0               PHSP;
+0.0015   anti-K0   K0   pi+  pi-               PHSP;
+0.0015   anti-K0   K0   pi0  pi0               PHSP;
+#
+0.0015   pi+ pi-                         PHSP;
+0.0008   pi0 pi0                         PHSP;
+0.0010   eta pi0                         PHSP;
+0.0010   eta'  pi0                       PHSP;
+0.0010   eta eta                         PHSP;
+0.0040   rho+ pi-                        SVS;
+0.0040   rho- pi+                        SVS;
+0.0020   rho0 pi0                        SVS;
+0.0060   pi+  pi-  pi0                   PHSP;
+0.0010   pi0  pi0  pi0                   PHSP;
+0.0073   pi+  pi+  pi-  pi-              PHSP;
+0.0050   pi+  pi-  pi0  pi0              PHSP;
+0.0177   pi+  pi-  pi+  pi-  pi0         PHSP;
+0.0060   pi+  pi-  pi0  pi0  pi0         PHSP;
+#
+# Doubly Cabibbo suppressed decays:
+0.00015   pi-  K+                         PHSP;
+0.0005    pi-  K+  pi0                    PHSP;
+Enddecay
+#
+#
+#
+Decay anti-D0
+0.0225   K*+  e-  anti-nu_e          PHOTOS   ISGW2;
+0.0350   K+   e-  anti-nu_e          PHOTOS   ISGW2;
+0.0014   K_1+  e-  anti-nu_e          PHOTOS   ISGW2;
+0.0015   K_2*+ e-  anti-nu_e          PHOTOS   ISGW2;
+0.0034   pi+  e-  anti-nu_e          PHOTOS   ISGW2;
+0.0022   rho+ e-  anti-nu_e          PHOTOS   ISGW2;
+0.0011   K0  pi+  e-  anti-nu_e      PHOTOS   PHSP;
+0.0006   K+  pi0  e-  anti-nu_e      PHOTOS   PHSP;
+#
+0.0214   K*+  mu- anti-nu_mu         PHOTOS  ISGW2;
+0.0340   K+   mu- anti-nu_mu        PHOTOS  ISGW2;
+0.0014   K_1+  mu- anti-nu_mu         PHOTOS  ISGW2;
+0.0015   K_2*+ mu- anti-nu_mu        PHOTOS  ISGW2;
+0.0034   pi+  mu- anti-nu_mu         PHOTOS  ISGW2;
+0.0022   rho+ mu- anti-nu_mu         PHOTOS  ISGW2;
+0.0011   K0  pi+  mu-  anti-nu_mu    PHOTOS   PHSP;
+0.0006   K+  pi0  mu-  anti-nu_mu    PHOTOS   PHSP;
+#
+0.0383   K+  pi-                         PHSP;
+0.0212   K0  pi0                         PHSP;
+0.0071   K0  eta                         PHSP;
+0.0172   K0  eta'                        PHSP;
+0.0210   omega K0                         SVS;
+0.0190   K*0 eta                         SVS;
+0.0020   K*0 eta'                        SVS;
+0.0730   a_1- K+                          SVS;
+0.0610   K*+ rho-                        SVV_HELAMP 1.0 0.0 1.0 0.0 1.0 0.0;
+0.0146   K*0 rho0                        SVV_HELAMP 1.0 0.0 1.0 0.0 1.0 0.0;
+0.0110   K*0 omega                        SVV_HELAMP 1.0 0.0 1.0 0.0 1.0 0.0;
+# the Dalitz mode below includes K*(892)0 pi0, K*(892)+ pi-, and K+ rho(770)- resonances
+0.1390   K+  pi-  pi0                    D_DALITZ;
+0.0085   K*0R pi0                        SVS;
+0.0107   K_1+ pi-                         SVS;
+0.0071   K_10 pi0                         SVS;
+# the Dalitz mode below includes K*(892)+ pi- and K0 rho(770)0 resonances
+0.0540   K0  pi+  pi-                    D_DALITZ;
+0.0078   K0  pi0  pi0                    PHSP;
+0.0225   K*0 pi+  pi-                    PHSP;
+0.0116   K*0 pi0  pi0                    PHSP;
+0.0100   K*+ pi-  pi0                    PHSP;
+0.0068   K+  rho- pi0                    PHSP;
+0.0060   K+  pi-  rho0                   PHSP;
+0.0303   K+  pi-  omega                   PHSP;
+0.0100   K+  pi-  eta                    PHSP;
+0.0075   K+  pi-  eta'                   PHSP;
+0.0074   K+  pi-  pi+   pi-              PHSP;
+0.0085   K0  pi+  pi-   pi0              PHSP;
+#
+# K+ pi- pi0 pi0 is (15 +/- 5)% in the PDG, but we decrease it to 
+# have everything add to 1 and get enough neutral kaons:
+0.02575  K+  pi-  pi0   pi0              PHSP;
+#
+0.0143   K0  pi0  pi0   pi0              PHSP;
+0.0038   K+  pi-  pi+   pi-   pi0        PHSP;
+0.0038   K+  pi-  pi0   pi0   pi0        PHSP;
+0.0058   K0  pi+  pi-   pi+   pi-        PHSP;
+# 
+0.0638   K0   pi-  pi+   pi0   pi0        PHSP;
+0.0192   K0   pi-  pi+   pi0   pi0   pi0  PHSP;
+#
+0.0086   phi K0                          SVS;
+0.0051   K0  K+   K-                     PHSP;
+0.0008   K_S0 K_S0  K_S0                    PHSP;
+0.0043   K+  K-                          PHSP;
+0.0006   K_S0 K_S0                         PHSP;
+0.0006   K_L0 K_L0                         PHSP;
+0.0004   anti-K*0 K0                          SVS;
+0.0008   K*0 anti-K0                           SVS;
+0.0018   K*+ K-                          SVS;
+0.0035   K*- K+                          SVS;
+0.0014   K*0 anti-K*0                         SVV_HELAMP 1.0 0.0 1.0 0.0 1.0 0.0;
+0.0007   phi pi0                         SVS;
+0.0011   phi pi+  pi-                    PHSP;
+0.0025   K+  K-   pi+  pi-               PHSP;
+0.0030   K+  K-   pi0  pi0               PHSP;
+0.0015   anti-K0   K0   pi+  pi-               PHSP;
+0.0015   anti-K0   K0   pi0  pi0               PHSP;
+#
+0.0015   pi+ pi-                         PHSP;
+0.0008   pi0 pi0                         PHSP;
+0.0010   eta pi0                         PHSP;
+0.0010   eta'  pi0                       PHSP;
+0.0010   eta eta                         PHSP;
+0.0040   rho+ pi-                        SVS;
+0.0040   rho- pi+                        SVS;
+0.0020   rho0 pi0                        SVS;
+0.0060   pi+  pi-  pi0                   PHSP;
+0.0010   pi0  pi0  pi0                   PHSP;
+0.0073   pi+  pi+  pi-  pi-              PHSP;
+0.0050   pi+  pi-  pi0  pi0              PHSP;
+0.0177   pi+  pi-  pi+  pi-  pi0         PHSP;
+0.0060   pi+  pi-  pi0  pi0  pi0         PHSP;
+#
+# Doubly Cabibbo suppressed decays:
+0.00015   pi+  K-                         PHSP;
+0.0005    pi+  K-  pi0                    PHSP;
+Enddecay
+#
+# Updated to PDG 2008
+Decay D_s+
+0.0242    phi   e+     nu_e       PHOTOS  ISGW2;
+0.0307    eta   e+     nu_e       PHOTOS  ISGW2;
+0.0106    eta'  e+     nu_e       PHOTOS  ISGW2;
+0.0027    anti-K0     e+     nu_e       PHOTOS  ISGW2;
+0.0010    anti-K*0   e+     nu_e       PHOTOS  ISGW2;
+0.0242    phi   mu+    nu_mu     PHOTOS  ISGW2;
+0.0307    eta   mu+    nu_mu     PHOTOS  ISGW2;
+0.0106    eta'  mu+    nu_mu     PHOTOS  ISGW2;
+0.0027    anti-K0     mu+    nu_mu     PHOTOS  ISGW2;
+0.0010    anti-K*0   mu+    nu_mu     PHOTOS  ISGW2;
+0.00616    mu+   nu_mu              PHOTOS  SLN;
+0.064    tau+  nu_tau                      SLN;
+### Lange Nov14, 2004 - average cleo + babar (prelim) using stat error only..
+0.044    phi   pi+                      SVS;
+0.021    eta   pi+                      PHSP;
+0.047    eta'  pi+                      PHSP;
+0.0034    omega  pi+                      SVS;
+0.0004    rho0  pi+                      SVS;
+0.0004    rho+  pi0                      SVS;
+#?
+0.0010    pi+   pi0                      PHSP;
+0.01    f_0    pi+                      PHSP;
+0.0023    f_2    pi+                      PHSP;
+0.082    phi   rho+                     SVV_HELAMP 1.0 0.0 1.0 0.0 1.0 0.0;
+0.131    rho+  eta                      SVS;
+0.122    rho+  eta'                     SVS;
+0.00005    pi+   pi-   pi+                PHSP;
+0.00005    pi+   pi0   pi0                PHSP;
+0.010    phi   pi+   pi0                PHSP;
+0.0150    eta   pi+   pi0                PHSP;
+0.0150    eta'  pi+   pi0                PHSP;
+0.008    phi   pi+   pi-   pi+          PHSP;
+0.0050    phi   pi+   pi0   pi0          PHSP;
+0.0050    eta   pi+   pi-   pi+          PHSP;
+0.0050    eta   pi+   pi0   pi0          PHSP;
+0.044    anti-K0     K+                 PHSP;
+0.040    anti-K*0   K+                  SVS;
+0.053    K*+   anti-K0                  SVS;
+0.070    anti-K*0   K*+                 SVV_HELAMP 1.0 0.0 1.0 0.0 1.0 0.0;
+0.003    anti-K0     K+    pi0          PHSP;
+0.0012    anti-K*0   K+     pi0          PHSP;
+0.0012    K*+   anti-K0     pi0          PHSP;
+0.004    anti-K*0   K*+    pi0          PHSP;
+0.011    K+    K-    pi+                PHSP;
+0.0010    anti-K0     K+    pi+   pi-    PHSP;
+0.0010    anti-K0     K+    pi0   pi0    PHSP;
+0.0043    K+    K-    pi+   pi-   pi+    PHSP;
+0.0003    phi   K+                       SVS;
+0.0002    eta   K+                       PHSP;
+0.0002    eta'  K+                       PHSP;
+0.0002    eta   K+    pi0                PHSP;
+0.0002    eta   K+    pi+   pi-          PHSP;
+0.0002    eta'  K+    pi0                PHSP;
+0.0002    eta'  K+    pi+   pi-          PHSP;
+0.0002    K+    K-    K+                 PHSP;
+0.0040    K0    pi+                      PHSP;
+0.0015    rho+  K0                       SVS;
+0.0015    rho0  K+                       SVS;
+0.0010    K0    pi+   pi0                PHSP;
+0.0025    a_1+   K0                       SVS;
+0.0079    K*0   pi+                      SVS;
+0.0050    K*0   rho+                     SVV_HELAMP 1.0 0.0 1.0 0.0 1.0 0.0;
+0.0050    K*0   pi+   pi0                PHSP;
+Enddecay
+#
+Decay D_s-
+0.0242    phi   e-     anti-nu_e      PHOTOS  ISGW2;
+0.0307    eta   e-     anti-nu_e      PHOTOS  ISGW2;
+0.0106    eta'  e-     anti-nu_e      PHOTOS  ISGW2;
+0.0027    K0    e-     anti-nu_e      PHOTOS  ISGW2;
+0.0010    K*0   e-     anti-nu_e      PHOTOS  ISGW2;
+0.0242    phi   mu-    anti-nu_mu    PHOTOS  ISGW2;
+0.0307    eta   mu-    anti-nu_mu    PHOTOS  ISGW2;
+0.0106    eta'  mu-    anti-nu_mu    PHOTOS  ISGW2;
+0.0027    K0    mu-    anti-nu_mu    PHOTOS  ISGW2;
+0.0010    K*0   mu-    anti-nu_mu    PHOTOS  ISGW2;
+0.00616    mu-   anti-nu_mu           PHOTOS    SLN;
+0.064    tau-  anti-nu_tau                     SLN;
+0.0440    phi   pi-                      SVS;
+0.0210    eta   pi-                      PHSP;
+0.0470    eta'  pi-                      PHSP;
+0.0034    omega  pi-                      SVS;
+0.0004    rho0  pi-                      SVS;
+0.0004    rho-  pi0                      SVS;
+0.0010    pi-   pi0                      PHSP;
+0.010    f_0    pi-                      PHSP;
+0.0023    f_2    pi-                      PHSP;
+0.0820    phi   rho-                     SVV_HELAMP 1.0 0.0 1.0 0.0 1.0 0.0;
+0.131    rho-  eta                      SVS;
+0.122    rho-  eta'                     SVS;
+0.00005    pi-   pi-   pi+                PHSP;
+0.00005    pi-   pi0   pi0                PHSP;
+0.010    phi   pi-   pi0                PHSP;
+0.0150    eta   pi-   pi0                PHSP;
+0.0150    eta'  pi-   pi0                PHSP;
+0.008    phi   pi-   pi-   pi+          PHSP;
+0.0050    phi   pi-   pi0   pi0          PHSP;
+0.0050    eta   pi-   pi-   pi+          PHSP;
+0.0050    eta   pi-   pi0   pi0          PHSP;
+#
+0.0440    K0    K-                       PHSP;
+0.0400    K*0   K-                       SVS;
+0.0530    K*-   K0                       SVS;
+0.0700    K*0   K*-                      SVV_HELAMP 1.0 0.0 1.0 0.0 1.0 0.0;
+0.003    K0    K-    pi0                PHSP;
+0.0012    K*0   K-    pi0                PHSP;
+0.0012    K*-   K0    pi0                PHSP;
+0.004    K*0   K*-   pi0                PHSP;
+#
+0.0110    K+    K-    pi-                PHSP;
+0.0010    K0    K-    pi+   pi-          PHSP;
+0.0010    K0    K-    pi0   pi0          PHSP;
+0.0043    K-    K+    pi-   pi+   pi-    PHSP;
+0.0003    phi   K-                       SVS;
+0.0002    eta   K-                       PHSP;
+0.0002    eta'  K-                       PHSP;
+0.0002    eta   K-    pi0                PHSP;
+0.0002    eta   K-    pi+   pi-          PHSP;
+0.0002    eta'  K-    pi0                PHSP;
+0.0002    eta'  K-    pi+   pi-          PHSP;
+0.0002    K-    K-    K+                 PHSP;
+0.0040    anti-K0     pi-                PHSP;
+0.0015    rho-  anti-K0                  SVS;
+0.0015    rho0  K-                       SVS;
+0.0010    anti-K0     pi-   pi0          PHSP;
+0.0025    a_1-   anti-K0                 SVS;
+0.0079    anti-K*0   pi-                 SVS;
+0.0050    anti-K*0   rho-                SVV_HELAMP 1.0 0.0 1.0 0.0 1.0 0.0;
+0.0050    anti-K*0   pi-   pi0           PHSP;
+Enddecay

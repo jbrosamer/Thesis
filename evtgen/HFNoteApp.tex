@@ -1,0 +1,120 @@
+\documentclass{atlasnote} 
+
+%\documentclass[usetikz]{atlasnote} % the 'usetikz' option loads tikz.sty in the proper place, 
+                                   % avoiding conflicts with graphicx.sty.
+                                   % Don't know what tikz.st is? Just ignore this line! :-)
+
+%\documentclass[coverpage]{atlasnote} % the 'coverpage' option loads the ATLAS Cover Page package 
+                                      % ans makes sure that the cover page is generated before the
+                                      % note title page. Make sure that the latest version of
+                                      % of 'atlascover.sty. is installed on your system!
+
+%\usepackage{graphicx} % This is already loaded by the atlasnote class
+                       % Just use it to include your plots!
+
+\usepackage{atlasphysics} % Contains useful shortcuts. Uncomment to use
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%           Title page             % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\skipbeforetitle{100pt}
+
+% \atlasnote{ATLAS-PHYS-PUB-2013-005} 
+
+% Title
+\title{Supporting Internal Appendices for Comparison of Monte Carlo generator predictions for the fragmentation and decay of heavy flavor hadrons}
+%
+% Author
+%if not given, typesets ``The ATLAS collaboration''
+\author{The ATLAS Collaboration}
+
+% if multiple authors/affiliations are needed, use the authblk package
+\usepackage{authblk}
+\usepackage{subfig}
+\usepackage{float}
+\renewcommand\Authands{, } % avoid ``. and'' for last author
+\renewcommand\Affilfont{\itshape\small} % affiliation formatting
+
+\author[a]{Jacquelyn Brosamer}
+\author[a]{Marjorie Shapiro}
+%\author[b]{Third Author}
+\setcounter{tocdepth}{4} 
+\setcounter{secnumdepth}{4} 
+
+\affil[a]{Lawrence Berkeley National Lab}
+%\affil[b]{Another Institution}
+
+% Date: if not given, uses current date
+%\date{\today}
+
+% Draft version: if given, adds draft version on front page, a
+% 'DRAFT' box on top of each other page, and line numbers to easy
+% commenting. Comment or remove in final version.
+\draftversion{0.3}
+
+% Journal: adds a 
+%\journal{} 
+\input{defines.tex}
+% Abstract
+\abstracttext{\noindent \textit{Supporting internal appendices for note ATL-COM-PHYS-2014-288, which has the following abstract:}
+
+
+
+
+
+
+The fragmentation and decay of heavy flavor hadrons are studied
+for four Monte Carlo generators: \PythiaE, \Pythia, \Herwig\ and \Herwigpp.
+Heavy flavor production fractions and fragmentation functions are
+studied using top-quark pair and high transverse
+momentum QCD jet samples generated for $pp$ collisions at $\sqrt{s}=8$~\TeV.  
+The performance of the generators for heavy flavor fragmentation is also validated
+using $e^+e^-$ annihilation events generated at $\sqrt{s}=91.2$~\GeV\
+(for b-quarks) and $\sqrt{s}=10.53$~\GeV\ (for \textit{c}-quarks).  
+In addition, charm and bottom hadron decays studied for the four generators and are compared
+to both those obtained using the \EvtGen\ Monte Carlo and to experimental measurements. 
+}
+
+\begin{document}
+
+% Test of tikz.sty loadin in atlasnote.cls. Use 'usetkiz' option in documentclass declaration:
+% e.g. \documentclass[usetikz]{atlasnote}
+% \input{tikz-test}
+%\section{Introduction}
+%\label{sec:intro}
+%\input{Intro.tex}
+%\section{Monte Carlo Samples}
+%\label{sec:mcsamples}
+%\input{mcsamples.tex}
+%\section{Heavy Flavor Production Fractions}
+%\label{sec:prod}
+%\input{Prod.tex}
+%\section{Heavy Flavor Fragmentation}
+%\label{sec:frag}
+%\label{sec:fragmentation}
+%\input{Fragmentation.tex}
+%\section{Heavy Flavor Decays}
+%\label{sec:decay}
+%\input{Decays.tex}
+%\section{Summary}
+%\label{sec:conclusion}
+%\input{Conclusion.tex}
+%\clearpage
+\appendix
+\textit{The following appendices are for internal ATLAS circulation only and will be removed before this note is made public.  Appendix C, which lists the changes made to the default EvtGen inclusive decay table,
+will be provided as additional information on the ATLAS web page.} 
+\section{MC Datasets}
+\label{app:datasets}
+\input{Datasets.tex}
+\section{Private samples}
+\label{app:JO}
+\input{JobOptions.tex}
+\clearpage
+\section{Changes to EvtGen .dec file}
+\label{app:DecFile}
+\input{DecFile.tex}
+\clearpage
+\bibliographystyle{atlasBibStyleWithTitle}
+%\bibliography{HFNote}
+\end{document}
+

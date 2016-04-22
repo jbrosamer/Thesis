@@ -13,7 +13,7 @@ BIBTEX   = bibtex
 DVIPS    = dvips
 DVIPDF   = dvipdf
 
-BASENAME = thesis
+export BASENAME = thesis
 
 # Default target - make mydocument.pdf with pdflatex
 default: testpdflatex
@@ -92,7 +92,7 @@ clean:
 	-rm *.dvi *.toc *.aux *.log *.out \
 		*.bbl *.blg *.brf *.bcf *.run.xml \
 		*.cb *.ind *.idx *.ilg *.inx \
-		*.synctex.gz *~ ~* spellTmp 
+		*.synctex.gz *~ ~* spellTmp *.lot *.lof
 	
 cleanall: clean
 	-rm $(BASENAME).pdf 

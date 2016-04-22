@@ -1,0 +1,64 @@
+%MC samples are used to study the effect of different showering generators on the kinematics and decay properties of 
+%heavy flavor hadrons produced in \ttbar\ and di-jet events. 
+
+The versions of the four generators studied here are 
+\PythiaS\ 6.427, 
+\PythiaEE\ 8.175, 
+\Herwig\ 6.520 
+with \Jimmy\ 4.31~\cite{Butterworth:1996zw} for the underlying event and
+\Herwigpp\ 2.6.3a.
+All \pp\ samples have been generated with a center-of-mass energy of $\sqrt{s}=8$~\TeV.  
+
+Two physics
+processes are studied:
+\begin{itemize}
+
+  \item Top-pair production (\ttbar ) is calculated using  
+\PowHeg\ ~\cite{Nason:2004rx, Frixione:2007vw, Alioli:2010xd, Alioli:2008gx} r2330 and
+the \textsc{CT10}~\cite{Lai:2010vv} parton distribution functions (PDFs).  At keast one of the $W$ bosons in the \ttbar\ event is required to decay leptonically.
+The output of \PowHeg\ are files in Les Houches Event (LHE) format, which contain the top-pair decay products (leptons and
+quarks). The same 
+\PowHeg\ LHE files are then passed to each of the four generators 
+for parton shower, hadronization and underlying-event modeling.
+The generator tunes used are
+Perugia 2011C~\cite{Skands:2010ak} (\Pythia ),
+AU2(CT10)~\cite{ATL-PHYS-PUB-2012-003} (\PythiaE )~\footnote{
+While the default release of Pythia 8.175 uses the tau lifetimes specified in the \PowHeg\ LHE files, a patch was applied to overrule the incorrect lifetimes written out in the \PowHeg\ event record. This patch has since become part of \PythiaEE~8.175.},
+%While the default release of \PythiaEE~8.175 did not
+%properly set the $\tau$ lifetime, a patch to fix this problem was applied to the samples studied here.
+AUET2(CT10)~\cite{ATL-PHYS-PUB-2011-008} (\Jimmy)
+and UE-EE-4-LO**~\cite{Seymour:2013qka} (\Herwigpp ).  
+In \Pythia\ and \PythiaE, heavy quark fragmentation uses the Lund symmetric model with
+the Bowler modification~\cite{Bowler:1981sb}.  In \Herwig\ and \Herwigpp, heavy quarks are fragmented using the cluster model. 
+
+\item High \pT~jet samples are generated using the matrix
+element calculations provided by each generator.  The generator tunes and fragmentation models used are
+the same as those used for the \ttbar\ samples. Events are required
+to have at least one jet with \pT\ between 500~\GeV\ and 1~\TeV.
+
+\end{itemize}
+
+
+For both processes, jets are reconstructed from stable particles~\footnote{Stable particles are defined as those with a mean lifetime, $c\tau_{0}$,~$< 10$~mm.} using the
+infrared- and collinear-safe \antikt\ algorithm~\cite{bib:antikt2}
+with radius parameter $R=0.4$ using the FastJet package~\cite{bib:antikt3}. In the case of \ttbar\ samples, leptons
+from the W decay are excluded from the jet recontruction.
+
+
+For the fragmentation studies in Section~\ref{sec:fragmentation},~$e^+e^-$ samples are generated.
+%\Pythia, \PythiaE, \Herwigpp and \Herwig. 
+Unless otherwise stated, 
+these samples are generated with initial state QED radiation enabled. 
+Comparisons with LEP and SLC data use $e^+e^-\rightarrow b\overline{b}$ samples
+generated at $\sqrt{s}=91.2$ GeV. In addition, $e^+e^-\rightarrow b\overline{b}$ samples
+generated at $\sqrt{s}=200$ GeV with initial state QED disabled for comparison to the $\sqrt{s}=91.2$ GeV samples. Comparisons with Belle and CLEO data are studied using  
+$e^+e^-\rightarrow c\overline{c}$ samples with $\sqrt{s}=10.53$ GeV.
+
+%The decay properties of bottom and charm hadrons for the four generators are studied  
+%and are compared
+For studies of bottom and charm hadron decay properties, \EvtGen~2.0~\cite{Lange:2001uf} is used.
+Decay products of all heavy flavor hadrons are removed from the event record and the four-momenta
+of the heavy flavor hadrons are passed to \EvtGen, which redecays these hadrons; these new decay
+products are added to the event record.
+In some cases, modifications to the \EvtGen\ default decay table have been made.  These changes
+are discussed in Section~\ref{sec:decay}.

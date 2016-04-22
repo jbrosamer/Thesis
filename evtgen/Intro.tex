@@ -1,0 +1,48 @@
+Final states that include heavy flavor (bottom and charm) hadrons are important for the
+study of many processes at the Large Hadron Collider (LHC).  Examples of such processes
+include top quark pair (\ttbar) production, Higgs production (with decay to a bottom quark pair)
+and searches for signals from physics beyond the Standard Model (SM).  
+To fully exploit the large data samples that will be collected during Run II at the LHC,
+a reduction in current systematic uncertainties associated with the modeling of
+heavy flavor hadron production and decay will be needed.
+Although data-driven methods are likely to play a major part in the effort to reduce these
+uncertainties, improvementsin the Monte Carlo (MC) models used to determine
+reconstruction efficiencies  will also be necessary.
+
+An overview of the physics of general purpose MC event generators can be found in reviews such as References~\cite{Buckley:2011ms} and~\cite{PDGMC}. Simulation of QCD processes using these generators involves four separate stages.  First, the short distance cross section for the process of interest is calculated from the hard-scattering matrix elements obtained using a fixed-order perturbative QCD calculation.    Second, perturbative contributions from initial- and final-state parton showers are included.  These stages together provide a descripiton of the kinematic properties of quarks, gluons and leptons.  Third, soft hadronic phenomena are treated using QCD-inspired models.  In this step, the quarks and gluons are transformed into colorless objects using a hadronization model which includes the effects of fragmentation and soft gluon radiation.  The most common hadronization models are the string model (used by \Pythia~\cite{Sjostrand:2006za} and \PythiaE~\cite{Sjostrand:2007gs}) and the cluster model (used by \Herwig~\cite{Corcella:2002jc} and \Herwigpp~\cite{Bahr:2008pv}).     For hadronic initial states, the underlying event and effects from multiple parton interactions are incorporated at this stage.  The generators all include adjustable phenomenological parameters that are determined by comparing MC predictions to experimental data.  Differences in the treatment of the soft physics and in the values chosen for the adjustable parameters can lead to substantial variations in the kinematic properties of the particles produced (see, for example, the results compiled in Reference~\cite{Karneyeu:2013aha}).  Fourth, hadron and $\tau$ decays proceed according to particle tables that have been adapted from experimental data.
+
+
+
+
+This note presents a study of heavy flavor hadron production and decay properties for four
+MC generators (\PythiaE, \Pythia, \Herwigpp\  and \Herwig)  extensively used to 
+model \pp\ interactions at the LHC.  Two benchmark physics processes are used for
+these comparisons:  \ttbar\ production, in which a $b$-quark is produced in each top
+decay and a $c$-quark is produced in approximately 1/3 of the $W$ decays~\footnote{Although
+bottom and charm hadrons can also be produced in the parton shower, the rate for such
+production is small when compared to that produced in the top decays.}  and
+high transverse momentum (\pT) jet production, in which the generators produce
+$b$- and $c$-quarks via both the matrix element calculation and the parton shower.  
+In addition, ancillary 
+$e^+e^-\rightarrow b\overline b$  and $e^+e^-\rightarrow c\overline c$ samples are generated using 
+shower parameterizations consistent with those used for LHC tunes.  These samples are used to 
+check the consistency of the fragmentation functions with data for the processes in which the
+fragmentation functions were originally measured.
+
+
+The note is organized as follows.  Section~\ref{sec:mcsamples} provides information on the 
+configuration of the MC generators used for these studies. 
+Section~\ref{sec:prod} presents
+the bottom and charm hadron production fractions obtained with these generators and compares them
+to world averages of experimental data.  
+These production fractions are sensitive to the adjustable parameters of the hadronization model.
+Section~\ref{sec:frag} provides a detailed study of the modeling of heavy quark fragmentation.  
+The MC generators all rely on the assumption that non-perturbative fragmentation 
+functions are universal (aside from the QCD scaling violations).
+Section~\ref{sec:decay} compares 
+decay properties of heavy flavor hadrons in each of the four generators to world average experimental data.
+In addition, these results are compared to those obtained with the
+\EvtGen~\cite{Lange:2001uf} decay package, which implements detailed models of flavor decay and
+uses branching fraction measurements compiled in Reference~\cite{PhysRevD.86.010001}.
+Section~\ref{sec:conclusion} provides a brief summary of the results presented here.
+

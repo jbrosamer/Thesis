@@ -184,11 +184,13 @@ the inversion process. The number of iterations has been set to 2. Details on th
 \end{figure}
 
 \begin{figure}
-\subfloat [a]{
-\includegraphics[width=0.45\textwidth]{fig/Cov/Response.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/Cov/Response.pdf}
+\end{subfigure}
 ~
-\subfloat [b]{
-\includegraphics[width=0.45\textwidth]{fig/Cov/MissedPt.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/Cov/MissedPt.pdf}
+\end{subfigure}
 ~
 \caption{Migration matrix between the truth and reconstructed number of extra jets in each bin (a) and distribution of `missed' truth jets not matched to reco jets (b). Jets are binned according to both \pt value and rank. The matrix is filled from events passing both reconstructed and truth $e\mu$+2-$b$ jet events in the baseline \ttbar simulation. `Missed' jets are handled by the RooUnfold framework.}
 \label{f:res}
@@ -303,15 +305,19 @@ Total reco events & 11997.1 & 100.00 \\
 
 \begin{figure}
 \centering
-\subfloat[a]{
-\includegraphics[width=0.45\textwidth]{fig/RecoNotTruth/ElecPt.pdf}}
-\subfloat[b]{
-\includegraphics[width=0.45\textwidth]{fig/RecoNotTruth/BJetPt.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/RecoNotTruth/ElecPt.pdf}
+\end{subfigure}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/RecoNotTruth/BJetPt.pdf}
+\end{subfigure}
 \\
-\subfloat[c]{
-\includegraphics[width=0.45\textwidth]{fig/RecoNotTruth/BJetMV1.pdf}}
-\subfloat[d]{
-\includegraphics[width=0.45\textwidth]{fig/RecoNotTruth/NJets.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/RecoNotTruth/BJetMV1.pdf}
+\end{subfigure}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/RecoNotTruth/NJets.pdf}
+\end{subfigure}
 \caption{Distributions of the (a) $e$ \pt, (b) $b$-jet \pt, (c) $b$-jet MV1 weight and (d) extra jet multiplicity. Each distribution is normalized by the number of events falling in that category. Events were simulated with \powpy~\ttbar.}
 \label{fig:reconottruth}
 \end{figure}
@@ -344,30 +350,38 @@ Total truth events & 43376.7 & 100.00 \\
 
 \begin{figure}
 \centering
-\subfloat[a]{
-\includegraphics[width=0.45\textwidth]{fig/TruthNotReco/TruthBJetPt.pdf}}
-\subfloat[b]{
-\includegraphics[width=0.45\textwidth]{fig/TruthNotReco/NTruthExtraJets30.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/TruthNotReco/TruthBJetPt.pdf}
+\end{subfigure}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/TruthNotReco/NTruthExtraJets30.pdf}
+\end{subfigure}
 \\
-\subfloat[c]{
-\includegraphics[width=0.45\textwidth]{fig/TruthNotReco/TruthPtJet0.pdf}}
-\subfloat[d]{
-\includegraphics[width=0.45\textwidth]{fig/TruthNotReco/TruthPtJet1.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/TruthNotReco/TruthPtJet0.pdf}
+\end{subfigure}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/TruthNotReco/TruthPtJet1.pdf}
+\end{subfigure}
 \caption{Distributions of the truth (a) $b-$jet \pt, (b) extra jet multiplicity, (c) leading extra jet \pt and (d) subleading extra jet \pt. Each distribution is normalized by the number of events falling in that category. Events were simulated with \powpy~\ttbar and required to pass the fiducial truth $e\mu$+2 $b$-jet selection.}
 \label{fig:truthnotreco}
 \end{figure}
 
 \begin{figure}
 \centering
-\subfloat[a]{
-\includegraphics[width=0.45\textwidth]{fig/TruthNotReco/BJetNJets30.pdf}}
-\subfloat[b]{
-\includegraphics[width=0.45\textwidth]{fig/TruthNotReco/BJetPtJet0.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/TruthNotReco/BJetNJets30.pdf}
+\end{subfigure}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/TruthNotReco/BJetPtJet0.pdf}
+\end{subfigure}
 \\
-\subfloat[c]{
-\includegraphics[width=0.45\textwidth]{fig/TruthNotReco/BJetPtJet1.pdf}}
-\subfloat[d]{
-\includegraphics[width=0.45\textwidth]{fig/TruthNotReco/BJetPtJet2.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/TruthNotReco/BJetPtJet1.pdf}
+\end{subfigure}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/TruthNotReco/BJetPtJet2.pdf}
+\end{subfigure}
 \caption{Distributions of the truth (a) extra jet multiplicity, (b) leading extra jet \pt, (c) subleading extra jet \pt and (d) subsubleading extra jet \pt in bins of the average of the \pt of the two truth $b$-jets used to select the event. Each distribution is normalized by 
 the number of events falling in that bin. Events were simulated with \powpy~\ttbar and required to pass the fiducial truth $e\mu$+2 $b$-jet selection.}
 \label{fig:bjetdep}
@@ -400,11 +414,13 @@ The final correction factors used for data are taken from the baseline \powpy\ s
 
 \begin{center}
 \begin{figure}
-\subfloat[a]{
-\includegraphics[width=0.45\textwidth]{fig/Unfolding/CorrFactors.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/Unfolding/CorrFactors.pdf}
+\end{subfigure}
 ~
-\subfloat[b]{
- \includegraphics[width=0.45\textwidth]{fig/Unfolding/FractionCorrectionDiff.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/Unfolding/FractionCorrectionDiff.pdf}
+\end{subfigure}
 \caption{(a) Ratio of unfolded extra jets to truth extra jets different \ttbar generators (including a 2.9\% contribution from single top). (b) Fractional difference of the correction factorfrom baseline for different generators. Extra jets in events passing reconstructed and truth selection for each generator are added to single top and used to fill a response matrix. Then each generator is unfolded against itself, using all selected reconstructed events. Extra jet truth distributions are made without any reconstruction requirements. Finally, the unfolded distribution is divided by the truth distribution to obtain a correction factor for each bin.
 \label{fig:bincorr}}
 \end{figure}
@@ -469,27 +485,33 @@ The pull distributions for the alternate generators unfolded against the baselin
 Figure~\ref{fig:fracbias} shows the fractional bias obtained for the stress test for four representative alternative generators. Though bin-to-bin fluctuations around zero are visible, these fluctuations fall largely within the one sigma error contour. For \mcnlohw, the disagreements become large for jets of rank 3 and higher. The jet multiplicity in \mcnlohw\ at reconstruction level is signifigantly lower than the data. For \madpy\ deviations above the one sigma level are observed for low jet \pt. The \madpy\ is signifigantly steeper than that of \powpy. This will affect the size of the feed-in correction $g_i$. The differences with respect to \madpy\ are included in the systematic uncertainties described in Chapter~\ref{ss:unfsystt}.
 
 \begin{figure}
-\subfloat[a]{
-\includegraphics[width=0.45\textwidth]{fig/Stress/117050atlfast/Pull2Iterations.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/Stress/117050atlfast/Pull2Iterations.pdf}
+\end{subfigure}
 ~
-\subfloat[b]{
-\includegraphics[width=0.45\textwidth]{fig/Stress/117050atlfast/FracBias2Iterations.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/Stress/117050atlfast/FracBias2Iterations.pdf}
+\end{subfigure}
 \caption{(a) Pull distribution and (b) fractional bias for the extra jets from the baseline \ttbar simulation unfolded against a matrix filled with the baseline \ttbar simulation with all correction factors. The Bayesian unfolding method with 2 iterations is used. One thousand pseudoexperiments, each the size of the events in data, are randomly selected from the sample and unfolded. Each bin of the pull distribution over the pseudoexperiments is fit with a gaussian. The black points show the fitted mean of each bin. A fitted mean of zero shows the unfolding is not signifigantly biased. The blue band shows the fitted $\sigma$ of each bin. A fitted $\sigma$ of one shows the unfolding correctly estimates the errors.}
 \label{fig:UnfoldPull}
 \end{figure}
 
 \begin{figure}
-\subfloat[a]{
-\includegraphics[width=0.45\textwidth]{fig/Stress/105860atlfast/FracBias2Iterations.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/Stress/105860atlfast/FracBias2Iterations.pdf}
+\end{subfigure}
 ~
-\subfloat[b]{
-\includegraphics[width=0.45\textwidth]{fig/Stress/110872atlfast/FracBias2Iterations.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/Stress/110872atlfast/FracBias2Iterations.pdf}
+\end{subfigure}
 \\
-\subfloat[c]{
-\includegraphics[width=0.45\textwidth]{fig/Stress/110404atlfast/FracBias2Iterations.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/Stress/110404atlfast/FracBias2Iterations.pdf}
+\end{subfigure}
 ~
-\subfloat[d]{
-\includegraphics[width=0.45\textwidth]{fig/Stress/105200atlfast/FracBias2Iterations.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/Stress/105200atlfast/FracBias2Iterations.pdf}
+\end{subfigure}
 ~
 \caption{Fractional bias distributions for pseudoexperiments from alternative generators unfolded against a matrix filled with the baseline simulation. The truth spectrum of the baseline sample is reweighted to match jet \pt\ and multiplicity spectra of (a) \pow+\hw (b) \madpy, (c) \hdamp, and (d) \mcnlohw~simulation. One thousand pseudoexperiments, each the size of the events in data, are constructed for each generator and unfolded. The Bayesian unfolding method with 2 iterations is used. Each bin of the distribution over the pseudoexperiments is fit with a gaussian. The black points show the fitted mean of each bin and the blue band shows the fitted sigma.}
 \label{fig:fracbias}

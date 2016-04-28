@@ -48,14 +48,18 @@ As a cross-check, the uncertainities obtained using this procedure are compared 
 
 
 \begin{figure}
-\subfloat{
-\includegraphics[width=0.45\textwidth]{fig/UnfoldSys/Toy/JES1VarBandRatioJet0.pdf}}
-\subfloat{
-\includegraphics[width=0.45\textwidth]{fig/UnfoldSys/Toy/JES1VarBandRatioJet1.pdf}} \\
-\subfloat{
-\includegraphics[width=0.45\textwidth]{fig/UnfoldSys/Toy/JES1VarBandRatioJet2.pdf}}
-\subfloat{
-\includegraphics[width=0.45\textwidth]{fig/UnfoldSys/Toy/JES1VarBandRatioJet3.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/UnfoldSys/Toy/JES1VarBandRatioJet0.pdf}
+\end{subfigure}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/UnfoldSys/Toy/JES1VarBandRatioJet1.pdf}
+\end{subfigure} \\
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/UnfoldSys/Toy/JES1VarBandRatioJet2.pdf}
+\end{subfigure}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/UnfoldSys/Toy/JES1VarBandRatioJet3.pdf}
+\end{subfigure}
 \caption{Ratio of reconstructed extra jets spectrum obtained from systematic variations of the 15 JES eigenstate nuisance parameters with respect to that obtained using the nominal parameters. The band shows the uncertainty obtained from the samples with gaussian variation of all nuisance parameters. The upper and lower lines shows uncertainty from the quadratic sum of the independent variations of each nuisance parameter by $\pm 1 \sigma$. The distribution of samples values has fitted $\mu=1$ and $\sigma$ consistent with the $\pm 1 \sigma$ method. }
 \label{fig:ToyJES1}
 \end{figure}
@@ -120,11 +124,13 @@ Each variation is unfolded with the nominal \mcnlohw\ migration matrix. For each
 \end{displaymath}
 
 \begin{figure}
-\subfloat[a]{
-\includegraphics[width=0.45\textwidth]{fig/PDF/AvgBias.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/PDF/AvgBias.pdf}
+\end{subfigure}
 ~
-\subfloat[b]{
-\includegraphics[width=0.45\textwidth]{fig/PDF/AvgFracBias.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/PDF/AvgFracBias.pdf}
+\end{subfigure}
 ~
 \label{fig:pdfbias}
 \caption{
@@ -133,11 +139,13 @@ Each variation is unfolded with the nominal \mcnlohw\ migration matrix. For each
 
 
 \begin{figure}
-\subfloat[a]{
-\includegraphics[width=0.45\textwidth]{fig/Stress/110875atlfast/FracBias2Iterations.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/Stress/110875atlfast/FracBias2Iterations.pdf}
+\end{subfigure}
 ~
-\subfloat[b]{
-\includegraphics[width=0.45\textwidth]{fig/Stress/110878atlfast/FracBias2Iterations.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/Stress/110878atlfast/FracBias2Iterations.pdf}
+\end{subfigure}
 \label{fig:radbias}
 \caption{
 Fractional bias distributions for pseudoexperiments from \madpy\ radiation samples unfolded against a matrix filled with nominal \madpy. The truth spectrum of the baseline sample is reweighted to match jet \pt\ and multiplicity spectra of (a) \madpy\ RadLo (b) \madpy\ RadHi simulation. One thousand pseudoexperiments, each the size of the events in data, are constructed for each generator and unfolded. The Bayesian unfolding method with 2 iterations is used. Each bin of the distribution over the pseudoexperiments is fit with a gaussian. The black points show the fitted mean of each bin and the blue band shows the fitted sigma.}
@@ -146,17 +154,21 @@ Fractional bias distributions for pseudoexperiments from \madpy\ radiation sampl
 
 \begin{figure}
 ~
-\subfloat{
-\includegraphics[width=0.45\textwidth]{fig/Pileup/RecoPtFalseJet0.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/Pileup/RecoPtFalseJet0.pdf}
+\end{subfigure}
 ~
-\subfloat{
-\includegraphics[width=0.45\textwidth]{fig/Pileup/RecoPtFalseJet1.pdf}}\\
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/Pileup/RecoPtFalseJet1.pdf}
+\end{subfigure}\\
 ~
-\subfloat{
-\includegraphics[width=0.45\textwidth]{fig/Pileup/RecoPtFalseJet2.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/Pileup/RecoPtFalseJet2.pdf}
+\end{subfigure}
 ~
-\subfloat{
-\includegraphics[width=0.45\textwidth]{fig/Pileup/RecoPtFalseJet3.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/Pileup/RecoPtFalseJet3.pdf}
+\end{subfigure}
 ~
 \caption{Unmatched jets in the baseline \ttbar\ simulation and the hybrid sample. The difference between the two is used to estimate the uncertainty.}
 \label{fig:FalseComp}
@@ -188,39 +200,34 @@ In most bins, statistical uncertainty dominates. At low jet \pt, JES is the larg
 % \section{Propagation of uncertainties to multiplicity distributions}
 % Statistical uncertainties from RooUnfold and systematic uncertainties from the above procedures are calculated in bins of jet \pt\ and rank. In order to derive the multiplicity from these distributions, the uncertainties must be propagated as a multinomial distribution with a full covariance matrix. Details of this propagation are provided in Appendix~\ref{app:stats}. Pull distributions obtained from pseudoexperiments are shown in Figure~\ref{fig:multpull} and indicate that this calculation overestimates the statistical uncertainty. As recommended by the statistics committee, the final uncertainty on the multiplicity is obtained using the pseudoexperiments.
 \begin{figure}
-\subfloat{
-\includegraphics[width=0.45\textwidth]{fig/UnfoldSys/Jet0.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/UnfoldSys/Jet0.pdf}
+\end{subfigure}
 ~
-\subfloat{
-\includegraphics[width=0.45\textwidth]{fig/UnfoldSys/Jet1.pdf}} \\
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/UnfoldSys/Jet1.pdf}
+\end{subfigure} \\
 ~
-\subfloat{
-\includegraphics[width=0.45\textwidth]{fig/UnfoldSys/Jet2.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/UnfoldSys/Jet2.pdf}
+\end{subfigure}
 ~
-\subfloat{
-\includegraphics[width=0.45\textwidth]{fig/UnfoldSys/Jet3.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/UnfoldSys/Jet3.pdf}
+\end{subfigure}
 ~
 \caption{Sum of systematic uncertainties due to detector modeling. The ratio of the simulated extra jets reconstructed with each systematic variation is taken with respect to the nominal. The band shows the data statistical uncertainty for reference.}
 \label{fig:SmoothSys}
 \end{figure}
-% \begin{figure}
-% \subfloat{
-% \includegraphics[width=0.45\textwidth]{fig/Cov/TotSys.pdf}}
-% ~
-% \subfloat{
-% \includegraphics[width=0.45\textwidth]{fig/Cov/Total.pdf}}
-% ~
-% \caption{(a) Covariance matrix representing the systematic uncertainty on the measured
-% spectrum. (b) Covariance matrix representing the full (statistical plus systematic) uncertainty
-% on the measured spectrum.}
-% \label{fig:uncmat}
-% \end{figure}
+
 \begin{figure}
-\subfloat[a]{
-\includegraphics[width=0.45\textwidth]{fig/Cov/Stat.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/Cov/Stat.pdf}
+\end{subfigure}
 ~
-\subfloat[b]{
-\includegraphics[width=0.45\textwidth]{fig/Cov/Total.pdf}}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\textwidth]{fig/Cov/Total.pdf}
+\end{subfigure}
 ~
 \caption{(a) The covariance matrix associated with the statistical uncertainty of the input spectrum returned from \texttt{ RooUnfold}. (b) The covariance matrix from all sources of uncertainty, obtained by adding the covariance matrices from all sources of systematic uncertainty to (a). This matrix is used to determine the \chisq\ agreement between generators and the fully corrected data.}
 \label{fig:cov}

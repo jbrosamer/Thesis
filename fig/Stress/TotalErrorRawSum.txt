@@ -1,4 +1,4 @@
-Iterations,Powheg+PY hdamp=m_{t},Err,Powheg+PY8,Err,Powheg+HW,Err,MC@NLO+HW,Err,MadGraph+PY,Err,Powheg+PY hdamp=#infty,Err,Madgraph+PY RadLo,Err,Madgraph+PY RadHi
+Iterations,Powheg+PY6 hdamp=m_{t},Err,Powheg+PY8 hdamp=m_{t},Err,Powheg+HW,Err,MC@NLO+HW,Err,MadGraph+PY,Err,Powheg+PY6 hdamp=#infty,Err,Madgraph+PY6 RadLo,Err,Madgraph+PY6 RadHi
 0, 0.0\e{0  , 0.0\e{0  , 0.0\e{0  , 0.0\e{0  , 0.0\e{0  , 0.0\e{0  , 0.0\e{0  , 0.0\e{0  
 1, 8.1\e{0  , 8.5\e{0  , 8.7\e{0  , 7.9\e{0  , 8.1\e{0  , 8.6\e{0  , 7.6\e{0  , 8.7\e{0  
 2, 1.1\e{1  , 1.2\e{1  , 1.2\e{1  , 1.1\e{1  , 1.1\e{1  , 1.2\e{1  , 1.1\e{1  , 1.2\e{1  

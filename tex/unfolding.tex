@@ -69,11 +69,11 @@ N(j)=N(\geq j)-N(\geq j+1)
 \end{equation}
 
 %\noindent This makes the table 
-\noindent and the total number of jets with  exactly 0 jets is $N(0)=N_{total}-N(\geq 1)$, where $N_{total}$ is the total number of events.
+\noindent and the total number of events with  exactly 0 jets is $N(0)=N_{total}-N(\geq 1)$, where $N_{total}$ is the total number of events.
 \begin{center}
 \begin{longtable}{|c|c|c|}
 \caption{Binning for unfolding of extra jets. Jets are binned simultaneously in both rank (\pt order) and \pt. For each jet rank, variable sized \pt bins are chosen so that at least 10 data events fall in each bin. The first bin in \pt for each rank is treated as underflow bins. These bins are not reported as part of the measurement.} \label{t:gbins} \\ \hline
-Bin number & Jet rank & Jet \pt (\GeV) \\
+Jet rank & Bin number &  Jet \pt (\GeV) \\
 \hline 
 \endfirsthead
 \multicolumn{3}{l}%
@@ -232,7 +232,7 @@ one of the two reconstructed $b$-jets does match any truth jet.
 \end{enumerate}
 %\end{description}
 Figure~\ref{fig:reconottruth} shows the electron \pt, $b$-jet \pt, $b$-jet MV1 weight, and extra jet multiplicity 
-for events in the above categories. Additional plots of the kinematics and extra jets for these events can be found in Appendix~\ref{app:reconottruth}. 
+for events in the above categories. %Additional plots of the kinematics and extra jets for these events can be found in Appendix~\ref{app:reconottruth}. 
 Events failing the truth lepton or $b$-jet fiducial cuts arise mainly from resolution smearing of the \pt.
 These produce a softer spectrum 
 %as shown by the peak in the 25-30 \gev\ bin for 
@@ -247,7 +247,8 @@ the mistag estimate for $b$-jets given in Ref.~\cite{btagmiscal}.
 Due to detector inefficiencies, the majority of events passing the truth selection fail the reconstruction selection (\textit{missed events}). Table~\ref{t:truthnotreco} shows the events that pass truth selection broken into categories based on which objects were correctly reconstructed. The largest contributions come from failure to reconstruct the electron or the second $b$-jet in the event. A large fraction of these come from migrations across the fiducial boundary due to \pt\ smearing. 
 
 Figure~\ref{fig:truthnotreco} shows the truth $b$-jet \pt, extra jet multiplicity, leading extra jet \pt\ and subleading extra 
-jet \pt\ by category. Additional distribtuions can be found in Appendix~\ref{app:truthnotreco}. The $b$-jet \pt\ 
+jet \pt\ by category. %Additional distribtuions can be found in Appendix~\ref{app:truthnotreco}. 
+The $b$-jet \pt\ 
 is much softer for events that are not reconstructed. The extra jets in these events are softer as well.
 
 The differences in the extra jet distributions for these events can be explained by studying the relationship between the $b$-jet \pt\ 
@@ -451,7 +452,7 @@ The agreement between an unfolded spectrum and truth distribution can be estimat
 This \chisq\ is used validate the unfolding procedure with different MC generators in Chapter~\ref{ss:close}-\ref{ss:stress}, as well as to assess the agreement of generators with the fully corrected data in Chapter~\ref{ch:results}.
 \subsection{Closure test}
 \label{ss:close}
-The closure test validates the unfolding procedure using simulation. The stability of unfolding can depend on the statistical power of the input data. To ensure that the the closure test appropriately accounts for this effect, the test is performed using pseudoexperiments with the same statistical power as the data.
+The closure test validates the unfolding procedure using simulation. The stability of unfolding can depend on the statistical power of the input data. To ensure that the closure test appropriately accounts for this effect, the test is performed using pseudoexperiments with the same statistical power as the data.
 
 In the closure test, the baseline \ttbar+3\% $Wt$ simulation is used to fill the migration matrix and
 one thousand pseudoexperiments are performed using randomly chosen subsamples of events.  Each pseudoexperiment is chosen
